@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="gecco-patient" />
+  <url value="https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/Patient" />
+  <version value="1.0" />
+  <name value="Patient" />
+  <title value="Patient" />
+  <status value="active" />
+  <date value="2020-10-29" />
+  <publisher value="Charité" />
+  <contact>
+    <telecom>
+      <system value="url" />
+      <value value="https://www.bihealth.org/en/research/core-facilities/interoperability/" />
+    </telecom>
+  </contact>
+  <description value="Covers demographic data about the patient" />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Patient" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Patient" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Patient.extension">
+      <path value="Patient.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Patient.extension:ethnicGroup">
+      <path value="Patient.extension" />
+      <sliceName value="ethnicGroup" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/ethnic-group" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.extension:age">
+      <path value="Patient.extension" />
+      <sliceName value="age" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/age" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.birthDate">
+      <path value="Patient.birthDate" />
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>

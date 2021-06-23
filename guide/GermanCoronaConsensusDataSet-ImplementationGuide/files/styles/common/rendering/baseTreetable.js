@@ -1,1 +1,249 @@
-var BaseTreeTable=function(){function e(){this.eventHandlerDictionary=[],this.parentContainerId="",this.maxColumnWidth=500}return e.prototype.getContext=function(){return document.getElementById(this.parentContainerId)},e.prototype.getElements=function(e){var t='[data-ParentId="'+e+'"]',n=this.getContext().querySelectorAll(t);return n},e.prototype.hasClass=function(e,t){return(" "+e.className+" ").indexOf(" "+t+" ")>-1},e.prototype.showChildren=function(e,t,n,i){var a=this.getContext().querySelector('[data-id="'+e+'"]');void 0!=a&&(a.className=a.className.replace(" collapsed",""));for(var s=this.getElements(e),l=0;l<s.length;l++){var o=s[l].dataset.id,r='[data-id="'+o+'"] td',d=s[l].querySelector(r+" .vjoinendcollapsible, "+r+" .vjoincollapsible");null!==d&&this.showChildren(o,null,null,null),s[l].style.display="table-row"}void 0!=t&&(t.className="base "+i,this.registerEventSingle(t,"click",this.eventHandlerDictionary[i]))},e.prototype.hideChildren=function(e,t,n,i){var a=this.getContext().querySelector('[data-id="'+e+'"]');void 0!=a&&(a.className=a.className+" collapsed"),void 0!=t&&(this.hideUnderlyingElements(e),t.className="base "+i,this.registerEventSingle(t,"click",this.eventHandlerDictionary[i]))},e.prototype.hideUnderlyingElements=function(e){for(var t=this.getElements(e),n=0;n<t.length;n++){var i=t[n].dataset.id;this.hideUnderlyingElements(i),t[n].style.display="none"}},e.prototype.createSpan=function(e){var t=document.createElement("SPAN");return t.className=e,t},e.prototype.addIdentation=function(e,t,n){t+=1;for(var i=0;i<e.length;i++){var a=t,s=e[i].dataset.id,l=e[i].getElementsByTagName("td")[0],o=this.getElements(s),r=o.length>0,d=i===e.length-1;d?n[t-1]=this.createSpan("base spacer"):n[t-1]=this.createSpan("base vline");var c=null,p=l.parentElement;for(this.hasClass(p,"collapsed")&&(c="collapsed");a-1>=1;)a-=1,a===t-1&&"collapsed"===c&&r&&!d?(l.insertBefore(this.createSpan("base vjoinexpandable"),l.childNodes[0]),this.hideUnderlyingElements(p.dataset.id)):a===t-1&&"collapsed"===c&&r&&d?(l.insertBefore(this.createSpan("base vjoinendexpandable"),l.childNodes[0]),this.hideUnderlyingElements(p.dataset.id)):a===t-1&&r&&d?l.insertBefore(this.createSpan("base vjoinendcollapsible"),l.childNodes[0]):a===t-1&&r&&!d?l.insertBefore(this.createSpan("base vjoincollapsible"),l.childNodes[0]):a!==t-1||r||d?a===t-1&&!r&&d?l.insertBefore(this.createSpan("base vjoinend"),l.childNodes[0]):void 0!==n[a]&&l.insertBefore(n[a].cloneNode(),l.childNodes[0]):l.insertBefore(this.createSpan("base vjoin"),l.childNodes[0]);this.addIdentation(o,t,n)}},e.prototype.insertIndentations=function(){for(var e=this.getContext().querySelectorAll("tr:not([data-parentId])"),t=0;t<e.length;t++){var n=1,i=e[t].dataset.id,a=this.getElements(i),s=t===e.length-1,l=[];s?l[n]=this.createSpan("base spacer"):l[n]=this.createSpan("base vline"),this.addIdentation(a,n,l)}},e.prototype.getParentElementId=function(e){var t=e.parentElement.parentElement,n=t.dataset.id;return n},e.prototype.initEventHandlerDictionary=function(){var e=this;this.eventHandlerDictionary.vjoinexpandable=function(){console.log("vjoinexpandable");var t=e.getParentElementId(this);e.showChildren(t,this,"vjoinexpandable","vjoincollapsible")},this.eventHandlerDictionary.vjoincollapsible=function(){console.log("vjoincollapsible");var t=e.getParentElementId(this);e.hideChildren(t,this,"vjoincollapsible","vjoinexpandable")},this.eventHandlerDictionary.vjoinendexpandable=function(){console.log("vjoinendexpandable");var t=e.getParentElementId(this);e.showChildren(t,this,"vjoinendexpandable","vjoinendcollapsible")},this.eventHandlerDictionary.vjoinendcollapsible=function(){console.log("vjoinendcollapsible");var t=e.getParentElementId(this);e.hideChildren(t,this,"vjoinendcollapsible","vjoinendexpandable")},this.eventHandlerDictionary.pushpinClick=function(t){for(var n=this,i=this;(i=i.parentElement)&&!i.classList.contains("popout"););i.removeEventListener("mouseout",e.eventHandlerDictionary.popOutMouseOut),n.className.indexOf("pinned")>-1?n.className=n.className.replace(" pinned",""):n.className+=" pinned"},this.eventHandlerDictionary.descriptionMouseIn=function(t){this.className.indexOf("popouthover")===-1&&(this.className+=" popouthover"),e.applyShowAllStyles(this);var n=this.querySelector(".pushpin");n.style.display="initial"},this.eventHandlerDictionary.descriptionMouseOut=function(t){var n=this.querySelector(".pinned");if(null===n){var i=this.querySelector(".pushpin");i.style.display="none",e.applyHideLongTextStyles(this),this.className=this.className.replace(" popouthover","")}else e.applyShowAllStyles(this),this.style.display="inline-block"}},e.prototype.registerEventSingle=function(e,t,n){"click"===t?e.onclick=n:"dblclick"===t?e.ondblclick=n:e.addEventListener(t,n)},e.prototype.registerEvent=function(e,t,n){for(var i=this.getContext().getElementsByClassName(e),a=0;a<i.length;a++){var s=i[a];this.registerEventSingle(s,t,n)}},e.prototype.registerForEvents=function(){this.registerEvent("vjoinexpandable","click",this.eventHandlerDictionary.vjoinexpandable),this.registerEvent("vjoincollapsible","click",this.eventHandlerDictionary.vjoincollapsible),this.registerEvent("vjoinendcollapsible","click",this.eventHandlerDictionary.vjoinendcollapsible),this.registerEvent("vjoinendexpandable","click",this.eventHandlerDictionary.vjoinendexpandable),this.registerEvent("pushpin","click",this.eventHandlerDictionary.pushpinClick),this.registerEvent("popout","mouseover",this.eventHandlerDictionary.descriptionMouseIn),this.registerEvent("popout","mouseout",this.eventHandlerDictionary.descriptionMouseOut)},e.prototype.resizeToMaxColumnWidth=function(e){for(var t=document.getElementById(e),n=t.getElementsByTagName("td"),i=0;i<n.length;i++){var a=n[i];if("description"===a.className){var s=a.getBoundingClientRect();if(s.width>this.maxColumnWidth){a.className+=" popout",this.applyHideLongTextStyles(a);var l=document.createElement("div"),o=document.createElement("span"),r=a.childNodes[0];o.className="glyphicon glyphicon-pushpin pushpin",l.className="spanContainer",l.appendChild(o),a.insertBefore(l,r)}}}},e.prototype.applyShowAllStyles=function(e){e.style.overflow="visible",e.style.whiteSpace="normal"},e.prototype.applyHideLongTextStyles=function(e){e.style.overflow="hidden",e.style.whiteSpace="nowrap"},e.prototype.init=function(e){this.parentContainerId=e,this.initEventHandlerDictionary(),this.insertIndentations(),this.resizeToMaxColumnWidth(e),this.registerForEvents()},e}();
+var BaseTreeTable = (function () {
+    function BaseTreeTable() {
+        this.eventHandlerDictionary = [];
+        this.parentContainerId = "";
+        this.maxColumnWidth = 500;
+    }
+    BaseTreeTable.prototype.getContext = function () {
+        return document.getElementById(this.parentContainerId);
+    };
+    BaseTreeTable.prototype.getElements = function (parentId) {
+        var parentSelector = '[data-ParentId="' + parentId + '"]';
+        var collapsibleElements = this.getContext().querySelectorAll(parentSelector);
+        return collapsibleElements;
+    };
+    BaseTreeTable.prototype.hasClass = function (element, cls) {
+        return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
+    };
+    BaseTreeTable.prototype.showChildren = function (parentId, element, className, newClassName) {
+        var treeNode = this.getContext().querySelector('[data-id="' + parentId + '"]');
+        if (treeNode != undefined)
+            treeNode.className = treeNode.className.replace(" collapsed", "");
+        var collapsibleElements = this.getElements(parentId);
+        for (var i = 0; i < collapsibleElements.length; i++) {
+            var currentElementId = collapsibleElements[i].dataset["id"];
+            var selector = '[data-id="' + currentElementId + '"] td';
+            var span = collapsibleElements[i].querySelector(selector + " .vjoinendcollapsible, " + selector + ' .vjoincollapsible');
+            if (span !== null) {
+                this.showChildren(currentElementId, null, null, null);
+            }
+            collapsibleElements[i].style.display = 'table-row';
+        }
+        if (element != undefined) {
+            element.className = 'base ' + newClassName;
+            this.registerEventSingle(element, 'click', this.eventHandlerDictionary[newClassName]);
+        }
+    };
+    BaseTreeTable.prototype.hideChildren = function (parentId, element, className, newClassName) {
+        var treeNode = this.getContext().querySelector('[data-id="' + parentId + '"]');
+        if (treeNode != undefined)
+            treeNode.className = treeNode.className + " collapsed";
+        if (element != undefined) {
+            this.hideUnderlyingElements(parentId);
+            element.className = 'base ' + newClassName;
+            this.registerEventSingle(element, 'click', this.eventHandlerDictionary[newClassName]);
+        }
+    };
+    BaseTreeTable.prototype.hideUnderlyingElements = function (parentId) {
+        var collapsibleElements = this.getElements(parentId);
+        for (var i = 0; i < collapsibleElements.length; i++) {
+            var currentElementId = collapsibleElements[i].dataset["id"];
+            this.hideUnderlyingElements(currentElementId);
+            collapsibleElements[i].style.display = 'none';
+        }
+    };
+    BaseTreeTable.prototype.createSpan = function (className) {
+        var span = document.createElement('SPAN');
+        span.className = className;
+        return span;
+    };
+    BaseTreeTable.prototype.addIdentation = function (children, depth, identationDictionary) {
+        depth += 1;
+        for (var i = 0; i < children.length; i++) {
+            var localDepth = depth;
+            var currentElementId = children[i].dataset.id;
+            var tdElement = children[i].getElementsByTagName('td')[0];
+            var currentElementChildren = this.getElements(currentElementId);
+            var hasChildren = currentElementChildren.length > 0;
+            var isLast = i === children.length - 1;
+            if (isLast) {
+                identationDictionary[depth - 1] = this.createSpan('base spacer');
+            }
+            else {
+                identationDictionary[depth - 1] = this.createSpan('base vline');
+                ;
+            }
+            var defaultState = null;
+            var trElement = tdElement.parentElement;
+            if (this.hasClass(trElement, 'collapsed')) {
+                defaultState = 'collapsed';
+            }
+            while (localDepth - 1 >= 1) {
+                localDepth = localDepth - 1;
+                if (localDepth === depth - 1 && defaultState === 'collapsed' && hasChildren && !isLast) {
+                    tdElement.insertBefore(this.createSpan('base vjoinexpandable'), tdElement.childNodes[0]);
+                    this.hideUnderlyingElements(trElement.dataset.id);
+                }
+                else if (localDepth === depth - 1 && defaultState === 'collapsed' && hasChildren && isLast) {
+                    tdElement.insertBefore(this.createSpan('base vjoinendexpandable'), tdElement.childNodes[0]);
+                    this.hideUnderlyingElements(trElement.dataset.id);
+                }
+                else if (localDepth === depth - 1 && hasChildren && isLast) {
+                    tdElement.insertBefore(this.createSpan('base vjoinendcollapsible'), tdElement.childNodes[0]);
+                }
+                else if (localDepth === depth - 1 && hasChildren && !isLast) {
+                    tdElement.insertBefore(this.createSpan('base vjoincollapsible'), tdElement.childNodes[0]);
+                }
+                else if (localDepth === depth - 1 && !hasChildren && !isLast) {
+                    tdElement.insertBefore(this.createSpan('base vjoin'), tdElement.childNodes[0]);
+                }
+                else if (localDepth === depth - 1 && !hasChildren && isLast) {
+                    tdElement.insertBefore(this.createSpan('base vjoinend'), tdElement.childNodes[0]);
+                }
+                else if (identationDictionary[localDepth] !== undefined) {
+                    tdElement.insertBefore(identationDictionary[localDepth].cloneNode(), tdElement.childNodes[0]);
+                }
+            }
+            this.addIdentation(currentElementChildren, depth, identationDictionary);
+        }
+    };
+    BaseTreeTable.prototype.insertIndentations = function () {
+        var roots = this.getContext().querySelectorAll('tr:not([data-parentId])');
+        for (var i = 0; i < roots.length; i++) {
+            var depth = 1;
+            var parentId = roots[i].dataset["id"];
+            var children = this.getElements(parentId);
+            var isParentLast = i === roots.length - 1;
+            var identationDictionary = [];
+            if (isParentLast) {
+                identationDictionary[depth] = this.createSpan('base spacer');
+            }
+            else {
+                identationDictionary[depth] = this.createSpan('base vline');
+            }
+            this.addIdentation(children, depth, identationDictionary);
+        }
+    };
+    BaseTreeTable.prototype.getParentElementId = function (element) {
+        var parent = element.parentElement.parentElement;
+        var parentId = parent.dataset.id;
+        return parentId;
+    };
+    BaseTreeTable.prototype.initEventHandlerDictionary = function () {
+        var self = this;
+        this.eventHandlerDictionary['vjoinexpandable'] = function () {
+            console.log('vjoinexpandable');
+            var parentId = self.getParentElementId(this);
+            self.showChildren(parentId, this, 'vjoinexpandable', 'vjoincollapsible');
+        };
+        this.eventHandlerDictionary['vjoincollapsible'] = function () {
+            console.log('vjoincollapsible');
+            var parentId = self.getParentElementId(this);
+            self.hideChildren(parentId, this, 'vjoincollapsible', 'vjoinexpandable');
+        };
+        this.eventHandlerDictionary['vjoinendexpandable'] = function () {
+            console.log('vjoinendexpandable');
+            var parentId = self.getParentElementId(this);
+            self.showChildren(parentId, this, 'vjoinendexpandable', 'vjoinendcollapsible');
+        };
+        this.eventHandlerDictionary['vjoinendcollapsible'] = function () {
+            console.log('vjoinendcollapsible');
+            var parentId = self.getParentElementId(this);
+            self.hideChildren(parentId, this, 'vjoinendcollapsible', 'vjoinendexpandable');
+        };
+        this.eventHandlerDictionary['pushpinClick'] = function (event) {
+            var me = this;
+            var el = this;
+            while ((el = el.parentElement) && !el.classList.contains('popout'))
+                ;
+            el.removeEventListener('mouseout', self.eventHandlerDictionary["popOutMouseOut"]);
+            if (me.className.indexOf('pinned') > -1) {
+                me.className = me.className.replace(' pinned', '');
+            }
+            else {
+                me.className += ' pinned';
+            }
+        };
+        this.eventHandlerDictionary["descriptionMouseIn"] = function (event) {
+            if (this.className.indexOf('popouthover') === -1) {
+                this.className += ' popouthover';
+            }
+            self.applyShowAllStyles(this);
+            var span = this.querySelector(".pushpin");
+            span.style.display = "initial";
+        };
+        this.eventHandlerDictionary["descriptionMouseOut"] = function (event) {
+            var pin = this.querySelector('.pinned');
+            if (pin === null) {
+                var span = this.querySelector('.pushpin');
+                span.style.display = 'none';
+                self.applyHideLongTextStyles(this);
+                this.className = this.className.replace(' popouthover', '');
+            }
+            else {
+                self.applyShowAllStyles(this);
+                this.style.display = 'inline-block';
+            }
+        };
+    };
+    BaseTreeTable.prototype.registerEventSingle = function (element, type, eventHandle) {
+        //TODO: this is a temporary workaround, fix it.
+        if (type === "click")
+            element.onclick = eventHandle;
+        else if (type === "dblclick")
+            element.ondblclick = eventHandle;
+        else
+            element.addEventListener(type, eventHandle);
+    };
+    BaseTreeTable.prototype.registerEvent = function (className, type, eventHandle) {
+        var elems = this.getContext().getElementsByClassName(className);
+        for (var i = 0; i < elems.length; i++) {
+            var elem = elems[i];
+            this.registerEventSingle(elem, type, eventHandle);
+        }
+    };
+    BaseTreeTable.prototype.registerForEvents = function () {
+        this.registerEvent("vjoinexpandable", "click", this.eventHandlerDictionary["vjoinexpandable"]);
+        this.registerEvent("vjoincollapsible", "click", this.eventHandlerDictionary["vjoincollapsible"]);
+        this.registerEvent("vjoinendcollapsible", "click", this.eventHandlerDictionary["vjoinendcollapsible"]);
+        this.registerEvent("vjoinendexpandable", "click", this.eventHandlerDictionary["vjoinendexpandable"]);
+        this.registerEvent("pushpin", "click", this.eventHandlerDictionary["pushpinClick"]);
+        this.registerEvent("popout", "mouseover", this.eventHandlerDictionary["descriptionMouseIn"]);
+        this.registerEvent("popout", "mouseout", this.eventHandlerDictionary["descriptionMouseOut"]);
+    };
+    BaseTreeTable.prototype.resizeToMaxColumnWidth = function (containerId) {
+        var container = document.getElementById(containerId);
+        var tdElements = container.getElementsByTagName('td');
+        for (var i = 0; i < tdElements.length; i++) {
+            var td = tdElements[i];
+            if (td.className === 'description') {
+                var metrics = td.getBoundingClientRect();
+                if (metrics.width > this.maxColumnWidth) {
+                    td.className += ' popout';
+                    this.applyHideLongTextStyles(td);
+                    var div = document.createElement('div'), span = document.createElement('span'), firstNode = td.childNodes[0];
+                    span.className = 'glyphicon glyphicon-pushpin pushpin';
+                    div.className = 'spanContainer';
+                    div.appendChild(span);
+                    td.insertBefore(div, firstNode);
+                }
+            }
+        }
+    };
+    BaseTreeTable.prototype.applyShowAllStyles = function (item) {
+        item.style.overflow = "visible";
+        item.style.whiteSpace = "normal";
+    };
+    BaseTreeTable.prototype.applyHideLongTextStyles = function (item) {
+        item.style.overflow = "hidden";
+        item.style.whiteSpace = "nowrap";
+    };
+    BaseTreeTable.prototype.init = function (containerId) {
+        this.parentContainerId = containerId;
+        this.initEventHandlerDictionary();
+        this.insertIndentations();
+        this.resizeToMaxColumnWidth(containerId);
+        this.registerForEvents();
+    };
+    return BaseTreeTable;
+}());

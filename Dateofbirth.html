@@ -1,0 +1,1291 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8" />
+        <title>German Corona Consensus Data Set - Implementation Guide</title>
+
+        <link rel="icon" href="guide/GermanCoronaConsensusDataSet-ImplementationGuide/files/styles/common/favicon.ico" />
+
+        <script src="guide/GermanCoronaConsensusDataSet-ImplementationGuide/files/styles/common/jquery/jquery.min.js"></script>
+        <script src="guide/GermanCoronaConsensusDataSet-ImplementationGuide/files/styles/common/bootstrap/bootstrap.min.js"></script>
+
+        <link rel="stylesheet" href="guide/GermanCoronaConsensusDataSet-ImplementationGuide/files/styles/common/main.min.css" />
+        <link rel="stylesheet" href="guide/GermanCoronaConsensusDataSet-ImplementationGuide/files/styles/common/bootstrap/bootstrap.min.css" />
+        <link rel="stylesheet" href="guide/GermanCoronaConsensusDataSet-ImplementationGuide/files/styles/common/rendering/rendering.min.css" />
+
+        <script src="guide/GermanCoronaConsensusDataSet-ImplementationGuide/files/styles/common/rendering/stu3TreeTable.min.js"></script>
+        <script src="guide/GermanCoronaConsensusDataSet-ImplementationGuide/files/styles/common/rendering/baseTreetable.min.js"></script>
+
+        <link rel="stylesheet" href="guide/GermanCoronaConsensusDataSet-ImplementationGuide/files/styles/treetable/style.css?v=1d76743ac2fc700" />
+
+    </head>
+
+    <body>
+
+        <div id="ig-viewer">
+
+            <div class="ig-view-content">
+
+                <div id="ig-view-treetable">
+
+                    <div class="segment-default-header" role="banner" aria-label="Header">
+                        <div class="row">
+                            <header class="col-md-12" aria-hidden="true">
+                                <h1 class="title">
+                                    <b>German Corona Consensus Data Set - Implementation Guide</b>
+                                </h1>
+                            </header>
+                        </div>
+                    </div>
+
+                    <div class="container-fluid">
+                        <div id="guide-panel">
+                            <div class="tree-panel" role="navigation" aria-label="Main menu">
+                                
+
+<div class="tree-content">
+    <div>
+
+        <input data-val="true" data-val-required="The Id field is required." id="GuideId" name="Guide.Id" type="hidden" value="1252" />
+
+        <table id="treetable" class="treetable ig-treetable">
+
+                    <tr data-id="90320"
+                        data-serial-nr="0"
+                        class="rootnode treenode">
+                        <td>
+                            <a href="Home.html">
+                                <span class="baseIcon resource"></span>
+                                <span title="Home">Home</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90323"
+                        data-parentId="90320"
+                        data-serial-nr="1"
+                        class="treenode">
+                        <td>
+                            <a href="Introduction.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Introduction">Introduction</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90324"
+                        data-parentId="90323"
+                        data-serial-nr="2"
+                        class="treenode">
+                        <td>
+                            <a href="TransactionBundle.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Transaction Bundle">Transaction Bundle</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90322"
+                        data-parentId="90320"
+                        data-serial-nr="3"
+                        class="treenode">
+                        <td>
+                            <a href="GECCOCore.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="GECCO Core">GECCO Core</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90325"
+                        data-parentId="90322"
+                        data-serial-nr="4"
+                        class="treenode">
+                        <td>
+                            <a href="AnamnesisRiskfactors.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Anamnesis / Risk factors">Anamnesis / Risk factors</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90396"
+                        data-parentId="90325"
+                        data-serial-nr="5"
+                        class="treenode">
+                        <td>
+                            <a href="Chroniclungdiseases-duplicate-2.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Chronic lung diseases">Chronic lung diseases</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90368"
+                        data-parentId="90325"
+                        data-serial-nr="6"
+                        class="treenode">
+                        <td>
+                            <a href="Disordersofcardiovascularsystem.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Disorders of cardiovascular system">Disorders of cardiovascular system</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90369"
+                        data-parentId="90325"
+                        data-serial-nr="7"
+                        class="treenode">
+                        <td>
+                            <a href="Chronicliverdiseases-duplicate-2.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Chronic liver diseases">Chronic liver diseases</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90370"
+                        data-parentId="90325"
+                        data-serial-nr="8"
+                        class="treenode">
+                        <td>
+                            <a href="Rheumatologicalimmunologicaldiseases-duplicate-2.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Rheumatological/immunological diseases">Rheumatological/immunological diseases</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90371"
+                        data-parentId="90325"
+                        data-serial-nr="9"
+                        class="treenode">
+                        <td>
+                            <a href="Humanimmunodeficiencyvirusinfection-duplicate-2.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Human immunodeficiency virus infection">Human immunodeficiency virus infection</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90372"
+                        data-parentId="90325"
+                        data-serial-nr="10"
+                        class="treenode">
+                        <td>
+                            <a href="Historyofbeingatissueororganrecipient.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="History of being a tissue or organ recipient">History of being a tissue or organ recipient</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90373"
+                        data-parentId="90325"
+                        data-serial-nr="11"
+                        class="treenode">
+                        <td>
+                            <a href="Diabetesmellitus-duplicate-2.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Diabetes mellitus">Diabetes mellitus</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90374"
+                        data-parentId="90325"
+                        data-serial-nr="12"
+                        class="treenode">
+                        <td>
+                            <a href="Malignantneoplasticdiseases.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Malignant neoplastic diseases">Malignant neoplastic diseases</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90375"
+                        data-parentId="90325"
+                        data-serial-nr="13"
+                        class="treenode">
+                        <td>
+                            <a href="Tobaccosmokingstatus.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Tobacco smoking status">Tobacco smoking status</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90376"
+                        data-parentId="90325"
+                        data-serial-nr="14"
+                        class="treenode">
+                        <td>
+                            <a href="Chronicneurologicalormentaldiseases.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Chronic neurological or mental diseases">Chronic neurological or mental diseases</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90377"
+                        data-parentId="90325"
+                        data-serial-nr="15"
+                        class="treenode">
+                        <td>
+                            <a href="Respiratorytherapies-duplicate-2.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Respiratory therapies">Respiratory therapies</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90378"
+                        data-parentId="90325"
+                        data-serial-nr="16"
+                        class="treenode">
+                        <td>
+                            <a href="Chronickidneydiseases-duplicate-2.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Chronic kidney diseases">Chronic kidney diseases</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90379"
+                        data-parentId="90325"
+                        data-serial-nr="17"
+                        class="treenode">
+                        <td>
+                            <a href="Historyoftravel-duplicate-3.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="History of travel">History of travel</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90380"
+                        data-parentId="90325"
+                        data-serial-nr="18"
+                        class="treenode">
+                        <td>
+                            <a href="Gastrointestinalulcers-duplicate-2.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Gastrointestinal ulcers">Gastrointestinal ulcers</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90381"
+                        data-parentId="90325"
+                        data-serial-nr="19"
+                        class="treenode">
+                        <td>
+                            <a href="Immunizationstatus.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Immunization status">Immunization status</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90382"
+                        data-parentId="90325"
+                        data-serial-nr="20"
+                        class="treenode">
+                        <td>
+                            <a href="Resuscitationstatus-duplicate-2.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Resuscitation status">Resuscitation status</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90326"
+                        data-parentId="90322"
+                        data-serial-nr="21"
+                        class="treenode">
+                        <td>
+                            <a href="Imaging.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Imaging">Imaging</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90383"
+                        data-parentId="90326"
+                        data-serial-nr="22"
+                        class="treenode">
+                        <td>
+                            <a href="Imagingprocedures.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Imaging procedures">Imaging procedures</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90384"
+                        data-parentId="90326"
+                        data-serial-nr="23"
+                        class="treenode">
+                        <td>
+                            <a href="Radiologicalfindings.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Radiological findings">Radiological findings</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90327"
+                        data-parentId="90322"
+                        data-serial-nr="24"
+                        class="treenode">
+                        <td>
+                            <a href="Demographics.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Demographics">Demographics</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90385"
+                        data-parentId="90327"
+                        data-serial-nr="25"
+                        class="treenode">
+                        <td>
+                            <a href="Pregnancy.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Pregnancy">Pregnancy</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90386"
+                        data-parentId="90327"
+                        data-serial-nr="26"
+                        class="treenode">
+                        <td>
+                            <a href="Ethnicgroup-duplicate-2.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Ethnic group">Ethnic group</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90387"
+                        data-parentId="90327"
+                        data-serial-nr="27"
+                        class="treenode">
+                        <td>
+                            <a href="Biologicalsex.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Biological sex">Biological sex</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90388"
+                        data-parentId="90327"
+                        data-serial-nr="28"
+                        class="treenode selected">
+                        <td>
+                            <a href="Dateofbirth.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Date of birth">Date of birth</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90389"
+                        data-parentId="90327"
+                        data-serial-nr="29"
+                        class="treenode">
+                        <td>
+                            <a href="Age-duplicate-2.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Age">Age</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90390"
+                        data-parentId="90327"
+                        data-serial-nr="30"
+                        class="treenode">
+                        <td>
+                            <a href="Frailtyscore-duplicate-2.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Frailty score">Frailty score</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90391"
+                        data-parentId="90327"
+                        data-serial-nr="31"
+                        class="treenode">
+                        <td>
+                            <a href="Bodyweight-duplicate-2.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Body weight">Body weight</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90392"
+                        data-parentId="90327"
+                        data-serial-nr="32"
+                        class="treenode">
+                        <td>
+                            <a href="Bodyheight-duplicate-2.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Body height">Body height</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90328"
+                        data-parentId="90322"
+                        data-serial-nr="33"
+                        class="treenode">
+                        <td>
+                            <a href="Epidemiologicalfactors.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Epidemiological factors">Epidemiological factors</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90393"
+                        data-parentId="90328"
+                        data-serial-nr="34"
+                        class="treenode">
+                        <td>
+                            <a href="ContactwithpersonssufferingfromCovid-19.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Contact with persons suffering from Covid-19?">Contact with persons suffering from Covid-19?</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90329"
+                        data-parentId="90322"
+                        data-serial-nr="35"
+                        class="treenode">
+                        <td>
+                            <a href="Complications.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Complications">Complications</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90394"
+                        data-parentId="90329"
+                        data-serial-nr="36"
+                        class="treenode">
+                        <td>
+                            <a href="Complication.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Complication">Complication</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90330"
+                        data-parentId="90322"
+                        data-serial-nr="37"
+                        class="treenode">
+                        <td>
+                            <a href="OnsetofillnessAdmission.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Onset of illness / Admission">Onset of illness / Admission</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90367"
+                        data-parentId="90330"
+                        data-serial-nr="38"
+                        class="treenode">
+                        <td>
+                            <a href="Stageatdiagnosis.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Stage at diagnosis">Stage at diagnosis</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90331"
+                        data-parentId="90322"
+                        data-serial-nr="39"
+                        class="treenode">
+                        <td>
+                            <a href="Laboratoryvalues.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Laboratory values">Laboratory values</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90366"
+                        data-parentId="90331"
+                        data-serial-nr="40"
+                        class="treenode">
+                        <td>
+                            <a href="Laboratoryvalue.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Laboratory value">Laboratory value</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90365"
+                        data-parentId="90331"
+                        data-serial-nr="41"
+                        class="treenode">
+                        <td>
+                            <a href="SARS-CoV-2-RT-PCR.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="SARS-CoV-2-RT-PCR">SARS-CoV-2-RT-PCR</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90350"
+                        data-parentId="90331"
+                        data-serial-nr="42"
+                        class="treenode">
+                        <td>
+                            <a href="SARS-CoV-2antibodies.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="SARS-CoV-2 antibodies">SARS-CoV-2 antibodies</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90332"
+                        data-parentId="90322"
+                        data-serial-nr="43"
+                        class="treenode">
+                        <td>
+                            <a href="Medication.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Medication">Medication</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90338"
+                        data-parentId="90332"
+                        data-serial-nr="44"
+                        class="treenode">
+                        <td>
+                            <a href="Covid-19therapy.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Covid-19 therapy">Covid-19 therapy</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90339"
+                        data-parentId="90332"
+                        data-serial-nr="45"
+                        class="treenode">
+                        <td>
+                            <a href="ACEinhibitors.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="ACE inhibitors">ACE inhibitors</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90340"
+                        data-parentId="90332"
+                        data-serial-nr="46"
+                        class="treenode">
+                        <td>
+                            <a href="Immunoglobulins.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Immunoglobulins">Immunoglobulins</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90341"
+                        data-parentId="90332"
+                        data-serial-nr="47"
+                        class="treenode">
+                        <td>
+                            <a href="Anticoagulation.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Anticoagulation">Anticoagulation</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90333"
+                        data-parentId="90322"
+                        data-serial-nr="48"
+                        class="treenode">
+                        <td>
+                            <a href="Outcomeatdischarge.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Outcome at discharge">Outcome at discharge</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90342"
+                        data-parentId="90333"
+                        data-serial-nr="49"
+                        class="treenode">
+                        <td>
+                            <a href="Respiratoryoutcome.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Respiratory outcome">Respiratory outcome</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90343"
+                        data-parentId="90333"
+                        data-serial-nr="50"
+                        class="treenode">
+                        <td>
+                            <a href="Typeofdischarge.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Type of discharge">Type of discharge</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90344"
+                        data-parentId="90333"
+                        data-serial-nr="51"
+                        class="treenode">
+                        <td>
+                            <a href="Follow-upswabresult.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Follow-up swab result">Follow-up swab result</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90334"
+                        data-parentId="90322"
+                        data-serial-nr="52"
+                        class="treenode">
+                        <td>
+                            <a href="StudyenrollmentInclusioncriteria.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Study enrollment / Inclusion criteria">Study enrollment / Inclusion criteria</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90345"
+                        data-parentId="90334"
+                        data-serial-nr="53"
+                        class="treenode">
+                        <td>
+                            <a href="StudyenrolmentduetoCovid-19.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Study enrolment due to Covid-19">Study enrolment due to Covid-19</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90346"
+                        data-parentId="90334"
+                        data-serial-nr="54"
+                        class="treenode">
+                        <td>
+                            <a href="Interventionalstudiesparticipation.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Interventional studies participation">Interventional studies participation</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90335"
+                        data-parentId="90322"
+                        data-serial-nr="55"
+                        class="treenode">
+                        <td>
+                            <a href="Symptoms.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Symptoms">Symptoms</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90347"
+                        data-parentId="90335"
+                        data-serial-nr="56"
+                        class="treenode">
+                        <td>
+                            <a href="Symptom.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Symptom">Symptom</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90336"
+                        data-parentId="90322"
+                        data-serial-nr="57"
+                        class="treenode">
+                        <td>
+                            <a href="Therapy.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Therapy">Therapy</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90348"
+                        data-parentId="90336"
+                        data-serial-nr="58"
+                        class="treenode">
+                        <td>
+                            <a href="DialysisHemofiltration.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Dialysis / Hemofiltration">Dialysis / Hemofiltration</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90349"
+                        data-parentId="90336"
+                        data-serial-nr="59"
+                        class="treenode">
+                        <td>
+                            <a href="Apheresis.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Apheresis">Apheresis</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90351"
+                        data-parentId="90336"
+                        data-serial-nr="60"
+                        class="treenode">
+                        <td>
+                            <a href="Proneposition.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Prone position">Prone position</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90364"
+                        data-parentId="90336"
+                        data-serial-nr="61"
+                        class="treenode">
+                        <td>
+                            <a href="ECMOtherapy.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="ECMO therapy">ECMO therapy</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90352"
+                        data-parentId="90336"
+                        data-serial-nr="62"
+                        class="treenode">
+                        <td>
+                            <a href="Isthepatientintheintensivecareunit.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Is the patient in the intensive care unit?">Is the patient in the intensive care unit?</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90353"
+                        data-parentId="90336"
+                        data-serial-nr="63"
+                        class="treenode">
+                        <td>
+                            <a href="Ventilationtype.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Ventilation type">Ventilation type</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90337"
+                        data-parentId="90322"
+                        data-serial-nr="64"
+                        class="treenode">
+                        <td>
+                            <a href="Vitalsigns.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Vital signs">Vital signs</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90354"
+                        data-parentId="90337"
+                        data-serial-nr="65"
+                        class="treenode">
+                        <td>
+                            <a href="PaCO2.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="PaCO2">PaCO2</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90355"
+                        data-parentId="90337"
+                        data-serial-nr="66"
+                        class="treenode">
+                        <td>
+                            <a href="PaO2.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="PaO2">PaO2</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90356"
+                        data-parentId="90337"
+                        data-serial-nr="67"
+                        class="treenode">
+                        <td>
+                            <a href="FiO2.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="FiO2">FiO2</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90357"
+                        data-parentId="90337"
+                        data-serial-nr="68"
+                        class="treenode">
+                        <td>
+                            <a href="pH.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="pH">pH</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90358"
+                        data-parentId="90337"
+                        data-serial-nr="69"
+                        class="treenode">
+                        <td>
+                            <a href="SOFA-Score-duplicate-2.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="SOFA-Score">SOFA-Score</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90359"
+                        data-parentId="90337"
+                        data-serial-nr="70"
+                        class="treenode">
+                        <td>
+                            <a href="Respiratoryrate-duplicate-2.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Respiratory rate">Respiratory rate</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90360"
+                        data-parentId="90337"
+                        data-serial-nr="71"
+                        class="treenode">
+                        <td>
+                            <a href="Diastolicbloodpressure.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Diastolic blood pressure">Diastolic blood pressure</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90361"
+                        data-parentId="90337"
+                        data-serial-nr="72"
+                        class="treenode">
+                        <td>
+                            <a href="Systolicbloodpressure.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Systolic blood pressure">Systolic blood pressure</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90362"
+                        data-parentId="90337"
+                        data-serial-nr="73"
+                        class="treenode">
+                        <td>
+                            <a href="Heartrate-duplicate-2.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Heart rate">Heart rate</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90363"
+                        data-parentId="90337"
+                        data-serial-nr="74"
+                        class="treenode">
+                        <td>
+                            <a href="Bodytemperature-duplicate-2.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Body temperature">Body temperature</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90395"
+                        data-parentId="90337"
+                        data-serial-nr="75"
+                        class="treenode">
+                        <td>
+                            <a href="Peripheraloxygensaturation.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Peripheral oxygen saturation">Peripheral oxygen saturation</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90321"
+                        data-parentId="90320"
+                        data-serial-nr="76"
+                        class="treenode">
+                        <td>
+                            <a href="Terminologies.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Terminologies">Terminologies</span>
+                            </a>
+                        </td>
+                    </tr>
+
+        </table>
+    </div>
+</div>
+
+<script type="text/javascript">
+    window.addEventListener('DOMContentLoaded', (event) => {
+        var resourceTreeTable = new BaseTreeTable();
+        resourceTreeTable.init("treetable");
+    });
+</script>
+
+                            </div>
+                            <div id="preview-content" class="preview-panel full-width" role="main" aria-label="Main content">
+                                
+
+<h4 id="date-of-birth">Date of birth</h4>
+<hr />
+<table class="regular">
+<thead>
+<tr>
+<th>PARAMETER CASE REPORT FORM</th>
+<th>RESPONSE OPTIONS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Date of birth</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>The <em>Patient.birthDate</em> element shall be used to capture the date of birth of a patient.</p>
+<hr />
+<p><strong>Profile - Patient</strong></p>
+<p>Canonical: <a href="https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/Patient">https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/Patient</a></p>
+<p><strong>Snapshot</strong></p>
+<p><div id="911d4c99da00422d934b9bc77352cc36" data-level="1" class="stu3-treetable"><div class="treetable-wrapper snapshot"><div class="treetable-left-panel"><table class="treetable"><tr data-id="51568b0d-367b-4462-bd3b-0d2b427fc21e" class="collapsed constraints"><td class="profile"><span class="baseIcon resource"></span><span class="constraints">Patient</span></td><td class="profile"></td><td></td><td class="profile"><a title="Patient
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-Patient.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/78930" >Patient</a></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Patient</pre></p></div><span><b>Short description </b></span><p><span>Information about an individual or animal receiving health care services</span></p><span><b>Alternate names </b></span><p><span>SubjectOfCare Client Resident</span></p><span><b>Definition </b></span><div class="markdown"><p>Demographics and other administrative information about an individual or animal receiving care or other health-related services.</p>
+</div><span><b>Data Type </b></span><p><a title="Patient
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-Patient.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/78930" >Patient</a></p><span><b>Constraints</b></span><div><ul><li class=""><b>dom-2:</b>If the resource is contained in another resource, it SHALL NOT contain nested Resources<br/><code>contained.contained.empty()</code></li><li class=""><b>dom-4:</b>If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated<br/><code>contained.meta.versionId.empty() and contained.meta.lastUpdated.empty()</code></li><li class=""><b>dom-3:</b>If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource or SHALL refer to the containing resource<br/><code>contained.where((('#'+id in (%resource.descendants().reference | %resource.descendants().as(canonical) | %resource.descendants().as(uri) | %resource.descendants().as(url))) or descendants().where(reference = '#').exists() or descendants().where(as(canonical) = '#').exists() or descendants().where(as(canonical) = '#').exists()).not()).trace('unmatched', id).empty()</code></li><li class=""><b>dom-6:</b>A resource should have narrative for robust management<br/><code>text.`div`.exists()</code></li><li class=""><b>dom-5:</b>If a resource is contained in another resource, it SHALL NOT have a security label<br/><code>contained.meta.security.empty()</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>Entity. Role, or Act</li><li class=""><b>rim:</b>Patient[classCode=PAT]</li><li class=""><b>cda:</b>ClinicalDocument.recordTarget.patientRole</li></ul></td></tr><tr id="Patient.extension" data-id="d600afa5-74de-42c4-8f63-198ee479f602" data-parentId="51568b0d-367b-4462-bd3b-0d2b427fc21e" class="collapsed sliced constraints"><td class="profile"><span class="baseIcon extension"></span><span class="constraints">extension</span></td><td class="profile"></td><td class="profile"><span>0</span><span>..</span><span>*</span></td><td class="profile"><a title="Extension
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-Extension.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/79955" >Extension</a></td><td class="details hidden"><span class="pin-control"></span><span><b>Element Id</b></span><div><p><pre>Patient.extension</pre></p></div><span><b>Short description </b></span><p><span>Additional content defined by implementations</span></p><span><b>Alternate names </b></span><p><span>extensions</span><span>, </span><span>user content</span></p><span><b>Definition </b></span><div class="markdown"><p>May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.</p>
+</div><span><b>Comments </b></span><div class="markdown"><p>There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.</p>
+</div><span><b>Data Type </b></span><p><a title="Extension
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-Extension.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/79955" >Extension</a></p><span class="constraints"><b>Sliced: </b></span><p><span class="constraints">Unordered, Open, by url(Value)</span></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li><li class=""><b>ext-1:</b>Must have either extensions or value[x], not both<br/><code>extension.exists() != value.exists()</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li><li class=""><b>rim:</b>N/A</li></ul></td></tr><tr id="Patient.extension:ethnicGroup" data-id="aa7c74ec-ad4f-417e-8ba5-a9b8a526e599" data-parentId="d600afa5-74de-42c4-8f63-198ee479f602" class="constraints"><td class="profile"><span class="baseIcon extension"></span><span class="constraints">ethnicGroup</span></td><td class="profile"><span class="mustsupport constraints" title="This element is an element that must be supported">S</span></td><td class="profile"><span>0</span><span>..</span><span>*</span></td><td class="profile"><a title="Extension
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-Extension.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/79955"  class="constraints">Extension</a><span class="constraints">(</span><a title="Coding
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-Coding.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81979" >Coding</a><span class="constraints">)</span></td><td class="details hidden"><span class="pin-control"></span><span><b>Element Id</b></span><div><p><pre>Patient.extension:ethnicGroup</pre></p></div><span><b>Short description </b></span><p><span>Optional Extensions Element</span></p><span><b>Alternate names </b></span><p><span>extensions</span><span>, </span><span>user content</span></p><span><b>Definition </b></span><div class="markdown"><p>Optional Extension Element - found in all resources.</p>
+</div><span><b>Comments </b></span><div class="markdown"><p>There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.</p>
+</div><span class="constraints"><b>Data Type </b></span><p><a title="Extension
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-Extension.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/79955"  class="constraints">Extension</a><span class="constraints">(</span><a title="Coding
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-Coding.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81979" >Coding</a><span class="constraints">)</span></p><span class="constraints"><b>Extension URL </b></span><p><a  href="artifacts/EthnicGroup.xml" target="Ethnic group of a patient" class="constraints">https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/ethnic-group</a></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li><li class=""><b>ext-1:</b>Must have either extensions or value[x], not both<br/><code>extension.exists() != value.exists()</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li><li class=""><b>rim:</b>N/A</li></ul></td></tr><tr id="Patient.extension:age" data-id="5c548e4e-e6bc-43ac-b806-d6ad6f405557" data-parentId="d600afa5-74de-42c4-8f63-198ee479f602" class="constraints"><td class="profile"><span class="baseIcon extension"></span><span class="constraints">age</span></td><td class="profile"><span class="mustsupport constraints" title="This element is an element that must be supported">S</span></td><td class="profile"><span>0</span><span class="constraints">..</span><span class="constraints">1</span></td><td class="profile"><a title="Extension
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-Extension.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/79955"  class="constraints">Extension</a><span class="constraints">(</span><span class="constraints">Complex</span><span class="constraints">)</span></td><td class="details hidden"><span class="pin-control"></span><span><b>Element Id</b></span><div><p><pre>Patient.extension:age</pre></p></div><span><b>Short description </b></span><p><span>Optional Extensions Element</span></p><span><b>Alternate names </b></span><p><span>extensions</span><span>, </span><span>user content</span></p><span><b>Definition </b></span><div class="markdown"><p>Optional Extension Element - found in all resources.</p>
+</div><span><b>Comments </b></span><div class="markdown"><p>There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.</p>
+</div><span class="constraints"><b>Data Type </b></span><p><a title="Extension
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-Extension.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/79955"  class="constraints">Extension</a><span class="constraints">(</span><span class="constraints">Complex</span><span class="constraints">)</span></p><span class="constraints"><b>Extension URL </b></span><p><a  href="artifacts/Extension-Patient-Age.xml" target="This extension captures a patient&#39;s age at a certain point in time." class="constraints">https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/age</a></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li><li class=""><b>ext-1:</b>Must have either extensions or value[x], not both<br/><code>extension.exists() != value.exists()</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li><li class=""><b>rim:</b>N/A</li></ul></td></tr><tr id="Patient.identifier" data-id="671acdfc-dc4a-4690-9119-0b9f5f4d1f1e" data-parentId="51568b0d-367b-4462-bd3b-0d2b427fc21e" class=""><td class="profile"><span class="baseIcon datatype"></span><span>identifier</span></td><td class="profile"><span title="This element is an element that is part of the summary">Σ</span></td><td class="profile"><span>0</span><span>..</span><span>*</span></td><td class="profile"><a title="Identifier
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-Identifier.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/82704" >Identifier</a></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Patient.identifier</pre></p></div><span><b>Short description </b></span><p><span>An identifier for this patient</span></p><span><b>Definition </b></span><div class="markdown"><p>An identifier for this patient.</p>
+</div><span><b>Requirements </b></span><div class="markdown"><p>Patients are almost always assigned specific numerical identifiers.</p>
+</div><span><b>Data Type </b></span><p><a title="Identifier
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-Identifier.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/82704" >Identifier</a></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li><li class=""><b>v2:</b>CX / EI (occasionally, more often EI maps to a resource id or a URL)</li><li class=""><b>rim:</b>II - The Identifier class is a little looser than the v3 type II because it allows URIs as well as registered OIDs or GUIDs.  Also maps to Role[classCode=IDENT]</li><li class=""><b>servd:</b>Identifier</li><li class=""><b>w5:</b>FiveWs.identifier</li><li class=""><b>v2:</b>PID-3</li><li class=""><b>rim:</b>id</li><li class=""><b>cda:</b>.id</li></ul></td></tr><tr id="Patient.active" data-id="03336574-0274-40be-86f1-a5e4c0c43211" data-parentId="51568b0d-367b-4462-bd3b-0d2b427fc21e" class=""><td class="profile"><span class="baseIcon primitive"></span><span>active</span></td><td class="profile"><span title="This element is an element that is part of the summary">Σ</span> <span title="This element is a modifying element">?!</span></td><td class="profile"><span>0</span><span>..</span><span>1</span></td><td class="profile"><a title="boolean
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-boolean.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/82930" >boolean</a></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Patient.active</pre></p></div><span><b>Short description </b></span><p><span>Whether this patient&#39;s record is in active use</span></p><span><b>Definition </b></span><div class="markdown"><p>Whether this patient record is in active use.
+Many systems use this property to mark as non-current patients, such as those that have not been seen for a period of time based on an organization's business rules.</p>
+<p>It is often used to filter patient lists to exclude inactive patients</p>
+<p>Deceased patients may also be marked as inactive for the same reasons, but may be active for some time after death.</p>
+</div><span><b>Requirements </b></span><div class="markdown"><p>Need to be able to mark a patient record as not to be used because it was created in error.</p>
+</div><span><b>Comments </b></span><div class="markdown"><p>If a record is inactive, and linked to an active record, then future patient/record updates should occur on the other patient.</p>
+</div><span><b>Data Type </b></span><p><a title="boolean
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-boolean.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/82930" >boolean</a></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li><li class=""><b>w5:</b>FiveWs.status</li><li class=""><b>rim:</b>statusCode</li><li class=""><b>cda:</b>n/a</li></ul></td></tr><tr id="Patient.name" data-id="731328bc-e787-418c-bb64-a8362436b729" data-parentId="51568b0d-367b-4462-bd3b-0d2b427fc21e" class=""><td class="profile"><span class="baseIcon datatype"></span><span>name</span></td><td class="profile"><span title="This element is an element that is part of the summary">Σ</span></td><td class="profile"><span>0</span><span>..</span><span>*</span></td><td class="profile"><a title="HumanName
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-HumanName.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/78879" >HumanName</a></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Patient.name</pre></p></div><span><b>Short description </b></span><p><span>A name associated with the patient</span></p><span><b>Definition </b></span><div class="markdown"><p>A name associated with the individual.</p>
+</div><span><b>Requirements </b></span><div class="markdown"><p>Need to be able to track the patient by multiple names. Examples are your official name and a partner name.</p>
+</div><span><b>Comments </b></span><div class="markdown"><p>A patient may have multiple names with different uses or applicable periods. For animals, the name is a &quot;HumanName&quot; in the sense that is assigned and used by humans and has the same patterns.</p>
+</div><span><b>Data Type </b></span><p><a title="HumanName
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-HumanName.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/78879" >HumanName</a></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li><li class=""><b>v2:</b>XPN</li><li class=""><b>rim:</b>EN (actually, PN)</li><li class=""><b>servd:</b>ProviderName</li><li class=""><b>v2:</b>PID-5, PID-9</li><li class=""><b>rim:</b>name</li><li class=""><b>cda:</b>.patient.name</li></ul></td></tr><tr id="Patient.telecom" data-id="4e9ed838-9129-42a6-841d-449fa22d5403" data-parentId="51568b0d-367b-4462-bd3b-0d2b427fc21e" class=""><td class="profile"><span class="baseIcon datatype"></span><span>telecom</span></td><td class="profile"><span title="This element is an element that is part of the summary">Σ</span></td><td class="profile"><span>0</span><span>..</span><span>*</span></td><td class="profile"><a title="ContactPoint
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-ContactPoint.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/83048" >ContactPoint</a></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Patient.telecom</pre></p></div><span><b>Short description </b></span><p><span>A contact detail for the individual</span></p><span><b>Definition </b></span><div class="markdown"><p>A contact detail (e.g. a telephone number or an email address) by which the individual may be contacted.</p>
+</div><span><b>Requirements </b></span><div class="markdown"><p>People have (primary) ways to contact them in some way such as phone, email.</p>
+</div><span><b>Comments </b></span><div class="markdown"><p>A Patient may have multiple ways to be contacted with different uses or applicable periods.  May need to have options for contacting the person urgently and also to help with identification. The address might not go directly to the individual, but may reach another party that is able to proxy for the patient (i.e. home phone, or pet owner's phone).</p>
+</div><span><b>Data Type </b></span><p><a title="ContactPoint
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-ContactPoint.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/83048" >ContactPoint</a></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li><li class=""><b>cpt-2:</b>A system is required if a value is provided.<br/><code>value.empty() or system.exists()</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li><li class=""><b>v2:</b>XTN</li><li class=""><b>rim:</b>TEL</li><li class=""><b>servd:</b>ContactPoint</li><li class=""><b>v2:</b>PID-13, PID-14, PID-40</li><li class=""><b>rim:</b>telecom</li><li class=""><b>cda:</b>.telecom</li></ul></td></tr><tr id="Patient.gender" data-id="6f8b10fc-a33f-42e2-a9b8-1932d7a51065" data-parentId="51568b0d-367b-4462-bd3b-0d2b427fc21e" class=""><td class="profile"><span class="baseIcon primitive"></span><span>gender</span></td><td class="profile"><span title="This element is an element that is part of the summary">Σ</span></td><td class="profile"><span>0</span><span>..</span><span>1</span></td><td class="profile"><a title="code
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-code.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/82771" >code</a><span class="binding-label">Binding</span></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Patient.gender</pre></p></div><span><b>Short description </b></span><p><span>male | female | other | unknown</span></p><span><b>Definition </b></span><div class="markdown"><p>Administrative Gender - the gender that the patient is considered to have for administration and record keeping purposes.</p>
+</div><span><b>Requirements </b></span><div class="markdown"><p>Needed for identification of the individual, in combination with (at least) name and birth date.</p>
+</div><span><b>Comments </b></span><div class="markdown"><p>The gender might not match the biological sex as determined by genetics or the individual's preferred identification. Note that for both humans and particularly animals, there are other legitimate possibilities than male and female, though the vast majority of systems and contexts only support male and female.  Systems providing decision support or enforcing business rules should ideally do this on the basis of Observations dealing with the specific sex or gender aspect of interest (anatomical, chromosomal, social, etc.)  However, because these observations are infrequently recorded, defaulting to the administrative gender is common practice.  Where such defaulting occurs, rule enforcement should allow for the variation between administrative and biological, chromosomal and other gender aspects.  For example, an alert about a hysterectomy on a male should be handled as a warning or overridable error, not a &quot;hard&quot; error.  See the Patient Gender and Sex section for additional information about communicating patient gender and sex.</p>
+</div><span><b>Data Type </b></span><p><a title="code
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-code.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/82771" >code</a></p><span><b>Binding </b></span><p><a title="AdministrativeGender
+hl7.fhir.r4.core 4.0.1
+ValueSet-administrative-gender.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/80273" >AdministrativeGender</a><span> (</span><a title="To be conformant, instances of this element SHALL include a code from the specified valueset" href="http://hl7.org/fhir/r4/terminologies.html#required" >required</a><span>)</span></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li><li class=""><b>v2:</b>PID-8</li><li class=""><b>rim:</b>player[classCode=PSN|ANM and determinerCode=INSTANCE]/administrativeGender</li><li class=""><b>cda:</b>.patient.administrativeGenderCode</li></ul></td></tr><tr id="Patient.birthDate" data-id="8ac9447e-7f08-4bc9-b815-827e83a88d8a" data-parentId="51568b0d-367b-4462-bd3b-0d2b427fc21e" class="constraints"><td class="profile"><span class="baseIcon primitive"></span><span class="constraints">birthDate</span></td><td class="profile"><span class="mustsupport constraints" title="This element is an element that must be supported">S</span> <span title="This element is an element that is part of the summary">Σ</span></td><td class="profile"><span>0</span><span>..</span><span>1</span></td><td class="profile"><a title="date
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-date.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/79679" >date</a></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Patient.birthDate</pre></p></div><span><b>Short description </b></span><p><span>The date of birth for the individual</span></p><span><b>Definition </b></span><div class="markdown"><p>The date of birth for the individual.</p>
+</div><span><b>Requirements </b></span><div class="markdown"><p>Age of the individual drives many clinical processes.</p>
+</div><span><b>Comments </b></span><div class="markdown"><p>At least an estimated year should be provided as a guess if the real DOB is unknown  There is a standard extension &quot;patient-birthTime&quot; available that should be used where Time is required (such as in maternity/infant care systems).</p>
+</div><span><b>Data Type </b></span><p><a title="date
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-date.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/79679" >date</a></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li><li class=""><b>v2:</b>PID-7</li><li class=""><b>rim:</b>player[classCode=PSN|ANM and determinerCode=INSTANCE]/birthTime</li><li class=""><b>cda:</b>.patient.birthTime</li><li class=""><b>loinc:</b>21112-8</li></ul></td></tr><tr id="Patient.deceased[x]" data-id="3770a506-d412-49c9-882d-8e64b2f725c0" data-parentId="51568b0d-367b-4462-bd3b-0d2b427fc21e" class="collapsed"><td class="profile"><span class="baseIcon valueX"></span><span>deceased[x]</span></td><td class="profile"><span title="This element is an element that is part of the summary">Σ</span> <span title="This element is a modifying element">?!</span></td><td class="profile"><span>0</span><span>..</span><span>1</span></td><td class="profile"></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Patient.deceased[x]</pre></p></div><span><b>Short description </b></span><p><span>Indicates if the individual is deceased or not</span></p><span><b>Definition </b></span><div class="markdown"><p>Indicates if the individual is deceased or not.</p>
+</div><span><b>Requirements </b></span><div class="markdown"><p>The fact that a patient is deceased influences the clinical process. Also, in human communication and relation management it is necessary to know whether the person is alive.</p>
+</div><span><b>Comments </b></span><div class="markdown"><p>If there's no value in the instance, it means there is no statement on whether or not the individual is deceased. Most systems will interpret the absence of a value as a sign of the person being alive.</p>
+</div><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li><li class=""><b>v2:</b>PID-30  (bool) and PID-29 (datetime)</li><li class=""><b>rim:</b>player[classCode=PSN|ANM and determinerCode=INSTANCE]/deceasedInd, player[classCode=PSN|ANM and determinerCode=INSTANCE]/deceasedTime</li><li class=""><b>cda:</b>n/a</li></ul></td></tr><tr id="Patient.deceasedBoolean" data-id="a415c7ad-0dca-45de-84d8-ca42107abafd" data-parentId="3770a506-d412-49c9-882d-8e64b2f725c0" class=""><td class="profile"><span class="baseIcon primitive"></span><span>deceasedBoolean</span></td><td class="profile"></td><td></td><td class="profile"><a title="boolean
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-boolean.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/82930" >boolean</a></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Data Type </b></span><p><a title="boolean
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-boolean.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/82930" >boolean</a></p></td></tr><tr id="Patient.deceasedDateTime" data-id="65f450f8-248e-4c2f-b3d0-c45bd2077f03" data-parentId="3770a506-d412-49c9-882d-8e64b2f725c0" class=""><td class="profile"><span class="baseIcon primitive"></span><span>deceasedDateTime</span></td><td class="profile"></td><td></td><td class="profile"><a title="dateTime
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-dateTime.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81730" >dateTime</a></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Data Type </b></span><p><a title="dateTime
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-dateTime.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81730" >dateTime</a></p></td></tr><tr id="Patient.address" data-id="02d874f7-8954-4db0-86d5-9a77415dc565" data-parentId="51568b0d-367b-4462-bd3b-0d2b427fc21e" class=""><td class="profile"><span class="baseIcon datatype"></span><span>address</span></td><td class="profile"><span title="This element is an element that is part of the summary">Σ</span></td><td class="profile"><span>0</span><span>..</span><span>*</span></td><td class="profile"><a title="Address
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-Address.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81295" >Address</a></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Patient.address</pre></p></div><span><b>Short description </b></span><p><span>An address for the individual</span></p><span><b>Definition </b></span><div class="markdown"><p>An address for the individual.</p>
+</div><span><b>Requirements </b></span><div class="markdown"><p>May need to keep track of patient addresses for contacting, billing or reporting requirements and also to help with identification.</p>
+</div><span><b>Comments </b></span><div class="markdown"><p>Patient may have multiple addresses with different uses or applicable periods.</p>
+</div><span><b>Data Type </b></span><p><a title="Address
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-Address.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81295" >Address</a></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li><li class=""><b>v2:</b>XAD</li><li class=""><b>rim:</b>AD</li><li class=""><b>servd:</b>Address</li><li class=""><b>v2:</b>PID-11</li><li class=""><b>rim:</b>addr</li><li class=""><b>cda:</b>.addr</li></ul></td></tr><tr id="Patient.maritalStatus" data-id="a77adc60-1761-4518-9c27-cee191d4d6e2" data-parentId="51568b0d-367b-4462-bd3b-0d2b427fc21e" class=""><td class="profile"><span class="baseIcon datatype"></span><span>maritalStatus</span></td><td class="profile"></td><td class="profile"><span>0</span><span>..</span><span>1</span></td><td class="profile"><a title="CodeableConcept
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-CodeableConcept.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/83219" >CodeableConcept</a><span class="binding-label">Binding</span></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Patient.maritalStatus</pre></p></div><span><b>Short description </b></span><p><span>Marital (civil) status of a patient</span></p><span><b>Definition </b></span><div class="markdown"><p>This field contains a patient's most recent marital (civil) status.</p>
+</div><span><b>Requirements </b></span><div class="markdown"><p>Most, if not all systems capture it.</p>
+</div><span><b>Comments </b></span><div class="markdown"><p>Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination.</p>
+</div><span><b>Data Type </b></span><p><a title="CodeableConcept
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-CodeableConcept.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/83219" >CodeableConcept</a></p><span><b>Binding </b></span><p><a title="Marital Status Codes
+hl7.fhir.r4.core 4.0.1
+ValueSet-marital-status.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81434" >Marital Status Codes</a><span> (</span><a title="To be conformant, instances of this element SHALL include a code from the specified value set if any of the codes within the value set can apply to the concept being communicated. If the valueset does not cover the concept (based on human review), alternate codings (or, data type allowing, text) may be included instead." href="http://hl7.org/fhir/r4/terminologies.html#extensible" >extensible</a><span>)</span></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li><li class=""><b>v2:</b>CE/CNE/CWE</li><li class=""><b>rim:</b>CD</li><li class=""><b>orim:</b>fhir:CodeableConcept rdfs:subClassOf dt:CD</li><li class=""><b>v2:</b>PID-16</li><li class=""><b>rim:</b>player[classCode=PSN]/maritalStatusCode</li><li class=""><b>cda:</b>.patient.maritalStatusCode</li></ul></td></tr><tr id="Patient.multipleBirth[x]" data-id="b4f40bc7-57ae-4128-abc4-e080eaa5d794" data-parentId="51568b0d-367b-4462-bd3b-0d2b427fc21e" class="collapsed"><td class="profile"><span class="baseIcon valueX"></span><span>multipleBirth[x]</span></td><td class="profile"></td><td class="profile"><span>0</span><span>..</span><span>1</span></td><td class="profile"></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Patient.multipleBirth[x]</pre></p></div><span><b>Short description </b></span><p><span>Whether patient is part of a multiple birth</span></p><span><b>Definition </b></span><div class="markdown"><p>Indicates whether the patient is part of a multiple (boolean) or indicates the actual birth order (integer).</p>
+</div><span><b>Requirements </b></span><div class="markdown"><p>For disambiguation of multiple-birth children, especially relevant where the care provider doesn't meet the patient, such as labs.</p>
+</div><span><b>Comments </b></span><div class="markdown"><p>Where the valueInteger is provided, the number is the birth number in the sequence. E.g. The middle birth in triplets would be valueInteger=2 and the third born would have valueInteger=3 If a boolean value was provided for this triplets example, then all 3 patient records would have valueBoolean=true (the ordering is not indicated).</p>
+</div><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li><li class=""><b>v2:</b>PID-24 (bool), PID-25 (integer)</li><li class=""><b>rim:</b>player[classCode=PSN|ANM and determinerCode=INSTANCE]/multipleBirthInd,  player[classCode=PSN|ANM and determinerCode=INSTANCE]/multipleBirthOrderNumber</li><li class=""><b>cda:</b>n/a</li></ul></td></tr><tr id="Patient.multipleBirthBoolean" data-id="e3142515-61aa-407e-88bd-52a8da9d8269" data-parentId="b4f40bc7-57ae-4128-abc4-e080eaa5d794" class=""><td class="profile"><span class="baseIcon primitive"></span><span>multipleBirthBoolean</span></td><td class="profile"></td><td></td><td class="profile"><a title="boolean
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-boolean.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/82930" >boolean</a></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Data Type </b></span><p><a title="boolean
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-boolean.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/82930" >boolean</a></p></td></tr><tr id="Patient.multipleBirthInteger" data-id="cf07d34e-4efc-4329-8ab7-1bd5eda7685d" data-parentId="b4f40bc7-57ae-4128-abc4-e080eaa5d794" class=""><td class="profile"><span class="baseIcon primitive"></span><span>multipleBirthInteger</span></td><td class="profile"></td><td></td><td class="profile"><a title="integer
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-integer.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/79042" >integer</a></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Data Type </b></span><p><a title="integer
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-integer.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/79042" >integer</a></p></td></tr><tr id="Patient.photo" data-id="e99b7545-d11d-4917-98ad-9e27cee73eb7" data-parentId="51568b0d-367b-4462-bd3b-0d2b427fc21e" class=""><td class="profile"><span class="baseIcon datatype"></span><span>photo</span></td><td class="profile"></td><td class="profile"><span>0</span><span>..</span><span>*</span></td><td class="profile"><a title="Attachment
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-Attachment.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81613" >Attachment</a></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Patient.photo</pre></p></div><span><b>Short description </b></span><p><span>Image of the patient</span></p><span><b>Definition </b></span><div class="markdown"><p>Image of the patient.</p>
+</div><span><b>Requirements </b></span><div class="markdown"><p>Many EHR systems have the capability to capture an image of the patient. Fits with newer social media usage too.</p>
+</div><span><b>Comments </b></span><div class="markdown"><p>Guidelines:</p>
+<ul>
+<li>Use id photos, not clinical photos.</li>
+<li>Limit dimensions to thumbnail.</li>
+<li>Keep byte count low to ease resource updates.</li>
+</ul>
+</div><span><b>Data Type </b></span><p><a title="Attachment
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-Attachment.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81613" >Attachment</a></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li><li class=""><b>att-1:</b>If the Attachment has data, it SHALL have a contentType<br/><code>data.empty() or contentType.exists()</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li><li class=""><b>v2:</b>ED/RP</li><li class=""><b>rim:</b>ED</li><li class=""><b>v2:</b>OBX-5 - needs a profile</li><li class=""><b>rim:</b>player[classCode=PSN|ANM and determinerCode=INSTANCE]/desc</li><li class=""><b>cda:</b>n/a</li></ul></td></tr><tr id="Patient.contact" data-id="c01d2be5-998a-4a46-a8c0-8db20d5f6984" data-parentId="51568b0d-367b-4462-bd3b-0d2b427fc21e" class="collapsed"><td class="profile"><span class="baseIcon backboneElement"></span><span>contact</span></td><td class="profile"></td><td class="profile"><span>0</span><span>..</span><span>*</span></td><td class="profile"><a title="BackboneElement
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-BackboneElement.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81560" >BackboneElement</a></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Patient.contact</pre></p></div><span><b>Short description </b></span><p><span>A contact party (e.g. guardian, partner, friend) for the patient</span></p><span><b>Definition </b></span><div class="markdown"><p>A contact party (e.g. guardian, partner, friend) for the patient.</p>
+</div><span><b>Requirements </b></span><div class="markdown"><p>Need to track people you can contact about the patient.</p>
+</div><span><b>Comments </b></span><div class="markdown"><p>Contact covers all kinds of contact parties: family members, business contacts, guardians, caregivers. Not applicable to register pedigree and family ties beyond use of having contact.</p>
+</div><span><b>Data Type </b></span><p><a title="BackboneElement
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-BackboneElement.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81560" >BackboneElement</a></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li><li class=""><b>pat-1:</b>SHALL at least contain a contact&#39;s details or a reference to an organization<br/><code>name.exists() or telecom.exists() or address.exists() or organization.exists()</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li><li class=""><b>rim:</b>player[classCode=PSN|ANM and determinerCode=INSTANCE]/scopedRole[classCode=CON]</li><li class=""><b>cda:</b>n/a</li></ul></td></tr><tr id="Patient.contact.relationship" data-id="fb61d7a7-c7e0-43f8-8b29-2626bb1a147b" data-parentId="c01d2be5-998a-4a46-a8c0-8db20d5f6984" class=""><td class="profile"><span class="baseIcon datatype"></span><span>relationship</span></td><td class="profile"></td><td class="profile"><span>0</span><span>..</span><span>*</span></td><td class="profile"><a title="CodeableConcept
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-CodeableConcept.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/83219" >CodeableConcept</a><span class="binding-label">Binding</span></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Patient.contact.relationship</pre></p></div><span><b>Short description </b></span><p><span>The kind of relationship</span></p><span><b>Definition </b></span><div class="markdown"><p>The nature of the relationship between the patient and the contact person.</p>
+</div><span><b>Requirements </b></span><div class="markdown"><p>Used to determine which contact person is the most relevant to approach, depending on circumstances.</p>
+</div><span><b>Comments </b></span><div class="markdown"><p>Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination.</p>
+</div><span><b>Data Type </b></span><p><a title="CodeableConcept
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-CodeableConcept.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/83219" >CodeableConcept</a></p><span><b>Binding </b></span><p><a title="PatientContactRelationship
+hl7.fhir.r4.core 4.0.1
+ValueSet-patient-contactrelationship.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/83180" >PatientContactRelationship</a><span> (</span><a title="To be conformant, instances of this element SHALL include a code from the specified value set if any of the codes within the value set can apply to the concept being communicated. If the valueset does not cover the concept (based on human review), alternate codings (or, data type allowing, text) may be included instead." href="http://hl7.org/fhir/r4/terminologies.html#extensible" >extensible</a><span>)</span></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li><li class=""><b>v2:</b>CE/CNE/CWE</li><li class=""><b>rim:</b>CD</li><li class=""><b>orim:</b>fhir:CodeableConcept rdfs:subClassOf dt:CD</li><li class=""><b>v2:</b>NK1-7, NK1-3</li><li class=""><b>rim:</b>code</li><li class=""><b>cda:</b>n/a</li></ul></td></tr><tr id="Patient.contact.name" data-id="0676bd51-3e57-4fa8-9fc8-3435026d6a40" data-parentId="c01d2be5-998a-4a46-a8c0-8db20d5f6984" class=""><td class="profile"><span class="baseIcon datatype"></span><span>name</span></td><td class="profile"></td><td class="profile"><span>0</span><span>..</span><span>1</span></td><td class="profile"><a title="HumanName
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-HumanName.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/78879" >HumanName</a></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Patient.contact.name</pre></p></div><span><b>Short description </b></span><p><span>A name associated with the contact person</span></p><span><b>Definition </b></span><div class="markdown"><p>A name associated with the contact person.</p>
+</div><span><b>Requirements </b></span><div class="markdown"><p>Contact persons need to be identified by name, but it is uncommon to need details about multiple other names for that contact person.</p>
+</div><span><b>Comments </b></span><div class="markdown"><p>Names may be changed, or repudiated, or people may have different names in different contexts. Names may be divided into parts of different type that have variable significance depending on context, though the division into parts does not always matter. With personal names, the different parts might or might not be imbued with some implicit meaning; various cultures associate different importance with the name parts and the degree to which systems must care about name parts around the world varies widely.</p>
+</div><span><b>Data Type </b></span><p><a title="HumanName
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-HumanName.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/78879" >HumanName</a></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li><li class=""><b>v2:</b>XPN</li><li class=""><b>rim:</b>EN (actually, PN)</li><li class=""><b>servd:</b>ProviderName</li><li class=""><b>v2:</b>NK1-2</li><li class=""><b>rim:</b>name</li><li class=""><b>cda:</b>n/a</li></ul></td></tr><tr id="Patient.contact.telecom" data-id="b2363fb7-8693-4f2a-82e6-9bb2128f9ae0" data-parentId="c01d2be5-998a-4a46-a8c0-8db20d5f6984" class=""><td class="profile"><span class="baseIcon datatype"></span><span>telecom</span></td><td class="profile"></td><td class="profile"><span>0</span><span>..</span><span>*</span></td><td class="profile"><a title="ContactPoint
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-ContactPoint.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/83048" >ContactPoint</a></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Patient.contact.telecom</pre></p></div><span><b>Short description </b></span><p><span>A contact detail for the person</span></p><span><b>Definition </b></span><div class="markdown"><p>A contact detail for the person, e.g. a telephone number or an email address.</p>
+</div><span><b>Requirements </b></span><div class="markdown"><p>People have (primary) ways to contact them in some way such as phone, email.</p>
+</div><span><b>Comments </b></span><div class="markdown"><p>Contact may have multiple ways to be contacted with different uses or applicable periods.  May need to have options for contacting the person urgently, and also to help with identification.</p>
+</div><span><b>Data Type </b></span><p><a title="ContactPoint
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-ContactPoint.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/83048" >ContactPoint</a></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li><li class=""><b>cpt-2:</b>A system is required if a value is provided.<br/><code>value.empty() or system.exists()</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li><li class=""><b>v2:</b>XTN</li><li class=""><b>rim:</b>TEL</li><li class=""><b>servd:</b>ContactPoint</li><li class=""><b>v2:</b>NK1-5, NK1-6, NK1-40</li><li class=""><b>rim:</b>telecom</li><li class=""><b>cda:</b>n/a</li></ul></td></tr><tr id="Patient.contact.address" data-id="96f16586-34e1-4da9-b259-befce2dba4de" data-parentId="c01d2be5-998a-4a46-a8c0-8db20d5f6984" class=""><td class="profile"><span class="baseIcon datatype"></span><span>address</span></td><td class="profile"></td><td class="profile"><span>0</span><span>..</span><span>1</span></td><td class="profile"><a title="Address
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-Address.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81295" >Address</a></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Patient.contact.address</pre></p></div><span><b>Short description </b></span><p><span>Address for the contact person</span></p><span><b>Definition </b></span><div class="markdown"><p>Address for the contact person.</p>
+</div><span><b>Requirements </b></span><div class="markdown"><p>Need to keep track where the contact person can be contacted per postal mail or visited.</p>
+</div><span><b>Comments </b></span><div class="markdown"><p>Note: address is intended to describe postal addresses for administrative purposes, not to describe absolute geographical coordinates.  Postal addresses are often used as proxies for physical locations (also see the <a href="location.html#">Location</a> resource).</p>
+</div><span><b>Data Type </b></span><p><a title="Address
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-Address.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81295" >Address</a></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li><li class=""><b>v2:</b>XAD</li><li class=""><b>rim:</b>AD</li><li class=""><b>servd:</b>Address</li><li class=""><b>v2:</b>NK1-4</li><li class=""><b>rim:</b>addr</li><li class=""><b>cda:</b>n/a</li></ul></td></tr><tr id="Patient.contact.gender" data-id="9c6bc7f4-faec-484d-9a26-8dd60149f8fb" data-parentId="c01d2be5-998a-4a46-a8c0-8db20d5f6984" class=""><td class="profile"><span class="baseIcon primitive"></span><span>gender</span></td><td class="profile"></td><td class="profile"><span>0</span><span>..</span><span>1</span></td><td class="profile"><a title="code
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-code.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/82771" >code</a><span class="binding-label">Binding</span></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Patient.contact.gender</pre></p></div><span><b>Short description </b></span><p><span>male | female | other | unknown</span></p><span><b>Definition </b></span><div class="markdown"><p>Administrative Gender - the gender that the contact person is considered to have for administration and record keeping purposes.</p>
+</div><span><b>Requirements </b></span><div class="markdown"><p>Needed to address the person correctly.</p>
+</div><span><b>Comments </b></span><div class="markdown"><p>Note that FHIR strings SHALL NOT exceed 1MB in size</p>
+</div><span><b>Data Type </b></span><p><a title="code
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-code.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/82771" >code</a></p><span><b>Binding </b></span><p><a title="AdministrativeGender
+hl7.fhir.r4.core 4.0.1
+ValueSet-administrative-gender.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/80273" >AdministrativeGender</a><span> (</span><a title="To be conformant, instances of this element SHALL include a code from the specified valueset" href="http://hl7.org/fhir/r4/terminologies.html#required" >required</a><span>)</span></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li><li class=""><b>v2:</b>NK1-15</li><li class=""><b>rim:</b>player[classCode=PSN|ANM and determinerCode=INSTANCE]/administrativeGender</li><li class=""><b>cda:</b>n/a</li></ul></td></tr><tr id="Patient.contact.organization" data-id="cd48661d-0837-42a1-9f28-c8cc788e1479" data-parentId="c01d2be5-998a-4a46-a8c0-8db20d5f6984" class=""><td class="profile"><span class="baseIcon reference"></span><span>organization</span></td><td class="profile"></td><td class="profile"><span>0</span><span>..</span><span>1</span></td><td class="profile"><a title="Reference
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-Reference.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81189" >Reference</a><span>(</span><a title="Organization
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-Organization.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/82502" >Organization</a><span>)</span></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Patient.contact.organization</pre></p></div><span><b>Short description </b></span><p><span>Organization that is associated with the contact</span></p><span><b>Definition </b></span><div class="markdown"><p>Organization on behalf of which the contact is acting or for which the contact is working.</p>
+</div><span><b>Requirements </b></span><div class="markdown"><p>For guardians or business related contacts, the organization is relevant.</p>
+</div><span><b>Comments </b></span><div class="markdown"><p>References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.</p>
+</div><span><b>Data Type </b></span><p><a title="Reference
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-Reference.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81189" >Reference</a><span>(</span><a title="Organization
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-Organization.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/82502" >Organization</a><span>)</span></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li><li class=""><b>ref-1:</b>SHALL have a contained resource if a local reference is provided<br/><code>reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li><li class=""><b>rim:</b>The target of a resource reference is a RIM entry point (Act, Role, or Entity)</li><li class=""><b>v2:</b>NK1-13, NK1-30, NK1-31, NK1-32, NK1-41</li><li class=""><b>rim:</b>scoper</li><li class=""><b>cda:</b>n/a</li></ul></td></tr><tr id="Patient.contact.period" data-id="3726b0f8-fc9f-4592-bb40-893ef9f7378c" data-parentId="c01d2be5-998a-4a46-a8c0-8db20d5f6984" class=""><td class="profile"><span class="baseIcon datatype"></span><span>period</span></td><td class="profile"></td><td class="profile"><span>0</span><span>..</span><span>1</span></td><td class="profile"><a title="Period
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-Period.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81271" >Period</a></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Patient.contact.period</pre></p></div><span><b>Short description </b></span><p><span>The period during which this contact person or organization is valid to be contacted relating to this patient</span></p><span><b>Definition </b></span><div class="markdown"><p>The period during which this contact person or organization is valid to be contacted relating to this patient.</p>
+</div><span><b>Comments </b></span><div class="markdown"><p>A Period specifies a range of time; the context of use will specify whether the entire range applies (e.g. &quot;the patient was an inpatient of the hospital for this time range&quot;) or one value from the range applies (e.g. &quot;give to the patient between these two times&quot;).</p>
+<p>Period is not used for a duration (a measure of elapsed time). See <a href="datatypes.html#Duration">Duration</a>.</p>
+</div><span><b>Data Type </b></span><p><a title="Period
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-Period.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81271" >Period</a></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li><li class=""><b>per-1:</b>If present, start SHALL have a lower value than end<br/><code>start.hasValue().not() or end.hasValue().not() or (start <= end)</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li><li class=""><b>v2:</b>DR</li><li class=""><b>rim:</b>IVL&lt;TS&gt;[lowClosed=&quot;true&quot; and highClosed=&quot;true&quot;] or URG&lt;TS&gt;[lowClosed=&quot;true&quot; and highClosed=&quot;true&quot;]</li><li class=""><b>rim:</b>effectiveTime</li><li class=""><b>cda:</b>n/a</li></ul></td></tr><tr id="Patient.communication" data-id="bb99f6c0-3c5d-44b6-be52-446453bb5ac0" data-parentId="51568b0d-367b-4462-bd3b-0d2b427fc21e" class="collapsed"><td class="profile"><span class="baseIcon backboneElement"></span><span>communication</span></td><td class="profile"></td><td class="profile"><span>0</span><span>..</span><span>*</span></td><td class="profile"><a title="BackboneElement
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-BackboneElement.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81560" >BackboneElement</a></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Patient.communication</pre></p></div><span><b>Short description </b></span><p><span>A language which may be used to communicate with the patient about his or her health</span></p><span><b>Definition </b></span><div class="markdown"><p>A language which may be used to communicate with the patient about his or her health.</p>
+</div><span><b>Requirements </b></span><div class="markdown"><p>If a patient does not speak the local language, interpreters may be required, so languages spoken and proficiency are important things to keep track of both for patient and other persons of interest.</p>
+</div><span><b>Comments </b></span><div class="markdown"><p>If no language is specified, this <em>implies</em> that the default local language is spoken.  If you need to convey proficiency for multiple modes, then you need multiple Patient.Communication associations.   For animals, language is not a relevant field, and should be absent from the instance. If the Patient does not speak the default local language, then the Interpreter Required Standard can be used to explicitly declare that an interpreter is required.</p>
+</div><span><b>Data Type </b></span><p><a title="BackboneElement
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-BackboneElement.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81560" >BackboneElement</a></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li><li class=""><b>rim:</b>LanguageCommunication</li><li class=""><b>cda:</b>patient.languageCommunication</li></ul></td></tr><tr id="Patient.communication.language" data-id="40d15ac1-bd9d-4c71-bb4f-195ac2f2bc54" data-parentId="bb99f6c0-3c5d-44b6-be52-446453bb5ac0" class=""><td class="profile"><span class="baseIcon datatype"></span><span>language</span></td><td class="profile"></td><td class="profile"><span>1</span><span>..</span><span>1</span></td><td class="profile"><a title="CodeableConcept
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-CodeableConcept.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/83219" >CodeableConcept</a><span class="binding-label">Binding</span></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Patient.communication.language</pre></p></div><span><b>Short description </b></span><p><span>The language which can be used to communicate with the patient about his or her health</span></p><span><b>Definition </b></span><div class="markdown"><p>The ISO-639-1 alpha 2 code in lower case for the language, optionally followed by a hyphen and the ISO-3166-1 alpha 2 code for the region in upper case; e.g. &quot;en&quot; for English, or &quot;en-US&quot; for American English versus &quot;en-EN&quot; for England English.</p>
+</div><span><b>Requirements </b></span><div class="markdown"><p>Most systems in multilingual countries will want to convey language. Not all systems actually need the regional dialect.</p>
+</div><span><b>Comments </b></span><div class="markdown"><p>The structure aa-BB with this exact casing is one the most widely used notations for locale. However not all systems actually code this but instead have it as free text. Hence CodeableConcept instead of code as the data type.</p>
+</div><span><b>Data Type </b></span><p><a title="CodeableConcept
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-CodeableConcept.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/83219" >CodeableConcept</a></p><span><b>Binding </b></span><p><a title="CommonLanguages
+hl7.fhir.r4.core 4.0.1
+ValueSet-languages.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81350" >CommonLanguages</a><span> (</span><a title="Instances are encouraged to draw from the specified codes for interoperability purposes but are not required to do so to be considered conformant." href="http://hl7.org/fhir/r4/terminologies.html#preferred" >preferred</a><span>)</span></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li><li class=""><b>v2:</b>CE/CNE/CWE</li><li class=""><b>rim:</b>CD</li><li class=""><b>orim:</b>fhir:CodeableConcept rdfs:subClassOf dt:CD</li><li class=""><b>v2:</b>PID-15, LAN-2</li><li class=""><b>rim:</b>player[classCode=PSN|ANM and determinerCode=INSTANCE]/languageCommunication/code</li><li class=""><b>cda:</b>.languageCode</li></ul></td></tr><tr id="Patient.communication.preferred" data-id="b0a721ee-6467-4ff6-a0ce-ab2f208d2139" data-parentId="bb99f6c0-3c5d-44b6-be52-446453bb5ac0" class=""><td class="profile"><span class="baseIcon primitive"></span><span>preferred</span></td><td class="profile"></td><td class="profile"><span>0</span><span>..</span><span>1</span></td><td class="profile"><a title="boolean
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-boolean.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/82930" >boolean</a></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Patient.communication.preferred</pre></p></div><span><b>Short description </b></span><p><span>Language preference indicator</span></p><span><b>Definition </b></span><div class="markdown"><p>Indicates whether or not the patient prefers this language (over other languages he masters up a certain level).</p>
+</div><span><b>Requirements </b></span><div class="markdown"><p>People that master multiple languages up to certain level may prefer one or more, i.e. feel more confident in communicating in a particular language making other languages sort of a fall back method.</p>
+</div><span><b>Comments </b></span><div class="markdown"><p>This language is specifically identified for communicating healthcare information.</p>
+</div><span><b>Data Type </b></span><p><a title="boolean
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-boolean.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/82930" >boolean</a></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li><li class=""><b>v2:</b>PID-15</li><li class=""><b>rim:</b>preferenceInd</li><li class=""><b>cda:</b>.preferenceInd</li></ul></td></tr><tr id="Patient.generalPractitioner" data-id="2734bf8f-2173-4ed2-a0f1-4217125ffa48" data-parentId="51568b0d-367b-4462-bd3b-0d2b427fc21e" class=""><td class="profile"><span class="baseIcon reference"></span><span>generalPractitioner</span></td><td class="profile"></td><td class="profile"><span>0</span><span>..</span><span>*</span></td><td class="profile"><a title="Reference
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-Reference.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81189" >Reference</a><span>(</span><a title="Organization
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-Organization.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/82502" >Organization</a><span>| </span><a title="Practitioner
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-Practitioner.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/80734" >Practitioner</a><span>| </span><a title="PractitionerRole
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-PractitionerRole.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/78948" >PractitionerRole</a><span>)</span></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Patient.generalPractitioner</pre></p></div><span><b>Short description </b></span><p><span>Patient&#39;s nominated primary care provider</span></p><span><b>Alternate names </b></span><p><span>careProvider</span></p><span><b>Definition </b></span><div class="markdown"><p>Patient's nominated care provider.</p>
+</div><span><b>Comments </b></span><div class="markdown"><p>This may be the primary care provider (in a GP context), or it may be a patient nominated care manager in a community/disability setting, or even organization that will provide people to perform the care provider roles.  It is not to be used to record Care Teams, these should be in a CareTeam resource that may be linked to the CarePlan or EpisodeOfCare resources.
+Multiple GPs may be recorded against the patient for various reasons, such as a student that has his home GP listed along with the GP at university during the school semesters, or a &quot;fly-in/fly-out&quot; worker that has the onsite GP also included with his home GP to remain aware of medical issues.</p>
+<p>Jurisdictions may decide that they can profile this down to 1 if desired, or 1 per type.</p>
+</div><span><b>Data Type </b></span><p><a title="Reference
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-Reference.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81189" >Reference</a><span>(</span><a title="Organization
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-Organization.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/82502" >Organization</a><span>| </span><a title="Practitioner
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-Practitioner.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/80734" >Practitioner</a><span>| </span><a title="PractitionerRole
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-PractitionerRole.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/78948" >PractitionerRole</a><span>)</span></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li><li class=""><b>ref-1:</b>SHALL have a contained resource if a local reference is provided<br/><code>reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li><li class=""><b>rim:</b>The target of a resource reference is a RIM entry point (Act, Role, or Entity)</li><li class=""><b>v2:</b>PD1-4</li><li class=""><b>rim:</b>subjectOf.CareEvent.performer.AssignedEntity</li><li class=""><b>cda:</b>n/a</li></ul></td></tr><tr id="Patient.managingOrganization" data-id="d36832f4-568b-4c19-8841-0e1153693403" data-parentId="51568b0d-367b-4462-bd3b-0d2b427fc21e" class=""><td class="profile"><span class="baseIcon reference"></span><span>managingOrganization</span></td><td class="profile"><span title="This element is an element that is part of the summary">Σ</span></td><td class="profile"><span>0</span><span>..</span><span>1</span></td><td class="profile"><a title="Reference
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-Reference.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81189" >Reference</a><span>(</span><a title="Organization
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-Organization.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/82502" >Organization</a><span>)</span></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Patient.managingOrganization</pre></p></div><span><b>Short description </b></span><p><span>Organization that is the custodian of the patient record</span></p><span><b>Definition </b></span><div class="markdown"><p>Organization that is the custodian of the patient record.</p>
+</div><span><b>Requirements </b></span><div class="markdown"><p>Need to know who recognizes this patient record, manages and updates it.</p>
+</div><span><b>Comments </b></span><div class="markdown"><p>There is only one managing organization for a specific patient record. Other organizations will have their own Patient record, and may use the Link property to join the records together (or a Person resource which can include confidence ratings for the association).</p>
+</div><span><b>Data Type </b></span><p><a title="Reference
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-Reference.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81189" >Reference</a><span>(</span><a title="Organization
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-Organization.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/82502" >Organization</a><span>)</span></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li><li class=""><b>ref-1:</b>SHALL have a contained resource if a local reference is provided<br/><code>reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li><li class=""><b>rim:</b>The target of a resource reference is a RIM entry point (Act, Role, or Entity)</li><li class=""><b>rim:</b>scoper</li><li class=""><b>cda:</b>.providerOrganization</li></ul></td></tr><tr id="Patient.link" data-id="5a9d6e47-740a-43b5-8fcd-c78c1441d5f6" data-parentId="51568b0d-367b-4462-bd3b-0d2b427fc21e" class="collapsed"><td class="profile"><span class="baseIcon backboneElement"></span><span>link</span></td><td class="profile"><span title="This element is an element that is part of the summary">Σ</span> <span title="This element is a modifying element">?!</span></td><td class="profile"><span>0</span><span>..</span><span>*</span></td><td class="profile"><a title="BackboneElement
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-BackboneElement.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81560" >BackboneElement</a></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Patient.link</pre></p></div><span><b>Short description </b></span><p><span>Link to another patient resource that concerns the same actual person</span></p><span><b>Definition </b></span><div class="markdown"><p>Link to another patient resource that concerns the same actual patient.</p>
+</div><span><b>Requirements </b></span><div class="markdown"><p>There are multiple use cases:</p>
+<ul>
+<li>Duplicate patient records due to the clerical errors associated with the difficulties of identifying humans consistently, and</li>
+<li>Distribution of patient information across multiple servers.</li>
+</ul>
+</div><span><b>Comments </b></span><div class="markdown"><p>There is no assumption that linked patient records have mutual links.</p>
+</div><span><b>Data Type </b></span><p><a title="BackboneElement
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-BackboneElement.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81560" >BackboneElement</a></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li><li class=""><b>rim:</b>outboundLink</li><li class=""><b>cda:</b>n/a</li></ul></td></tr><tr id="Patient.link.other" data-id="4d1520f1-eca4-47ea-846d-9995b700134f" data-parentId="5a9d6e47-740a-43b5-8fcd-c78c1441d5f6" class=""><td class="profile"><span class="baseIcon reference"></span><span>other</span></td><td class="profile"><span title="This element is an element that is part of the summary">Σ</span></td><td class="profile"><span>1</span><span>..</span><span>1</span></td><td class="profile"><a title="Reference
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-Reference.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81189" >Reference</a><span>(</span><a title="Patient
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-Patient.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/78930" >Patient</a><span>| </span><a title="RelatedPerson
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-RelatedPerson.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/82312" >RelatedPerson</a><span>)</span></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Patient.link.other</pre></p></div><span><b>Short description </b></span><p><span>The other patient or related person resource that the link refers to</span></p><span><b>Definition </b></span><div class="markdown"><p>The other patient resource that the link refers to.</p>
+</div><span><b>Comments </b></span><div class="markdown"><p>Referencing a RelatedPerson here removes the need to use a Person record to associate a Patient and RelatedPerson as the same individual.</p>
+</div><span><b>Data Type </b></span><p><a title="Reference
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-Reference.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81189" >Reference</a><span>(</span><a title="Patient
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-Patient.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/78930" >Patient</a><span>| </span><a title="RelatedPerson
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-RelatedPerson.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/82312" >RelatedPerson</a><span>)</span></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li><li class=""><b>ref-1:</b>SHALL have a contained resource if a local reference is provided<br/><code>reference.startsWith('#').not() or (reference.substring(1).trace('url') in %rootResource.contained.id.trace('ids'))</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li><li class=""><b>rim:</b>The target of a resource reference is a RIM entry point (Act, Role, or Entity)</li><li class=""><b>v2:</b>PID-3, MRG-1</li><li class=""><b>rim:</b>id</li><li class=""><b>cda:</b>n/a</li></ul></td></tr><tr id="Patient.link.type" data-id="d72bae21-81e6-4149-bc65-3ac527060944" data-parentId="5a9d6e47-740a-43b5-8fcd-c78c1441d5f6" class=""><td class="profile"><span class="baseIcon primitive"></span><span>type</span></td><td class="profile"><span title="This element is an element that is part of the summary">Σ</span></td><td class="profile"><span>1</span><span>..</span><span>1</span></td><td class="profile"><a title="code
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-code.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/82771" >code</a><span class="binding-label">Binding</span></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Patient.link.type</pre></p></div><span><b>Short description </b></span><p><span>replaced-by | replaces | refer | seealso</span></p><span><b>Definition </b></span><div class="markdown"><p>The type of link between this patient resource and another patient resource.</p>
+</div><span><b>Comments </b></span><div class="markdown"><p>Note that FHIR strings SHALL NOT exceed 1MB in size</p>
+</div><span><b>Data Type </b></span><p><a title="code
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-code.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/82771" >code</a></p><span><b>Binding </b></span><p><a title="LinkType
+hl7.fhir.r4.core 4.0.1
+ValueSet-link-type.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/79739" >LinkType</a><span> (</span><a title="To be conformant, instances of this element SHALL include a code from the specified valueset" href="http://hl7.org/fhir/r4/terminologies.html#required" >required</a><span>)</span></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li><li class=""><b>rim:</b>typeCode</li><li class=""><b>cda:</b>n/a</li></ul></td></tr></table></div><div class="treetable-right-panel"></div></div></div><script type="text/javascript">
+(function() {
+var isTreetableVisible = document.querySelector(".treetable") != null;
+if (isTreetableVisible) {
+var resourceTreeTable911d4c99da00422d934b9bc77352cc36 = new Stu3TreeTable(false);
+resourceTreeTable911d4c99da00422d934b9bc77352cc36.init("911d4c99da00422d934b9bc77352cc36");
+}
+})();
+</script></p>
+<hr />
+<p><strong>Examples</strong></p>
+<p>Example patient resource:</p>
+<p><pre class="resource-validation-xml"><pre><span class="brace">{</span>
+    <span class="element">&quot;</span><span class="element">resourceType</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Patient</span><span class="string">&quot;</span><span class="symbol">,</span>
+    <span class="element">&quot;</span><span class="element">id</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">c786ac3c-0579-4aa2-adda-db784b214ad6</span><span class="string">&quot;</span><span class="symbol">,</span>
+    <span class="element">&quot;</span><span class="element">meta</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span>
+        <span class="element">&quot;</span><span class="element">profile</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace"> [</span>
+            <span class="string">&quot;</span><span class="string">https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/Patient</span><span class="string">&quot;</span>
+        <span class="brace">]</span>
+    <span class="brace">}</span><span class="symbol">,</span>
+    <span class="element">&quot;</span><span class="element">extension</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace"> [</span>
+        <span class="brace">{</span>
+            <span class="element">&quot;</span><span class="element">url</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/ethnic-group</span><span class="string">&quot;</span><span class="symbol">,</span>
+            <span class="element">&quot;</span><span class="element">valueCoding</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span>
+                <span class="element">&quot;</span><span class="element">system</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://snomed.info/sct</span><span class="string">&quot;</span><span class="symbol">,</span>
+                <span class="element">&quot;</span><span class="element">code</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">186019001</span><span class="string">&quot;</span><span class="symbol">,</span>
+                <span class="element">&quot;</span><span class="element">display</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Other ethnic, mixed origin</span><span class="string">&quot;</span>
+            <span class="brace">}</span>
+        <span class="brace">}</span><span class="symbol">,</span>
+        <span class="brace">{</span>
+            <span class="element">&quot;</span><span class="element">extension</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace"> [</span>
+                <span class="brace">{</span>
+                    <span class="element">&quot;</span><span class="element">url</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">dateTimeOfDocumentation</span><span class="string">&quot;</span><span class="symbol">,</span>
+                    <span class="element">&quot;</span><span class="element">valueDateTime</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">2020-10-01</span><span class="string">&quot;</span>
+                <span class="brace">}</span><span class="symbol">,</span>
+                <span class="brace">{</span>
+                    <span class="element">&quot;</span><span class="element">url</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">age</span><span class="string">&quot;</span><span class="symbol">,</span>
+                    <span class="element">&quot;</span><span class="element">valueAge</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span>
+                        <span class="element">&quot;</span><span class="element">value</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">67</span><span class="symbol">,</span>
+                        <span class="element">&quot;</span><span class="element">unit</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">years</span><span class="string">&quot;</span><span class="symbol">,</span>
+                        <span class="element">&quot;</span><span class="element">system</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://unitsofmeasure.org</span><span class="string">&quot;</span><span class="symbol">,</span>
+                        <span class="element">&quot;</span><span class="element">code</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">a</span><span class="string">&quot;</span>
+                    <span class="brace">}</span>
+                <span class="brace">}</span>
+            <span class="brace">]</span><span class="symbol">,</span>
+            <span class="element">&quot;</span><span class="element">url</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/age</span><span class="string">&quot;</span>
+        <span class="brace">}</span>
+    <span class="brace">]</span><span class="symbol">,</span>
+    <span class="element">&quot;</span><span class="element">birthDate</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">1953-09-30</span><span class="string">&quot;</span>
+<span class="brace">}</span></pre></pre></p>
+<hr />
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="ig-view-footer" role="contentinfo" aria-label="Footer">
+                
+<div class="container">
+    <div class="row">
+        <p>Powered by <b>SIMPLIFIER.NET</b></p>
+        <div>
+            HL7<sup>&reg;</sup> and FHIR<sup>&reg;</sup> are the registered trademarks of Health Level Seven International
+        </div>
+    </div>
+</div>
+
+            </div>
+
+        </div>
+
+    </body>
+
+</html>

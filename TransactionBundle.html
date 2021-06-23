@@ -1,0 +1,1363 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8" />
+        <title>German Corona Consensus Data Set - Implementation Guide</title>
+
+        <link rel="icon" href="guide/GermanCoronaConsensusDataSet-ImplementationGuide/files/styles/common/favicon.ico" />
+
+        <script src="guide/GermanCoronaConsensusDataSet-ImplementationGuide/files/styles/common/jquery/jquery.min.js"></script>
+        <script src="guide/GermanCoronaConsensusDataSet-ImplementationGuide/files/styles/common/bootstrap/bootstrap.min.js"></script>
+
+        <link rel="stylesheet" href="guide/GermanCoronaConsensusDataSet-ImplementationGuide/files/styles/common/main.min.css" />
+        <link rel="stylesheet" href="guide/GermanCoronaConsensusDataSet-ImplementationGuide/files/styles/common/bootstrap/bootstrap.min.css" />
+        <link rel="stylesheet" href="guide/GermanCoronaConsensusDataSet-ImplementationGuide/files/styles/common/rendering/rendering.min.css" />
+
+        <script src="guide/GermanCoronaConsensusDataSet-ImplementationGuide/files/styles/common/rendering/stu3TreeTable.min.js"></script>
+        <script src="guide/GermanCoronaConsensusDataSet-ImplementationGuide/files/styles/common/rendering/baseTreetable.min.js"></script>
+
+        <link rel="stylesheet" href="guide/GermanCoronaConsensusDataSet-ImplementationGuide/files/styles/treetable/style.css?v=1d76743ac2fc700" />
+
+    </head>
+
+    <body>
+
+        <div id="ig-viewer">
+
+            <div class="ig-view-content">
+
+                <div id="ig-view-treetable">
+
+                    <div class="segment-default-header" role="banner" aria-label="Header">
+                        <div class="row">
+                            <header class="col-md-12" aria-hidden="true">
+                                <h1 class="title">
+                                    <b>German Corona Consensus Data Set - Implementation Guide</b>
+                                </h1>
+                            </header>
+                        </div>
+                    </div>
+
+                    <div class="container-fluid">
+                        <div id="guide-panel">
+                            <div class="tree-panel" role="navigation" aria-label="Main menu">
+                                
+
+<div class="tree-content">
+    <div>
+
+        <input data-val="true" data-val-required="The Id field is required." id="GuideId" name="Guide.Id" type="hidden" value="1252" />
+
+        <table id="treetable" class="treetable ig-treetable">
+
+                    <tr data-id="90320"
+                        data-serial-nr="0"
+                        class="rootnode treenode">
+                        <td>
+                            <a href="Home.html">
+                                <span class="baseIcon resource"></span>
+                                <span title="Home">Home</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90323"
+                        data-parentId="90320"
+                        data-serial-nr="1"
+                        class="treenode">
+                        <td>
+                            <a href="Introduction.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Introduction">Introduction</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90324"
+                        data-parentId="90323"
+                        data-serial-nr="2"
+                        class="treenode selected">
+                        <td>
+                            <a href="TransactionBundle.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Transaction Bundle">Transaction Bundle</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90322"
+                        data-parentId="90320"
+                        data-serial-nr="3"
+                        class="treenode">
+                        <td>
+                            <a href="GECCOCore.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="GECCO Core">GECCO Core</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90325"
+                        data-parentId="90322"
+                        data-serial-nr="4"
+                        class="treenode">
+                        <td>
+                            <a href="AnamnesisRiskfactors.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Anamnesis / Risk factors">Anamnesis / Risk factors</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90396"
+                        data-parentId="90325"
+                        data-serial-nr="5"
+                        class="treenode">
+                        <td>
+                            <a href="Chroniclungdiseases-duplicate-2.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Chronic lung diseases">Chronic lung diseases</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90368"
+                        data-parentId="90325"
+                        data-serial-nr="6"
+                        class="treenode">
+                        <td>
+                            <a href="Disordersofcardiovascularsystem.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Disorders of cardiovascular system">Disorders of cardiovascular system</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90369"
+                        data-parentId="90325"
+                        data-serial-nr="7"
+                        class="treenode">
+                        <td>
+                            <a href="Chronicliverdiseases-duplicate-2.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Chronic liver diseases">Chronic liver diseases</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90370"
+                        data-parentId="90325"
+                        data-serial-nr="8"
+                        class="treenode">
+                        <td>
+                            <a href="Rheumatologicalimmunologicaldiseases-duplicate-2.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Rheumatological/immunological diseases">Rheumatological/immunological diseases</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90371"
+                        data-parentId="90325"
+                        data-serial-nr="9"
+                        class="treenode">
+                        <td>
+                            <a href="Humanimmunodeficiencyvirusinfection-duplicate-2.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Human immunodeficiency virus infection">Human immunodeficiency virus infection</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90372"
+                        data-parentId="90325"
+                        data-serial-nr="10"
+                        class="treenode">
+                        <td>
+                            <a href="Historyofbeingatissueororganrecipient.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="History of being a tissue or organ recipient">History of being a tissue or organ recipient</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90373"
+                        data-parentId="90325"
+                        data-serial-nr="11"
+                        class="treenode">
+                        <td>
+                            <a href="Diabetesmellitus-duplicate-2.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Diabetes mellitus">Diabetes mellitus</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90374"
+                        data-parentId="90325"
+                        data-serial-nr="12"
+                        class="treenode">
+                        <td>
+                            <a href="Malignantneoplasticdiseases.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Malignant neoplastic diseases">Malignant neoplastic diseases</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90375"
+                        data-parentId="90325"
+                        data-serial-nr="13"
+                        class="treenode">
+                        <td>
+                            <a href="Tobaccosmokingstatus.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Tobacco smoking status">Tobacco smoking status</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90376"
+                        data-parentId="90325"
+                        data-serial-nr="14"
+                        class="treenode">
+                        <td>
+                            <a href="Chronicneurologicalormentaldiseases.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Chronic neurological or mental diseases">Chronic neurological or mental diseases</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90377"
+                        data-parentId="90325"
+                        data-serial-nr="15"
+                        class="treenode">
+                        <td>
+                            <a href="Respiratorytherapies-duplicate-2.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Respiratory therapies">Respiratory therapies</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90378"
+                        data-parentId="90325"
+                        data-serial-nr="16"
+                        class="treenode">
+                        <td>
+                            <a href="Chronickidneydiseases-duplicate-2.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Chronic kidney diseases">Chronic kidney diseases</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90379"
+                        data-parentId="90325"
+                        data-serial-nr="17"
+                        class="treenode">
+                        <td>
+                            <a href="Historyoftravel-duplicate-3.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="History of travel">History of travel</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90380"
+                        data-parentId="90325"
+                        data-serial-nr="18"
+                        class="treenode">
+                        <td>
+                            <a href="Gastrointestinalulcers-duplicate-2.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Gastrointestinal ulcers">Gastrointestinal ulcers</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90381"
+                        data-parentId="90325"
+                        data-serial-nr="19"
+                        class="treenode">
+                        <td>
+                            <a href="Immunizationstatus.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Immunization status">Immunization status</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90382"
+                        data-parentId="90325"
+                        data-serial-nr="20"
+                        class="treenode">
+                        <td>
+                            <a href="Resuscitationstatus-duplicate-2.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Resuscitation status">Resuscitation status</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90326"
+                        data-parentId="90322"
+                        data-serial-nr="21"
+                        class="treenode">
+                        <td>
+                            <a href="Imaging.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Imaging">Imaging</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90383"
+                        data-parentId="90326"
+                        data-serial-nr="22"
+                        class="treenode">
+                        <td>
+                            <a href="Imagingprocedures.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Imaging procedures">Imaging procedures</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90384"
+                        data-parentId="90326"
+                        data-serial-nr="23"
+                        class="treenode">
+                        <td>
+                            <a href="Radiologicalfindings.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Radiological findings">Radiological findings</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90327"
+                        data-parentId="90322"
+                        data-serial-nr="24"
+                        class="treenode">
+                        <td>
+                            <a href="Demographics.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Demographics">Demographics</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90385"
+                        data-parentId="90327"
+                        data-serial-nr="25"
+                        class="treenode">
+                        <td>
+                            <a href="Pregnancy.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Pregnancy">Pregnancy</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90386"
+                        data-parentId="90327"
+                        data-serial-nr="26"
+                        class="treenode">
+                        <td>
+                            <a href="Ethnicgroup-duplicate-2.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Ethnic group">Ethnic group</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90387"
+                        data-parentId="90327"
+                        data-serial-nr="27"
+                        class="treenode">
+                        <td>
+                            <a href="Biologicalsex.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Biological sex">Biological sex</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90388"
+                        data-parentId="90327"
+                        data-serial-nr="28"
+                        class="treenode">
+                        <td>
+                            <a href="Dateofbirth.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Date of birth">Date of birth</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90389"
+                        data-parentId="90327"
+                        data-serial-nr="29"
+                        class="treenode">
+                        <td>
+                            <a href="Age-duplicate-2.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Age">Age</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90390"
+                        data-parentId="90327"
+                        data-serial-nr="30"
+                        class="treenode">
+                        <td>
+                            <a href="Frailtyscore-duplicate-2.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Frailty score">Frailty score</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90391"
+                        data-parentId="90327"
+                        data-serial-nr="31"
+                        class="treenode">
+                        <td>
+                            <a href="Bodyweight-duplicate-2.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Body weight">Body weight</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90392"
+                        data-parentId="90327"
+                        data-serial-nr="32"
+                        class="treenode">
+                        <td>
+                            <a href="Bodyheight-duplicate-2.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Body height">Body height</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90328"
+                        data-parentId="90322"
+                        data-serial-nr="33"
+                        class="treenode">
+                        <td>
+                            <a href="Epidemiologicalfactors.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Epidemiological factors">Epidemiological factors</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90393"
+                        data-parentId="90328"
+                        data-serial-nr="34"
+                        class="treenode">
+                        <td>
+                            <a href="ContactwithpersonssufferingfromCovid-19.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Contact with persons suffering from Covid-19?">Contact with persons suffering from Covid-19?</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90329"
+                        data-parentId="90322"
+                        data-serial-nr="35"
+                        class="treenode">
+                        <td>
+                            <a href="Complications.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Complications">Complications</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90394"
+                        data-parentId="90329"
+                        data-serial-nr="36"
+                        class="treenode">
+                        <td>
+                            <a href="Complication.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Complication">Complication</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90330"
+                        data-parentId="90322"
+                        data-serial-nr="37"
+                        class="treenode">
+                        <td>
+                            <a href="OnsetofillnessAdmission.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Onset of illness / Admission">Onset of illness / Admission</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90367"
+                        data-parentId="90330"
+                        data-serial-nr="38"
+                        class="treenode">
+                        <td>
+                            <a href="Stageatdiagnosis.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Stage at diagnosis">Stage at diagnosis</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90331"
+                        data-parentId="90322"
+                        data-serial-nr="39"
+                        class="treenode">
+                        <td>
+                            <a href="Laboratoryvalues.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Laboratory values">Laboratory values</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90366"
+                        data-parentId="90331"
+                        data-serial-nr="40"
+                        class="treenode">
+                        <td>
+                            <a href="Laboratoryvalue.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Laboratory value">Laboratory value</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90365"
+                        data-parentId="90331"
+                        data-serial-nr="41"
+                        class="treenode">
+                        <td>
+                            <a href="SARS-CoV-2-RT-PCR.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="SARS-CoV-2-RT-PCR">SARS-CoV-2-RT-PCR</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90350"
+                        data-parentId="90331"
+                        data-serial-nr="42"
+                        class="treenode">
+                        <td>
+                            <a href="SARS-CoV-2antibodies.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="SARS-CoV-2 antibodies">SARS-CoV-2 antibodies</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90332"
+                        data-parentId="90322"
+                        data-serial-nr="43"
+                        class="treenode">
+                        <td>
+                            <a href="Medication.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Medication">Medication</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90338"
+                        data-parentId="90332"
+                        data-serial-nr="44"
+                        class="treenode">
+                        <td>
+                            <a href="Covid-19therapy.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Covid-19 therapy">Covid-19 therapy</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90339"
+                        data-parentId="90332"
+                        data-serial-nr="45"
+                        class="treenode">
+                        <td>
+                            <a href="ACEinhibitors.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="ACE inhibitors">ACE inhibitors</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90340"
+                        data-parentId="90332"
+                        data-serial-nr="46"
+                        class="treenode">
+                        <td>
+                            <a href="Immunoglobulins.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Immunoglobulins">Immunoglobulins</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90341"
+                        data-parentId="90332"
+                        data-serial-nr="47"
+                        class="treenode">
+                        <td>
+                            <a href="Anticoagulation.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Anticoagulation">Anticoagulation</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90333"
+                        data-parentId="90322"
+                        data-serial-nr="48"
+                        class="treenode">
+                        <td>
+                            <a href="Outcomeatdischarge.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Outcome at discharge">Outcome at discharge</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90342"
+                        data-parentId="90333"
+                        data-serial-nr="49"
+                        class="treenode">
+                        <td>
+                            <a href="Respiratoryoutcome.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Respiratory outcome">Respiratory outcome</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90343"
+                        data-parentId="90333"
+                        data-serial-nr="50"
+                        class="treenode">
+                        <td>
+                            <a href="Typeofdischarge.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Type of discharge">Type of discharge</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90344"
+                        data-parentId="90333"
+                        data-serial-nr="51"
+                        class="treenode">
+                        <td>
+                            <a href="Follow-upswabresult.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Follow-up swab result">Follow-up swab result</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90334"
+                        data-parentId="90322"
+                        data-serial-nr="52"
+                        class="treenode">
+                        <td>
+                            <a href="StudyenrollmentInclusioncriteria.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Study enrollment / Inclusion criteria">Study enrollment / Inclusion criteria</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90345"
+                        data-parentId="90334"
+                        data-serial-nr="53"
+                        class="treenode">
+                        <td>
+                            <a href="StudyenrolmentduetoCovid-19.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Study enrolment due to Covid-19">Study enrolment due to Covid-19</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90346"
+                        data-parentId="90334"
+                        data-serial-nr="54"
+                        class="treenode">
+                        <td>
+                            <a href="Interventionalstudiesparticipation.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Interventional studies participation">Interventional studies participation</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90335"
+                        data-parentId="90322"
+                        data-serial-nr="55"
+                        class="treenode">
+                        <td>
+                            <a href="Symptoms.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Symptoms">Symptoms</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90347"
+                        data-parentId="90335"
+                        data-serial-nr="56"
+                        class="treenode">
+                        <td>
+                            <a href="Symptom.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Symptom">Symptom</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90336"
+                        data-parentId="90322"
+                        data-serial-nr="57"
+                        class="treenode">
+                        <td>
+                            <a href="Therapy.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Therapy">Therapy</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90348"
+                        data-parentId="90336"
+                        data-serial-nr="58"
+                        class="treenode">
+                        <td>
+                            <a href="DialysisHemofiltration.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Dialysis / Hemofiltration">Dialysis / Hemofiltration</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90349"
+                        data-parentId="90336"
+                        data-serial-nr="59"
+                        class="treenode">
+                        <td>
+                            <a href="Apheresis.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Apheresis">Apheresis</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90351"
+                        data-parentId="90336"
+                        data-serial-nr="60"
+                        class="treenode">
+                        <td>
+                            <a href="Proneposition.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Prone position">Prone position</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90364"
+                        data-parentId="90336"
+                        data-serial-nr="61"
+                        class="treenode">
+                        <td>
+                            <a href="ECMOtherapy.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="ECMO therapy">ECMO therapy</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90352"
+                        data-parentId="90336"
+                        data-serial-nr="62"
+                        class="treenode">
+                        <td>
+                            <a href="Isthepatientintheintensivecareunit.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Is the patient in the intensive care unit?">Is the patient in the intensive care unit?</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90353"
+                        data-parentId="90336"
+                        data-serial-nr="63"
+                        class="treenode">
+                        <td>
+                            <a href="Ventilationtype.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Ventilation type">Ventilation type</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90337"
+                        data-parentId="90322"
+                        data-serial-nr="64"
+                        class="treenode">
+                        <td>
+                            <a href="Vitalsigns.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Vital signs">Vital signs</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90354"
+                        data-parentId="90337"
+                        data-serial-nr="65"
+                        class="treenode">
+                        <td>
+                            <a href="PaCO2.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="PaCO2">PaCO2</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90355"
+                        data-parentId="90337"
+                        data-serial-nr="66"
+                        class="treenode">
+                        <td>
+                            <a href="PaO2.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="PaO2">PaO2</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90356"
+                        data-parentId="90337"
+                        data-serial-nr="67"
+                        class="treenode">
+                        <td>
+                            <a href="FiO2.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="FiO2">FiO2</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90357"
+                        data-parentId="90337"
+                        data-serial-nr="68"
+                        class="treenode">
+                        <td>
+                            <a href="pH.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="pH">pH</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90358"
+                        data-parentId="90337"
+                        data-serial-nr="69"
+                        class="treenode">
+                        <td>
+                            <a href="SOFA-Score-duplicate-2.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="SOFA-Score">SOFA-Score</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90359"
+                        data-parentId="90337"
+                        data-serial-nr="70"
+                        class="treenode">
+                        <td>
+                            <a href="Respiratoryrate-duplicate-2.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Respiratory rate">Respiratory rate</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90360"
+                        data-parentId="90337"
+                        data-serial-nr="71"
+                        class="treenode">
+                        <td>
+                            <a href="Diastolicbloodpressure.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Diastolic blood pressure">Diastolic blood pressure</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90361"
+                        data-parentId="90337"
+                        data-serial-nr="72"
+                        class="treenode">
+                        <td>
+                            <a href="Systolicbloodpressure.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Systolic blood pressure">Systolic blood pressure</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90362"
+                        data-parentId="90337"
+                        data-serial-nr="73"
+                        class="treenode">
+                        <td>
+                            <a href="Heartrate-duplicate-2.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Heart rate">Heart rate</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90363"
+                        data-parentId="90337"
+                        data-serial-nr="74"
+                        class="treenode">
+                        <td>
+                            <a href="Bodytemperature-duplicate-2.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Body temperature">Body temperature</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90395"
+                        data-parentId="90337"
+                        data-serial-nr="75"
+                        class="treenode">
+                        <td>
+                            <a href="Peripheraloxygensaturation.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Peripheral oxygen saturation">Peripheral oxygen saturation</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90321"
+                        data-parentId="90320"
+                        data-serial-nr="76"
+                        class="treenode">
+                        <td>
+                            <a href="Terminologies.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Terminologies">Terminologies</span>
+                            </a>
+                        </td>
+                    </tr>
+
+        </table>
+    </div>
+</div>
+
+<script type="text/javascript">
+    window.addEventListener('DOMContentLoaded', (event) => {
+        var resourceTreeTable = new BaseTreeTable();
+        resourceTreeTable.init("treetable");
+    });
+</script>
+
+                            </div>
+                            <div id="preview-content" class="preview-panel full-width" role="main" aria-label="Main content">
+                                
+
+<h3 id="transaction-bundle">Transaction Bundle</h3>
+<p>The bundle of type 'transaction' is used to collect the set of resources as part of the GECCO dataset into a single instance for data exchange.</p>
+<hr />
+<p><strong>Profile - GECCO Bundle</strong></p>
+<p>Canonical: <a href="https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/gecco-bundle">https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/gecco-bundle</a></p>
+<p><strong>Snapshot</strong></p>
+<p><div id="1574e90e53a9430c97eb6c66ec44fe9b" data-level="1" class="stu3-treetable"><div class="treetable-wrapper snapshot"><div class="treetable-left-panel"><table class="treetable"><tr data-id="af58788e-2dd0-48c7-8eea-0e1d5d1ac58f" class="collapsed constraints"><td class="profile"><span class="baseIcon resource"></span><span class="constraints">Bundle</span></td><td class="profile"></td><td></td><td class="profile"><a title="Bundle
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-Bundle.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81169" >Bundle</a></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Bundle</pre></p></div><span><b>Short description </b></span><p><span>Contains a collection of resources</span></p><span><b>Definition </b></span><div class="markdown"><p>A container for a collection of resources.</p>
+</div><span><b>Data Type </b></span><p><a title="Bundle
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-Bundle.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81169" >Bundle</a></p><span><b>Constraints</b></span><div><ul><li class=""><b>bdl-7:</b>FullUrl must be unique in a bundle, or else entries with the same fullUrl must have different meta.versionId (except in history bundles)<br/><code>(type = 'history') or entry.where(fullUrl.exists()).select(fullUrl&resource.meta.versionId).isDistinct()</code></li><li class=""><b>bdl-9:</b>A document must have an identifier with a system and a value<br/><code>type = 'document' implies (identifier.system.exists() and identifier.value.exists())</code></li><li class=""><b>bdl-3:</b>entry.request mandatory for batch/transaction/history, otherwise prohibited<br/><code>entry.all(request.exists() = (%resource.type = 'batch' or %resource.type = 'transaction' or %resource.type = 'history'))</code></li><li class=""><b>bdl-4:</b>entry.response mandatory for batch-response/transaction-response/history, otherwise prohibited<br/><code>entry.all(response.exists() = (%resource.type = 'batch-response' or %resource.type = 'transaction-response' or %resource.type = 'history'))</code></li><li class=""><b>bdl-12:</b>A message must have a MessageHeader as the first resource<br/><code>type = 'message' implies entry.first().resource.is(MessageHeader)</code></li><li class=""><b>bdl-1:</b>total only when a search or history<br/><code>total.empty() or (type = 'searchset') or (type = 'history')</code></li><li class=""><b>bdl-2:</b>entry.search only when a search<br/><code>entry.search.empty() or (type = 'searchset')</code></li><li class=""><b>bdl-11:</b>A document must have a Composition as the first resource<br/><code>type = 'document' implies entry.first().resource.is(Composition)</code></li><li class=""><b>bdl-10:</b>A document must have a date<br/><code>type = 'document' implies (timestamp.hasValue())</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>Entity. Role, or Act</li><li class=""><b>v2:</b>N/A</li><li class=""><b>rim:</b>N/A</li><li class=""><b>cda:</b>ClinicalDocument, if bundle.type = document</li></ul></td></tr><tr id="Bundle.identifier" data-id="f6be29a1-263f-41b9-9ede-558fc4c9098b" data-parentId="af58788e-2dd0-48c7-8eea-0e1d5d1ac58f" class=""><td class="profile"><span class="baseIcon datatype"></span><span>identifier</span></td><td class="profile"><span title="This element is an element that is part of the summary">Σ</span></td><td class="profile"><span>0</span><span>..</span><span>1</span></td><td class="profile"><a title="Identifier
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-Identifier.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/82704" >Identifier</a></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Bundle.identifier</pre></p></div><span><b>Short description </b></span><p><span>Persistent identifier for the bundle</span></p><span><b>Definition </b></span><div class="markdown"><p>A persistent identifier for the bundle that won't change as a bundle is copied from server to server.</p>
+</div><span><b>Comments </b></span><div class="markdown"><p>Persistent identity generally only matters for batches of type Document, Message, and Collection. It would not normally be populated for search and history results and servers ignore Bundle.identifier when processing batches and transactions. For Documents  the .identifier SHALL be populated such that the .identifier is globally unique.</p>
+</div><span><b>Data Type </b></span><p><a title="Identifier
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-Identifier.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/82704" >Identifier</a></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li><li class=""><b>v2:</b>CX / EI (occasionally, more often EI maps to a resource id or a URL)</li><li class=""><b>rim:</b>II - The Identifier class is a little looser than the v3 type II because it allows URIs as well as registered OIDs or GUIDs.  Also maps to Role[classCode=IDENT]</li><li class=""><b>servd:</b>Identifier</li><li class=""><b>w5:</b>FiveWs.identifier</li><li class=""><b>cda:</b>ClinicalDocument.id</li></ul></td></tr><tr id="Bundle.type" data-id="20449df6-4d6b-4463-af69-ae5830bd4806" data-parentId="af58788e-2dd0-48c7-8eea-0e1d5d1ac58f" class="constraints"><td class="profile"><span class="baseIcon primitive"></span><span class="constraints">type</span></td><td class="profile"><span class="mustsupport constraints" title="This element is an element that must be supported">S</span> <span title="This element is an element that is part of the summary">Σ</span></td><td class="profile"><span>1</span><span>..</span><span>1</span></td><td class="profile"><a title="code
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-code.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/82771" >code</a><span class="binding-label">Binding</span><span class="fixed-label constraints">Fixed Value</span></td><td class="details hidden"><span class="pin-control"></span><span><b>Element Id</b></span><div><p><pre>Bundle.type</pre></p></div><span><b>Short description </b></span><p><span>document | message | transaction | transaction-response | batch | batch-response | history | searchset | collection</span></p><span><b>Definition </b></span><div class="markdown"><p>Indicates the purpose of this bundle - how it is intended to be used.</p>
+</div><span><b>Comments </b></span><div class="markdown"><p>It's possible to use a bundle for other purposes (e.g. a document can be accepted as a transaction). This is primarily defined so that there can be specific rules for some of the bundle types.</p>
+</div><span><b>Data Type </b></span><p><a title="code
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-code.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/82771" >code</a></p><span><b>Binding </b></span><p><a title="BundleType
+hl7.fhir.r4.core 4.0.1
+ValueSet-bundle-type.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81170" >BundleType</a><span> (</span><a title="To be conformant, instances of this element SHALL include a code from the specified valueset" href="http://hl7.org/fhir/r4/terminologies.html#required" >required</a><span>)</span></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li></ul></div><span class="constraints"><b>Fixed Value </b></span><div>
+<pre class=" constraints">transaction</pre></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li><li class=""><b>w5:</b>FiveWs.class</li></ul></td></tr><tr id="Bundle.timestamp" data-id="d3391e07-30b9-40df-90f0-6fcef7e95bf2" data-parentId="af58788e-2dd0-48c7-8eea-0e1d5d1ac58f" class="constraints"><td class="profile"><span class="baseIcon primitive"></span><span class="constraints">timestamp</span></td><td class="profile"><span class="mustsupport constraints" title="This element is an element that must be supported">S</span> <span title="This element is an element that is part of the summary">Σ</span></td><td class="profile"><span>0</span><span>..</span><span>1</span></td><td class="profile"><a title="instant
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-instant.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/82869" >instant</a></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Bundle.timestamp</pre></p></div><span><b>Short description </b></span><p><span>When the bundle was assembled</span></p><span><b>Definition </b></span><div class="markdown"><p>The date/time that the bundle was assembled - i.e. when the resources were placed in the bundle.</p>
+</div><span><b>Comments </b></span><div class="markdown"><p>For many bundles, the timestamp is equal to .meta.lastUpdated, because they are not stored (e.g. search results). When a bundle is placed in a persistent store, .meta.lastUpdated will be usually be changed by the server. When the bundle is a message, a middleware agent altering the message (even if not stored) SHOULD update .meta.lastUpdated. .timestamp is used to track the original time of the Bundle, and SHOULD be populated.</p>
+<p>Usage:</p>
+<ul>
+<li>document : the date the document was created. Note: the composition may predate the document, or be associated with multiple documents. The date of the composition - the authoring time - may be earlier than the document assembly time</li>
+<li>message : the date that the content of the message was assembled. This date is not changed by middleware engines unless they add additional data that changes the meaning of the time of the message</li>
+<li>history : the date that the history was assembled. This time would be used as the _since time to ask for subsequent updates</li>
+<li>searchset : the time that the search set was assembled. Note that different pages MAY have different timestamps but need not. Having different timestamps does not imply that subsequent pages will represent or include changes made since the initial query</li>
+<li>transaction | transaction-response | batch | batch-response | collection : no particular assigned meaning</li>
+</ul>
+<p>The timestamp value should be greater than the lastUpdated and other timestamps in the resources in the bundle, and it should be equal or earlier than the .meta.lastUpdated on the Bundle itself.</p>
+</div><span><b>Data Type </b></span><p><a title="instant
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-instant.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/82869" >instant</a></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li><li class=""><b>w5:</b>FiveWs.init</li><li class=""><b>cda:</b>ClinicalDocument.effectiveTime</li></ul></td></tr><tr id="Bundle.total" data-id="feed87e3-a441-4dfa-b36f-d9bb8cc896db" data-parentId="af58788e-2dd0-48c7-8eea-0e1d5d1ac58f" class=""><td class="profile"><span class="baseIcon primitive"></span><span>total</span></td><td class="profile"><span title="This element is an element that is part of the summary">Σ</span></td><td class="profile"><span>0</span><span>..</span><span>1</span></td><td class="profile"><a title="unsignedInt
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-unsignedInt.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81221" >unsignedInt</a></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Bundle.total</pre></p></div><span><b>Short description </b></span><p><span>If search, the total number of matches</span></p><span><b>Definition </b></span><div class="markdown"><p>If a set of search matches, this is the total number of entries of type 'match' across all pages in the search.  It does not include search.mode = 'include' or 'outcome' entries and it does not provide a count of the number of entries in the Bundle.</p>
+</div><span><b>Comments </b></span><div class="markdown"><p>Only used if the bundle is a search result set. The total does not include resources such as OperationOutcome and included resources, only the total number of matching resources.</p>
+</div><span><b>Data Type </b></span><p><a title="unsignedInt
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-unsignedInt.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81221" >unsignedInt</a></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li></ul></td></tr><tr id="Bundle.link" data-id="e976189d-2975-48af-9c18-b48134893065" data-parentId="af58788e-2dd0-48c7-8eea-0e1d5d1ac58f" class="collapsed"><td class="profile"><span class="baseIcon backboneElement"></span><span>link</span></td><td class="profile"><span title="This element is an element that is part of the summary">Σ</span></td><td class="profile"><span>0</span><span>..</span><span>*</span></td><td class="profile"><a title="BackboneElement
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-BackboneElement.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81560" >BackboneElement</a></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Bundle.link</pre></p></div><span><b>Short description </b></span><p><span>Links related to this Bundle</span></p><span><b>Definition </b></span><div class="markdown"><p>A series of links that provide context to this bundle.</p>
+</div><span><b>Comments </b></span><div class="markdown"><p>Both Bundle.link and Bundle.entry.link are defined to support providing additional context when Bundles are used (e.g. <a href="http://en.wikipedia.org/wiki/HATEOAS">HATEOAS</a>).</p>
+<p>Bundle.entry.link corresponds to links found in the HTTP header if the resource in the entry was <a href="http.html#read">read</a> directly.</p>
+<p>This specification defines some specific uses of Bundle.link for <a href="search.html#conformance">searching</a> and <a href="http.html#paging">paging</a>, but no specific uses for Bundle.entry.link, and no defined function in a transaction - the meaning is implementation specific.</p>
+</div><span><b>Data Type </b></span><p><a title="BackboneElement
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-BackboneElement.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81560" >BackboneElement</a></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li></ul></td></tr><tr id="Bundle.link.relation" data-id="db890e0c-14d9-408f-8f1e-cda2fbc48108" data-parentId="e976189d-2975-48af-9c18-b48134893065" class=""><td class="profile"><span class="baseIcon primitive"></span><span>relation</span></td><td class="profile"><span title="This element is an element that is part of the summary">Σ</span></td><td class="profile"><span>1</span><span>..</span><span>1</span></td><td class="profile"><a title="string
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-string.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81888" >string</a></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Bundle.link.relation</pre></p></div><span><b>Short description </b></span><p><span>See http://www.iana.org/assignments/link-relations/link-relations.xhtml#link-relations-1</span></p><span><b>Definition </b></span><div class="markdown"><p>A name which details the functional use for this link - see <a href="http://www.iana.org/assignments/link-relations/link-relations.xhtml#link-relations-1">http://www.iana.org/assignments/link-relations/link-relations.xhtml#link-relations-1</a>.</p>
+</div><span><b>Comments </b></span><div class="markdown"><p>Note that FHIR strings SHALL NOT exceed 1MB in size</p>
+</div><span><b>Data Type </b></span><p><a title="string
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-string.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81888" >string</a></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li></ul></td></tr><tr id="Bundle.link.url" data-id="c90c93b7-4c96-48c7-9852-037838914f71" data-parentId="e976189d-2975-48af-9c18-b48134893065" class=""><td class="profile"><span class="baseIcon primitive"></span><span>url</span></td><td class="profile"><span title="This element is an element that is part of the summary">Σ</span></td><td class="profile"><span>1</span><span>..</span><span>1</span></td><td class="profile"><a title="uri
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-uri.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81402" >uri</a></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Bundle.link.url</pre></p></div><span><b>Short description </b></span><p><span>Reference details for the link</span></p><span><b>Definition </b></span><div class="markdown"><p>The reference details for the link.</p>
+</div><span><b>Comments </b></span><div class="markdown"><p>see http://en.wikipedia.org/wiki/Uniform_resource_identifier</p>
+</div><span><b>Data Type </b></span><p><a title="uri
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-uri.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81402" >uri</a></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li></ul></td></tr><tr id="Bundle.entry" data-id="eb0aac0e-f03f-4936-8532-94dcf3801913" data-parentId="af58788e-2dd0-48c7-8eea-0e1d5d1ac58f" class="collapsed constraints"><td class="profile"><span class="baseIcon backboneElement"></span><span class="constraints">entry</span></td><td class="profile"><span class="mustsupport constraints" title="This element is an element that must be supported">S</span> <span title="This element is an element that is part of the summary">Σ</span></td><td class="profile"><span class="constraints">1</span><span class="constraints">..</span><span>*</span></td><td class="profile"><a title="BackboneElement
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-BackboneElement.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81560" >BackboneElement</a></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Bundle.entry</pre></p></div><span><b>Short description </b></span><p><span>Entry in the bundle - will have a resource or information</span></p><span><b>Definition </b></span><div class="markdown"><p>An entry in a bundle resource - will either contain a resource or information about a resource (transactions and history only).</p>
+</div><span><b>Data Type </b></span><p><a title="BackboneElement
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-BackboneElement.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81560" >BackboneElement</a></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li><li class=""><b>bdl-8:</b>fullUrl cannot be a version specific reference<br/><code>fullUrl.contains('/_history/').not()</code></li><li class=""><b>bdl-5:</b>must be a resource unless there&#39;s a request or response<br/><code>resource.exists() or request.exists() or response.exists()</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li></ul></td></tr><tr id="Bundle.entry.link" data-id="0ce3683b-a688-4bc6-8427-6c8209fc2881" data-parentId="eb0aac0e-f03f-4936-8532-94dcf3801913" class=""><td class="profile"><span class="baseIcon nameReference"></span><span>link</span></td><td class="profile"><span title="This element is an element that is part of the summary">Σ</span></td><td class="profile"><span>0</span><span>..</span><span>*</span></td><td class="profile">see (<a  href="#Bundle.link" >link</a>)</td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Bundle.entry.link</pre></p></div><span><b>Short description </b></span><p><span>Links related to this entry</span></p><span><b>Definition </b></span><div class="markdown"><p>A series of links that provide context to this entry.</p>
+</div></td></tr><tr id="Bundle.entry.fullUrl" data-id="96c783a1-c6b7-472e-9415-e6b18f19ed8e" data-parentId="eb0aac0e-f03f-4936-8532-94dcf3801913" class=""><td class="profile"><span class="baseIcon primitive"></span><span>fullUrl</span></td><td class="profile"><span title="This element is an element that is part of the summary">Σ</span></td><td class="profile"><span>0</span><span>..</span><span>1</span></td><td class="profile"><a title="uri
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-uri.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81402" >uri</a></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Bundle.entry.fullUrl</pre></p></div><span><b>Short description </b></span><p><span>URI for resource (Absolute URL server address or URI for UUID/OID)</span></p><span><b>Definition </b></span><div class="markdown"><p>The Absolute URL for the resource.  The fullUrl SHALL NOT disagree with the id in the resource - i.e. if the fullUrl is not a urn:uuid, the URL shall be version-independent URL consistent with the Resource.id. The fullUrl is a version independent reference to the resource. The fullUrl element SHALL have a value except that:</p>
+<ul>
+<li>fullUrl can be empty on a POST (although it does not need to when specifying a temporary id for reference in the bundle)</li>
+<li>Results from operations might involve resources that are not identified.</li>
+</ul>
+</div><span><b>Comments </b></span><div class="markdown"><p>fullUrl might not be <a href="bundle.html#bundle-unique">unique in the context of a resource</a>. Note that since <a href="references.html">FHIR resources do not need to be served through the FHIR API</a>, the fullURL might be a URN or an absolute URL that does not end with the logical id of the resource (Resource.id). However, but if the fullUrl does look like a RESTful server URL (e.g. meets the <a href="references.html#regex">regex</a>, then the 'id' portion of the fullUrl SHALL end with the Resource.id.</p>
+<p>Note that the fullUrl is not the same as the canonical URL - it's an absolute url for an endpoint serving the resource (these will happen to have the same value on the canonical server for the resource with the canonical URL).</p>
+</div><span><b>Data Type </b></span><p><a title="uri
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-uri.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81402" >uri</a></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li></ul></td></tr><tr id="Bundle.entry.resource" data-id="ef96221a-e0ea-4fb4-9622-30340b8551c3" data-parentId="eb0aac0e-f03f-4936-8532-94dcf3801913" class="constraints"><td class="profile"><span class="baseIcon datatype"></span><span class="constraints">resource</span></td><td class="profile"><span title="This element is an element that is part of the summary">Σ</span></td><td class="profile"><span class="constraints">1</span><span class="constraints">..</span><span>1</span></td><td class="profile"><a title="Resource
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-Resource.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/78806" >Resource</a></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Bundle.entry.resource</pre></p></div><span><b>Short description </b></span><p><span>A resource in the bundle</span></p><span><b>Definition </b></span><div class="markdown"><p>The Resource for the entry. The purpose/meaning of the resource is determined by the Bundle.type.</p>
+</div><span><b>Data Type </b></span><p><a title="Resource
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-Resource.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/78806" >Resource</a></p><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>Entity. Role, or Act</li></ul></td></tr><tr id="Bundle.entry.search" data-id="0fd1af7e-902a-4acd-b14e-44d0c5b936f5" data-parentId="eb0aac0e-f03f-4936-8532-94dcf3801913" class="collapsed"><td class="profile"><span class="baseIcon backboneElement"></span><span>search</span></td><td class="profile"><span title="This element is an element that is part of the summary">Σ</span></td><td class="profile"><span>0</span><span>..</span><span>1</span></td><td class="profile"><a title="BackboneElement
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-BackboneElement.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81560" >BackboneElement</a></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Bundle.entry.search</pre></p></div><span><b>Short description </b></span><p><span>Search related information</span></p><span><b>Definition </b></span><div class="markdown"><p>Information about the search process that lead to the creation of this entry.</p>
+</div><span><b>Data Type </b></span><p><a title="BackboneElement
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-BackboneElement.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81560" >BackboneElement</a></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li></ul></td></tr><tr id="Bundle.entry.search.mode" data-id="32247a3e-a640-46c2-a527-9764c83efb7f" data-parentId="0fd1af7e-902a-4acd-b14e-44d0c5b936f5" class=""><td class="profile"><span class="baseIcon primitive"></span><span>mode</span></td><td class="profile"><span title="This element is an element that is part of the summary">Σ</span></td><td class="profile"><span>0</span><span>..</span><span>1</span></td><td class="profile"><a title="code
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-code.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/82771" >code</a><span class="binding-label">Binding</span></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Bundle.entry.search.mode</pre></p></div><span><b>Short description </b></span><p><span>match | include | outcome - why this is in the result set</span></p><span><b>Definition </b></span><div class="markdown"><p>Why this entry is in the result set - whether it's included as a match or because of an _include requirement, or to convey information or warning information about the search process.</p>
+</div><span><b>Comments </b></span><div class="markdown"><p>There is only one mode. In some corner cases, a resource may be included because it is both a match and an include. In these circumstances, 'match' takes precedence.</p>
+</div><span><b>Data Type </b></span><p><a title="code
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-code.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/82771" >code</a></p><span><b>Binding </b></span><p><a title="SearchEntryMode
+hl7.fhir.r4.core 4.0.1
+ValueSet-search-entry-mode.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81541" >SearchEntryMode</a><span> (</span><a title="To be conformant, instances of this element SHALL include a code from the specified valueset" href="http://hl7.org/fhir/r4/terminologies.html#required" >required</a><span>)</span></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li></ul></td></tr><tr id="Bundle.entry.search.score" data-id="ca58992c-3da0-47ea-b51a-fbbc0de4ebe8" data-parentId="0fd1af7e-902a-4acd-b14e-44d0c5b936f5" class=""><td class="profile"><span class="baseIcon primitive"></span><span>score</span></td><td class="profile"><span title="This element is an element that is part of the summary">Σ</span></td><td class="profile"><span>0</span><span>..</span><span>1</span></td><td class="profile"><a title="decimal
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-decimal.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/79709" >decimal</a></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Bundle.entry.search.score</pre></p></div><span><b>Short description </b></span><p><span>Search ranking (between 0 and 1)</span></p><span><b>Definition </b></span><div class="markdown"><p>When searching, the server's search ranking score for the entry.</p>
+</div><span><b>Comments </b></span><div class="markdown"><p>Servers are not required to return a ranking score. 1 is most relevant, and 0 is least relevant. Often, search results are sorted by score, but the client may specify a different sort order.</p>
+<p>See <a href="patient-operation-match.html">Patient Match</a> for the EMPI search which relates to this element.</p>
+</div><span><b>Data Type </b></span><p><a title="decimal
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-decimal.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/79709" >decimal</a></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li></ul></td></tr><tr id="Bundle.entry.request" data-id="70fb67c3-9a95-406c-a228-5816394eecfb" data-parentId="eb0aac0e-f03f-4936-8532-94dcf3801913" class="collapsed"><td class="profile"><span class="baseIcon backboneElement"></span><span>request</span></td><td class="profile"><span title="This element is an element that is part of the summary">Σ</span></td><td class="profile"><span>0</span><span>..</span><span>1</span></td><td class="profile"><a title="BackboneElement
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-BackboneElement.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81560" >BackboneElement</a></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Bundle.entry.request</pre></p></div><span><b>Short description </b></span><p><span>Additional execution information (transaction/batch/history)</span></p><span><b>Definition </b></span><div class="markdown"><p>Additional information about how this entry should be processed as part of a transaction or batch.  For history, it shows how the entry was processed to create the version contained in the entry.</p>
+</div><span><b>Data Type </b></span><p><a title="BackboneElement
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-BackboneElement.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81560" >BackboneElement</a></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li></ul></td></tr><tr id="Bundle.entry.request.method" data-id="cceb81c3-7188-4097-9175-e188af4d1bc7" data-parentId="70fb67c3-9a95-406c-a228-5816394eecfb" class=""><td class="profile"><span class="baseIcon primitive"></span><span>method</span></td><td class="profile"><span title="This element is an element that is part of the summary">Σ</span></td><td class="profile"><span>1</span><span>..</span><span>1</span></td><td class="profile"><a title="code
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-code.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/82771" >code</a><span class="binding-label">Binding</span></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Bundle.entry.request.method</pre></p></div><span><b>Short description </b></span><p><span>GET | HEAD | POST | PUT | DELETE | PATCH</span></p><span><b>Definition </b></span><div class="markdown"><p>In a transaction or batch, this is the HTTP action to be executed for this entry. In a history bundle, this indicates the HTTP action that occurred.</p>
+</div><span><b>Comments </b></span><div class="markdown"><p>Note that FHIR strings SHALL NOT exceed 1MB in size</p>
+</div><span><b>Data Type </b></span><p><a title="code
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-code.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/82771" >code</a></p><span><b>Binding </b></span><p><a title="HTTPVerb
+hl7.fhir.r4.core 4.0.1
+ValueSet-http-verb.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/80044" >HTTPVerb</a><span> (</span><a title="To be conformant, instances of this element SHALL include a code from the specified valueset" href="http://hl7.org/fhir/r4/terminologies.html#required" >required</a><span>)</span></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li></ul></td></tr><tr id="Bundle.entry.request.url" data-id="3b7748f9-777e-4a36-ab83-8eb34c56a080" data-parentId="70fb67c3-9a95-406c-a228-5816394eecfb" class=""><td class="profile"><span class="baseIcon primitive"></span><span>url</span></td><td class="profile"><span title="This element is an element that is part of the summary">Σ</span></td><td class="profile"><span>1</span><span>..</span><span>1</span></td><td class="profile"><a title="uri
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-uri.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81402" >uri</a></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Bundle.entry.request.url</pre></p></div><span><b>Short description </b></span><p><span>URL for HTTP equivalent of this entry</span></p><span><b>Definition </b></span><div class="markdown"><p>The URL for this entry, relative to the root (the address to which the request is posted).</p>
+</div><span><b>Comments </b></span><div class="markdown"><p>E.g. for a Patient Create, the method would be &quot;POST&quot; and the URL would be &quot;Patient&quot;. For a Patient Update, the method would be PUT and the URL would be &quot;Patient/[id]&quot;.</p>
+</div><span><b>Data Type </b></span><p><a title="uri
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-uri.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81402" >uri</a></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li></ul></td></tr><tr id="Bundle.entry.request.ifNoneMatch" data-id="c3ae5c93-5d18-42dc-b103-83251f1968a3" data-parentId="70fb67c3-9a95-406c-a228-5816394eecfb" class=""><td class="profile"><span class="baseIcon primitive"></span><span>ifNoneMatch</span></td><td class="profile"><span title="This element is an element that is part of the summary">Σ</span></td><td class="profile"><span>0</span><span>..</span><span>1</span></td><td class="profile"><a title="string
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-string.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81888" >string</a></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Bundle.entry.request.ifNoneMatch</pre></p></div><span><b>Short description </b></span><p><span>For managing cache currency</span></p><span><b>Definition </b></span><div class="markdown"><p>If the ETag values match, return a 304 Not Modified status. See the API documentation for <a href="http.html#cread">&quot;Conditional Read&quot;</a>.</p>
+</div><span><b>Comments </b></span><div class="markdown"><p>Note that FHIR strings SHALL NOT exceed 1MB in size</p>
+</div><span><b>Data Type </b></span><p><a title="string
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-string.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81888" >string</a></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li></ul></td></tr><tr id="Bundle.entry.request.ifModifiedSince" data-id="68faa22e-c8a4-4b25-affe-c193dd41479f" data-parentId="70fb67c3-9a95-406c-a228-5816394eecfb" class=""><td class="profile"><span class="baseIcon primitive"></span><span>ifModifiedSince</span></td><td class="profile"><span title="This element is an element that is part of the summary">Σ</span></td><td class="profile"><span>0</span><span>..</span><span>1</span></td><td class="profile"><a title="instant
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-instant.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/82869" >instant</a></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Bundle.entry.request.ifModifiedSince</pre></p></div><span><b>Short description </b></span><p><span>For managing cache currency</span></p><span><b>Definition </b></span><div class="markdown"><p>Only perform the operation if the last updated date matches. See the API documentation for <a href="http.html#cread">&quot;Conditional Read&quot;</a>.</p>
+</div><span><b>Comments </b></span><div class="markdown"><p>Note: This is intended for where precisely observed times are required, typically system logs etc., and not human-reported times - for them, see date and dateTime (which can be as precise as instant, but is not required to be) below. Time zone is always required</p>
+</div><span><b>Data Type </b></span><p><a title="instant
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-instant.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/82869" >instant</a></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li></ul></td></tr><tr id="Bundle.entry.request.ifMatch" data-id="ba91c43e-616d-4ccb-9bf9-3f01e56bd474" data-parentId="70fb67c3-9a95-406c-a228-5816394eecfb" class=""><td class="profile"><span class="baseIcon primitive"></span><span>ifMatch</span></td><td class="profile"><span title="This element is an element that is part of the summary">Σ</span></td><td class="profile"><span>0</span><span>..</span><span>1</span></td><td class="profile"><a title="string
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-string.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81888" >string</a></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Bundle.entry.request.ifMatch</pre></p></div><span><b>Short description </b></span><p><span>For managing update contention</span></p><span><b>Definition </b></span><div class="markdown"><p>Only perform the operation if the Etag value matches. For more information, see the API section <a href="http.html#concurrency">&quot;Managing Resource Contention&quot;</a>.</p>
+</div><span><b>Comments </b></span><div class="markdown"><p>Note that FHIR strings SHALL NOT exceed 1MB in size</p>
+</div><span><b>Data Type </b></span><p><a title="string
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-string.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81888" >string</a></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li></ul></td></tr><tr id="Bundle.entry.request.ifNoneExist" data-id="450b03cf-ab39-4bbc-b8e4-69ae41696b8d" data-parentId="70fb67c3-9a95-406c-a228-5816394eecfb" class=""><td class="profile"><span class="baseIcon primitive"></span><span>ifNoneExist</span></td><td class="profile"><span title="This element is an element that is part of the summary">Σ</span></td><td class="profile"><span>0</span><span>..</span><span>1</span></td><td class="profile"><a title="string
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-string.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81888" >string</a></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Bundle.entry.request.ifNoneExist</pre></p></div><span><b>Short description </b></span><p><span>For conditional creates</span></p><span><b>Definition </b></span><div class="markdown"><p>Instruct the server not to perform the create if a specified resource already exists. For further information, see the API documentation for <a href="http.html#ccreate">&quot;Conditional Create&quot;</a>. This is just the query portion of the URL - what follows the &quot;?&quot; (not including the &quot;?&quot;).</p>
+</div><span><b>Comments </b></span><div class="markdown"><p>Note that FHIR strings SHALL NOT exceed 1MB in size</p>
+</div><span><b>Data Type </b></span><p><a title="string
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-string.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81888" >string</a></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li></ul></td></tr><tr id="Bundle.entry.response" data-id="46ef19eb-6224-42d7-941a-7260f13d646f" data-parentId="eb0aac0e-f03f-4936-8532-94dcf3801913" class="collapsed"><td class="profile"><span class="baseIcon backboneElement"></span><span>response</span></td><td class="profile"><span title="This element is an element that is part of the summary">Σ</span></td><td class="profile"><span>0</span><span>..</span><span>1</span></td><td class="profile"><a title="BackboneElement
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-BackboneElement.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81560" >BackboneElement</a></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Bundle.entry.response</pre></p></div><span><b>Short description </b></span><p><span>Results of execution (transaction/batch/history)</span></p><span><b>Definition </b></span><div class="markdown"><p>Indicates the results of processing the corresponding 'request' entry in the batch or transaction being responded to or what the results of an operation where when returning history.</p>
+</div><span><b>Data Type </b></span><p><a title="BackboneElement
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-BackboneElement.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81560" >BackboneElement</a></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li></ul></td></tr><tr id="Bundle.entry.response.status" data-id="fc36d89b-7388-4473-8a43-6e3c91f4ad81" data-parentId="46ef19eb-6224-42d7-941a-7260f13d646f" class=""><td class="profile"><span class="baseIcon primitive"></span><span>status</span></td><td class="profile"><span title="This element is an element that is part of the summary">Σ</span></td><td class="profile"><span>1</span><span>..</span><span>1</span></td><td class="profile"><a title="string
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-string.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81888" >string</a></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Bundle.entry.response.status</pre></p></div><span><b>Short description </b></span><p><span>Status response code (text optional)</span></p><span><b>Definition </b></span><div class="markdown"><p>The status code returned by processing this entry. The status SHALL start with a 3 digit HTTP code (e.g. 404) and may contain the standard HTTP description associated with the status code.</p>
+</div><span><b>Comments </b></span><div class="markdown"><p>Note that FHIR strings SHALL NOT exceed 1MB in size</p>
+</div><span><b>Data Type </b></span><p><a title="string
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-string.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81888" >string</a></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li></ul></td></tr><tr id="Bundle.entry.response.location" data-id="0ea3aedd-339a-4177-a65c-ef1520b72852" data-parentId="46ef19eb-6224-42d7-941a-7260f13d646f" class=""><td class="profile"><span class="baseIcon primitive"></span><span>location</span></td><td class="profile"><span title="This element is an element that is part of the summary">Σ</span></td><td class="profile"><span>0</span><span>..</span><span>1</span></td><td class="profile"><a title="uri
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-uri.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81402" >uri</a></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Bundle.entry.response.location</pre></p></div><span><b>Short description </b></span><p><span>The location (if the operation returns a location)</span></p><span><b>Definition </b></span><div class="markdown"><p>The location header created by processing this operation, populated if the operation returns a location.</p>
+</div><span><b>Comments </b></span><div class="markdown"><p>see http://en.wikipedia.org/wiki/Uniform_resource_identifier</p>
+</div><span><b>Data Type </b></span><p><a title="uri
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-uri.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81402" >uri</a></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li></ul></td></tr><tr id="Bundle.entry.response.etag" data-id="a385858c-9a2c-4665-8087-070daab3fa18" data-parentId="46ef19eb-6224-42d7-941a-7260f13d646f" class=""><td class="profile"><span class="baseIcon primitive"></span><span>etag</span></td><td class="profile"><span title="This element is an element that is part of the summary">Σ</span></td><td class="profile"><span>0</span><span>..</span><span>1</span></td><td class="profile"><a title="string
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-string.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81888" >string</a></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Bundle.entry.response.etag</pre></p></div><span><b>Short description </b></span><p><span>The Etag for the resource (if relevant)</span></p><span><b>Definition </b></span><div class="markdown"><p>The Etag for the resource, if the operation for the entry produced a versioned resource (see <a href="http.html#versioning">Resource Metadata and Versioning</a> and <a href="http.html#concurrency">Managing Resource Contention</a>).</p>
+</div><span><b>Comments </b></span><div class="markdown"><p>Etags match the Resource.meta.versionId. The ETag has to match the version id in the header if a resource is included.</p>
+</div><span><b>Data Type </b></span><p><a title="string
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-string.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81888" >string</a></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li></ul></td></tr><tr id="Bundle.entry.response.lastModified" data-id="3412e1d5-19fb-4d35-9be6-1464b0ed3483" data-parentId="46ef19eb-6224-42d7-941a-7260f13d646f" class=""><td class="profile"><span class="baseIcon primitive"></span><span>lastModified</span></td><td class="profile"><span title="This element is an element that is part of the summary">Σ</span></td><td class="profile"><span>0</span><span>..</span><span>1</span></td><td class="profile"><a title="instant
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-instant.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/82869" >instant</a></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Bundle.entry.response.lastModified</pre></p></div><span><b>Short description </b></span><p><span>Server&#39;s date time modified</span></p><span><b>Definition </b></span><div class="markdown"><p>The date/time that the resource was modified on the server.</p>
+</div><span><b>Comments </b></span><div class="markdown"><p>This has to match the same time in the meta header (meta.lastUpdated) if a resource is included.</p>
+</div><span><b>Data Type </b></span><p><a title="instant
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-instant.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/82869" >instant</a></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li></ul></td></tr><tr id="Bundle.entry.response.outcome" data-id="beca0e82-8dce-49bc-a979-80788771f291" data-parentId="46ef19eb-6224-42d7-941a-7260f13d646f" class=""><td class="profile"><span class="baseIcon datatype"></span><span>outcome</span></td><td class="profile"><span title="This element is an element that is part of the summary">Σ</span></td><td class="profile"><span>0</span><span>..</span><span>1</span></td><td class="profile"><a title="Resource
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-Resource.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/78806" >Resource</a></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Bundle.entry.response.outcome</pre></p></div><span><b>Short description </b></span><p><span>OperationOutcome with hints and warnings (for batch/transaction)</span></p><span><b>Definition </b></span><div class="markdown"><p>An OperationOutcome containing hints and warnings produced as part of processing this entry in a batch or transaction.</p>
+</div><span><b>Comments </b></span><div class="markdown"><p>For a POST/PUT operation, this is the equivalent outcome that would be returned for prefer = operationoutcome - except that the resource is always returned whether or not the outcome is returned.</p>
+<p>This outcome is not used for error responses in batch/transaction, only for hints and warnings. In a batch operation, the error will be in Bundle.entry.response, and for transaction, there will be a single OperationOutcome instead of a bundle in the case of an error.</p>
+</div><span><b>Data Type </b></span><p><a title="Resource
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-Resource.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/78806" >Resource</a></p><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>Entity. Role, or Act</li></ul></td></tr><tr id="Bundle.signature" data-id="eba692b9-9acd-4a4a-b1ad-57267bbe369c" data-parentId="af58788e-2dd0-48c7-8eea-0e1d5d1ac58f" class=""><td class="profile"><span class="baseIcon datatype"></span><span>signature</span></td><td class="profile"><span title="This element is an element that is part of the summary">Σ</span></td><td class="profile"><span>0</span><span>..</span><span>1</span></td><td class="profile"><a title="Signature
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-Signature.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81702" >Signature</a></td><td class="details hidden"><span class="pin-control"></span><div class="noconstraints"><span class="constraints">There are no (further) constraints on this element</span></div><span><b>Element Id</b></span><div><p><pre>Bundle.signature</pre></p></div><span><b>Short description </b></span><p><span>Digital Signature</span></p><span><b>Definition </b></span><div class="markdown"><p>Digital Signature - base64 encoded. XML-DSig or a JWT.</p>
+</div><span><b>Requirements </b></span><div class="markdown"><p>A Signature holds an electronic representation of a signature and its supporting context in a FHIR accessible form. The signature may either be a cryptographic type (XML DigSig or a JWS), which is able to provide non-repudiation proof, or it may be a graphical image that represents a signature or a signature process. This element allows capturing signatures on documents, messages, transactions or even search responses, to support content-authentication, non-repudiation or other business cases. This is primarily relevant where the bundle may travel through multiple hops or via other mechanisms where HTTPS non-repudiation is insufficient.</p>
+</div><span><b>Comments </b></span><div class="markdown"><p>The signature could be created by the &quot;author&quot; of the bundle or by the originating device.   Requirements around inclusion of a signature, verification of signatures and treatment of signed/non-signed bundles is implementation-environment specific.</p>
+</div><span><b>Data Type </b></span><p><a title="Signature
+hl7.fhir.r4.core 4.0.1
+StructureDefinition-Signature.json" href="https://simplifier.net/packages/hl7.fhir.r4.core/4.0.1/files/81702" >Signature</a></p><span><b>Constraints</b></span><div><ul><li class=""><b>ele-1:</b>All FHIR elements must have a @value or children<br/><code>hasValue() or (children().count() > id.count())</code></li></ul></div><span><b>Mappings</b></span><ul><li class=""><b>rim:</b>n/a</li><li class=""><b>rim:</b>N/A</li></ul></td></tr></table></div><div class="treetable-right-panel"></div></div></div><script type="text/javascript">
+(function() {
+var isTreetableVisible = document.querySelector(".treetable") != null;
+if (isTreetableVisible) {
+var resourceTreeTable1574e90e53a9430c97eb6c66ec44fe9b = new Stu3TreeTable(false);
+resourceTreeTable1574e90e53a9430c97eb6c66ec44fe9b.init("1574e90e53a9430c97eb6c66ec44fe9b");
+}
+})();
+</script></p>
+<hr />
+<p><strong>Examples</strong></p>
+<p><strong>Bundle</strong>
+<br>
+Example bundle shortened for display purposes</p>
+<p><pre class="resource-validation-xml"><pre><span class="brace">{</span>
+    <span class="element">&quot;</span><span class="element">resourceType</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Bundle</span><span class="string">&quot;</span><span class="symbol">,</span>
+    <span class="element">&quot;</span><span class="element">id</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">gecco-example-bundle</span><span class="string">&quot;</span><span class="symbol">,</span>
+    <span class="element">&quot;</span><span class="element">meta</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span>
+        <span class="element">&quot;</span><span class="element">profile</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace"> [</span>
+            <span class="string">&quot;</span><span class="string">https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/gecco-bundle</span><span class="string">&quot;</span>
+        <span class="brace">]</span>
+    <span class="brace">}</span><span class="symbol">,</span>
+    <span class="element">&quot;</span><span class="element">type</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">transaction</span><span class="string">&quot;</span><span class="symbol">,</span>
+    <span class="element">&quot;</span><span class="element">timestamp</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">2020-11-10T15:50:41+01:00</span><span class="string">&quot;</span><span class="symbol">,</span>
+    <span class="element">&quot;</span><span class="element">entry</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace"> [</span>
+        <span class="brace">{</span>
+            <span class="element">&quot;</span><span class="element">fullUrl</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">urn:uuid:b1128693-372d-469b-8288-04cf091e7553</span><span class="string">&quot;</span><span class="symbol">,</span>
+            <span class="element">&quot;</span><span class="element">resource</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span>
+                <span class="element">&quot;</span><span class="element">resourceType</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Patient</span><span class="string">&quot;</span><span class="symbol">,</span>
+                <span class="element">&quot;</span><span class="element">id</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">b1128693-372d-469b-8288-04cf091e7553</span><span class="string">&quot;</span><span class="symbol">,</span>
+                <span class="element">&quot;</span><span class="element">meta</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span>
+                    <span class="element">&quot;</span><span class="element">profile</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace"> [</span>
+                        <span class="string">&quot;</span><span class="string">https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/Patient</span><span class="string">&quot;</span>
+                    <span class="brace">]</span>
+                <span class="brace">}</span><span class="symbol">,</span>
+                <span class="element">&quot;</span><span class="element">extension</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace"> [</span>
+                    <span class="brace">{</span>
+                        <span class="element">&quot;</span><span class="element">url</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/ethnic-group</span><span class="string">&quot;</span><span class="symbol">,</span>
+                        <span class="element">&quot;</span><span class="element">valueCoding</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span>
+                            <span class="element">&quot;</span><span class="element">system</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://snomed.info/sct</span><span class="string">&quot;</span><span class="symbol">,</span>
+                            <span class="element">&quot;</span><span class="element">code</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">186019001</span><span class="string">&quot;</span><span class="symbol">,</span>
+                            <span class="element">&quot;</span><span class="element">display</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Other ethnic, mixed origin</span><span class="string">&quot;</span>
+                        <span class="brace">}</span>
+                    <span class="brace">}</span><span class="symbol">,</span>
+                    <span class="brace">{</span>
+                        <span class="element">&quot;</span><span class="element">extension</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace"> [</span>
+                            <span class="brace">{</span>
+                                <span class="element">&quot;</span><span class="element">url</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">dateTimeOfDocumentation</span><span class="string">&quot;</span><span class="symbol">,</span>
+                                <span class="element">&quot;</span><span class="element">valueDateTime</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">2020-10-01</span><span class="string">&quot;</span>
+                            <span class="brace">}</span><span class="symbol">,</span>
+                            <span class="brace">{</span>
+                                <span class="element">&quot;</span><span class="element">url</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">age</span><span class="string">&quot;</span><span class="symbol">,</span>
+                                <span class="element">&quot;</span><span class="element">valueAge</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span>
+                                    <span class="element">&quot;</span><span class="element">value</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">67</span><span class="symbol">,</span>
+                                    <span class="element">&quot;</span><span class="element">unit</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">years</span><span class="string">&quot;</span><span class="symbol">,</span>
+                                    <span class="element">&quot;</span><span class="element">system</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://unitsofmeasure.org</span><span class="string">&quot;</span><span class="symbol">,</span>
+                                    <span class="element">&quot;</span><span class="element">code</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">a</span><span class="string">&quot;</span>
+                                <span class="brace">}</span>
+                            <span class="brace">}</span>
+                        <span class="brace">]</span><span class="symbol">,</span>
+                        <span class="element">&quot;</span><span class="element">url</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/age</span><span class="string">&quot;</span>
+                    <span class="brace">}</span>
+                <span class="brace">]</span><span class="symbol">,</span>
+                <span class="element">&quot;</span><span class="element">identifier</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace"> [</span>
+                    <span class="brace">{</span>
+                        <span class="element">&quot;</span><span class="element">type</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span>
+                            <span class="element">&quot;</span><span class="element">coding</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace"> [</span>
+                                <span class="brace">{</span>
+                                    <span class="element">&quot;</span><span class="element">system</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://terminology.hl7.org/CodeSystem/v2-0203</span><span class="string">&quot;</span><span class="symbol">,</span>
+                                    <span class="element">&quot;</span><span class="element">code</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">MR</span><span class="string">&quot;</span>
+                                <span class="brace">}</span>
+                            <span class="brace">]</span>
+                        <span class="brace">}</span><span class="symbol">,</span>
+                        <span class="element">&quot;</span><span class="element">system</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">https://www.charite.de/fhir/CodeSystem/medical-record-numbers</span><span class="string">&quot;</span><span class="symbol">,</span>
+                        <span class="element">&quot;</span><span class="element">value</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">43814872</span><span class="string">&quot;</span><span class="symbol">,</span>
+                        <span class="element">&quot;</span><span class="element">assigner</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span>
+                            <span class="element">&quot;</span><span class="element">reference</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Organization/Charit&#233;</span><span class="string">&quot;</span>
+                        <span class="brace">}</span>
+                    <span class="brace">}</span>
+                <span class="brace">]</span><span class="symbol">,</span>
+                <span class="element">&quot;</span><span class="element">birthDate</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">1953-09-30</span><span class="string">&quot;</span>
+            <span class="brace">}</span><span class="symbol">,</span>
+            <span class="element">&quot;</span><span class="element">request</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span>
+                <span class="element">&quot;</span><span class="element">method</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">PUT</span><span class="string">&quot;</span><span class="symbol">,</span>
+                <span class="element">&quot;</span><span class="element">url</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Patient/b1128693-372d-469b-8288-04cf091e7553</span><span class="string">&quot;</span>
+            <span class="brace">}</span>
+        <span class="brace">}</span><span class="symbol">,</span>
+        <span class="brace">{</span>
+            <span class="element">&quot;</span><span class="element">fullUrl</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">urn:uuid:8d4c2cbb-bc80-4e5a-82f0-0babf997660e</span><span class="string">&quot;</span><span class="symbol">,</span>
+            <span class="element">&quot;</span><span class="element">resource</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span>
+                <span class="element">&quot;</span><span class="element">resourceType</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Condition</span><span class="string">&quot;</span><span class="symbol">,</span>
+                <span class="element">&quot;</span><span class="element">id</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">8d4c2cbb-bc80-4e5a-82f0-0babf997660e</span><span class="string">&quot;</span><span class="symbol">,</span>
+                <span class="element">&quot;</span><span class="element">meta</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span>
+                    <span class="element">&quot;</span><span class="element">profile</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace"> [</span>
+                        <span class="string">&quot;</span><span class="string">https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/chronic-lung-diseases</span><span class="string">&quot;</span>
+                    <span class="brace">]</span>
+                <span class="brace">}</span><span class="symbol">,</span>
+                <span class="element">&quot;</span><span class="element">clinicalStatus</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span>
+                    <span class="element">&quot;</span><span class="element">coding</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace"> [</span>
+                        <span class="brace">{</span>
+                            <span class="element">&quot;</span><span class="element">system</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://terminology.hl7.org/CodeSystem/condition-clinical</span><span class="string">&quot;</span><span class="symbol">,</span>
+                            <span class="element">&quot;</span><span class="element">code</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">active</span><span class="string">&quot;</span><span class="symbol">,</span>
+                            <span class="element">&quot;</span><span class="element">display</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Active</span><span class="string">&quot;</span>
+                        <span class="brace">}</span>
+                    <span class="brace">]</span>
+                <span class="brace">}</span><span class="symbol">,</span>
+                <span class="element">&quot;</span><span class="element">verificationStatus</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span>
+                    <span class="element">&quot;</span><span class="element">coding</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace"> [</span>
+                        <span class="brace">{</span>
+                            <span class="element">&quot;</span><span class="element">system</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://terminology.hl7.org/CodeSystem/condition-ver-status</span><span class="string">&quot;</span><span class="symbol">,</span>
+                            <span class="element">&quot;</span><span class="element">code</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">confirmed</span><span class="string">&quot;</span><span class="symbol">,</span>
+                            <span class="element">&quot;</span><span class="element">display</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Confirmed</span><span class="string">&quot;</span>
+                        <span class="brace">}</span><span class="symbol">,</span>
+                        <span class="brace">{</span>
+                            <span class="element">&quot;</span><span class="element">system</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://snomed.info/sct</span><span class="string">&quot;</span><span class="symbol">,</span>
+                            <span class="element">&quot;</span><span class="element">code</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">410605003</span><span class="string">&quot;</span><span class="symbol">,</span>
+                            <span class="element">&quot;</span><span class="element">display</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Confirmed present (qualifier value)</span><span class="string">&quot;</span>
+                        <span class="brace">}</span>
+                    <span class="brace">]</span>
+                <span class="brace">}</span><span class="symbol">,</span>
+                <span class="element">&quot;</span><span class="element">category</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace"> [</span>
+                    <span class="brace">{</span>
+                        <span class="element">&quot;</span><span class="element">coding</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace"> [</span>
+                            <span class="brace">{</span>
+                                <span class="element">&quot;</span><span class="element">system</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://snomed.info/sct</span><span class="string">&quot;</span><span class="symbol">,</span>
+                                <span class="element">&quot;</span><span class="element">code</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">418112009</span><span class="string">&quot;</span><span class="symbol">,</span>
+                                <span class="element">&quot;</span><span class="element">display</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Pulmonary medicine</span><span class="string">&quot;</span>
+                            <span class="brace">}</span>
+                        <span class="brace">]</span>
+                    <span class="brace">}</span>
+                <span class="brace">]</span><span class="symbol">,</span>
+                <span class="element">&quot;</span><span class="element">code</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span>
+                    <span class="element">&quot;</span><span class="element">coding</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace"> [</span>
+                        <span class="brace">{</span>
+                            <span class="element">&quot;</span><span class="element">system</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://snomed.info/sct</span><span class="string">&quot;</span><span class="symbol">,</span>
+                            <span class="element">&quot;</span><span class="element">code</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">413839001</span><span class="string">&quot;</span><span class="symbol">,</span>
+                            <span class="element">&quot;</span><span class="element">display</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Chronic lung disease</span><span class="string">&quot;</span>
+                        <span class="brace">}</span>
+                    <span class="brace">]</span>
+                <span class="brace">}</span><span class="symbol">,</span>
+                <span class="element">&quot;</span><span class="element">subject</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span>
+                    <span class="element">&quot;</span><span class="element">reference</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Patient/b1128693-372d-469b-8288-04cf091e7553</span><span class="string">&quot;</span>
+                <span class="brace">}</span><span class="symbol">,</span>
+                <span class="element">&quot;</span><span class="element">recordedDate</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">2020-11-10T15:50:41+01:00</span><span class="string">&quot;</span>
+            <span class="brace">}</span><span class="symbol">,</span>
+            <span class="element">&quot;</span><span class="element">request</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span>
+                <span class="element">&quot;</span><span class="element">method</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">POST</span><span class="string">&quot;</span><span class="symbol">,</span>
+                <span class="element">&quot;</span><span class="element">url</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Condition</span><span class="string">&quot;</span>
+            <span class="brace">}</span>
+        <span class="brace">}</span><span class="symbol">,</span>
+        <span class="brace">{</span>
+            <span class="element">&quot;</span><span class="element">fullUrl</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">urn:uuid:cabb511a-07be-4f2d-9444-54a4171a45a4</span><span class="string">&quot;</span><span class="symbol">,</span>
+            <span class="element">&quot;</span><span class="element">resource</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span>
+                <span class="element">&quot;</span><span class="element">resourceType</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Observation</span><span class="string">&quot;</span><span class="symbol">,</span>
+                <span class="element">&quot;</span><span class="element">id</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">cabb511a-07be-4f2d-9444-54a4171a45a4</span><span class="string">&quot;</span><span class="symbol">,</span>
+                <span class="element">&quot;</span><span class="element">meta</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span>
+                    <span class="element">&quot;</span><span class="element">profile</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace"> [</span>
+                        <span class="string">&quot;</span><span class="string">https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/sars-cov-2-rt-pcr</span><span class="string">&quot;</span>
+                    <span class="brace">]</span>
+                <span class="brace">}</span><span class="symbol">,</span>
+                <span class="element">&quot;</span><span class="element">identifier</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace"> [</span>
+                    <span class="brace">{</span>
+                        <span class="element">&quot;</span><span class="element">type</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span>
+                            <span class="element">&quot;</span><span class="element">coding</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace"> [</span>
+                                <span class="brace">{</span>
+                                    <span class="element">&quot;</span><span class="element">system</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://terminology.hl7.org/CodeSystem/v2-0203</span><span class="string">&quot;</span><span class="symbol">,</span>
+                                    <span class="element">&quot;</span><span class="element">code</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">OBI</span><span class="string">&quot;</span>
+                                <span class="brace">}</span>
+                            <span class="brace">]</span>
+                        <span class="brace">}</span><span class="symbol">,</span>
+                        <span class="element">&quot;</span><span class="element">system</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">https://www.charite.de/fhir/CodeSystem/lab-identifiers</span><span class="string">&quot;</span><span class="symbol">,</span>
+                        <span class="element">&quot;</span><span class="element">value</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">94500-6_SARS-CoV-2-RNA-Presence-in-Respiratory-specimen</span><span class="string">&quot;</span><span class="symbol">,</span>
+                        <span class="element">&quot;</span><span class="element">assigner</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span>
+                            <span class="element">&quot;</span><span class="element">reference</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Organization/Charit&#233;</span><span class="string">&quot;</span>
+                        <span class="brace">}</span>
+                    <span class="brace">}</span>
+                <span class="brace">]</span><span class="symbol">,</span>
+                <span class="element">&quot;</span><span class="element">status</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">final</span><span class="string">&quot;</span><span class="symbol">,</span>
+                <span class="element">&quot;</span><span class="element">category</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace"> [</span>
+                    <span class="brace">{</span>
+                        <span class="element">&quot;</span><span class="element">coding</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace"> [</span>
+                            <span class="brace">{</span>
+                                <span class="element">&quot;</span><span class="element">system</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://loinc.org</span><span class="string">&quot;</span><span class="symbol">,</span>
+                                <span class="element">&quot;</span><span class="element">code</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">26436-6</span><span class="string">&quot;</span>
+                            <span class="brace">}</span><span class="symbol">,</span>
+                            <span class="brace">{</span>
+                                <span class="element">&quot;</span><span class="element">system</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://terminology.hl7.org/CodeSystem/observation-category</span><span class="string">&quot;</span><span class="symbol">,</span>
+                                <span class="element">&quot;</span><span class="element">code</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">laboratory</span><span class="string">&quot;</span>
+                            <span class="brace">}</span>
+                        <span class="brace">]</span>
+                    <span class="brace">}</span>
+                <span class="brace">]</span><span class="symbol">,</span>
+                <span class="element">&quot;</span><span class="element">code</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span>
+                    <span class="element">&quot;</span><span class="element">coding</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace"> [</span>
+                        <span class="brace">{</span>
+                            <span class="element">&quot;</span><span class="element">system</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://loinc.org</span><span class="string">&quot;</span><span class="symbol">,</span>
+                            <span class="element">&quot;</span><span class="element">code</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">94500-6</span><span class="string">&quot;</span><span class="symbol">,</span>
+                            <span class="element">&quot;</span><span class="element">display</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">SARS-CoV-2 (COVID-19) RNA [Presence] in Respiratory specimen by NAA with probe detection</span><span class="string">&quot;</span>
+                        <span class="brace">}</span>
+                    <span class="brace">]</span><span class="symbol">,</span>
+                    <span class="element">&quot;</span><span class="element">text</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">SARS-CoV-2-RNA (PCR)</span><span class="string">&quot;</span>
+                <span class="brace">}</span><span class="symbol">,</span>
+                <span class="element">&quot;</span><span class="element">subject</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span>
+                    <span class="element">&quot;</span><span class="element">reference</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Patient/b1128693-372d-469b-8288-04cf091e7553</span><span class="string">&quot;</span>
+                <span class="brace">}</span><span class="symbol">,</span>
+                <span class="element">&quot;</span><span class="element">effectiveDateTime</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">2020-11-10T15:50:41+01:00</span><span class="string">&quot;</span><span class="symbol">,</span>
+                <span class="element">&quot;</span><span class="element">valueCodeableConcept</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span>
+                    <span class="element">&quot;</span><span class="element">coding</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace"> [</span>
+                        <span class="brace">{</span>
+                            <span class="element">&quot;</span><span class="element">system</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">http://snomed.info/sct</span><span class="string">&quot;</span><span class="symbol">,</span>
+                            <span class="element">&quot;</span><span class="element">code</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">260373001</span><span class="string">&quot;</span><span class="symbol">,</span>
+                            <span class="element">&quot;</span><span class="element">display</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Detected (qualifier value)</span><span class="string">&quot;</span>
+                        <span class="brace">}</span>
+                    <span class="brace">]</span><span class="symbol">,</span>
+                    <span class="element">&quot;</span><span class="element">text</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">SARS-CoV-2-RNA positiv</span><span class="string">&quot;</span>
+                <span class="brace">}</span>
+            <span class="brace">}</span><span class="symbol">,</span>
+            <span class="element">&quot;</span><span class="element">request</span><span class="element">&quot;</span><span class="symbol">: </span><span class="brace">{</span>
+                <span class="element">&quot;</span><span class="element">method</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">PUT</span><span class="string">&quot;</span><span class="symbol">,</span>
+                <span class="element">&quot;</span><span class="element">url</span><span class="element">&quot;</span><span class="symbol">: </span><span class="string">&quot;</span><span class="string">Observation/cabb511a-07be-4f2d-9444-54a4171a45a4</span><span class="string">&quot;</span>
+            <span class="brace">}</span>
+        <span class="brace">}</span>
+    <span class="brace">]</span>
+<span class="brace">}</span></pre></pre></p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="ig-view-footer" role="contentinfo" aria-label="Footer">
+                
+<div class="container">
+    <div class="row">
+        <p>Powered by <b>SIMPLIFIER.NET</b></p>
+        <div>
+            HL7<sup>&reg;</sup> and FHIR<sup>&reg;</sup> are the registered trademarks of Health Level Seven International
+        </div>
+    </div>
+</div>
+
+            </div>
+
+        </div>
+
+    </body>
+
+</html>

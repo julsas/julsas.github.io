@@ -1,0 +1,910 @@
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+  <id value="gecco-implementationguide" />
+  <url value="https://simplifier.net/guide/germancoronaconsensusdataset-implementationguide" />
+  <version value="1.0" />
+  <name value="German Corona Consensus Data Set - Implementation Guide" />
+  <status value="active" />
+  <experimental value="false" />
+  <date value="2020-12-23" />
+  <publisher value="Nationales Forschungsnetzwerk der Universitätsmedizin (NFN)" />
+  <contact>
+    <name value="Nationales Forschungsnetzwerk der Universitätsmedizin (NFN)" />
+    <telecom>
+      <system value="url" />
+      <value value="https://www.netzwerk-universitaetsmedizin.de/" />
+    </telecom>
+  </contact>
+  <description value="The German Corona Consensus Data Set (GECCO) is a nationally uniform data set for the systematic collection of scientific data on COVID-19 in Germany." />
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166" />
+      <code value="DE" />
+    </coding>
+  </jurisdiction>
+  <copyright value="The content of this specification is public. Reuse or publication claims are not limited." />
+  <packageId value="de.gecco" />
+  <fhirVersion value="4.0.1" />
+  <definition>
+    <resource>
+      <reference>
+        <reference value="Bundle/gecco-example-bundle" />
+      </reference>
+      <name value="GECCO Bundle example" />
+      <description value="GECCO transaction bundle example" />
+      <exampleCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/gecco-bundle" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Condition/4f7ba670-119e-4964-9cd5-c191f1c00ce1" />
+      </reference>
+      <name value="Chronic lung disease" />
+      <description value="Chronic lung disease condition example" />
+      <exampleCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/chronic-lung-diseases" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Condition/a2341941-cb9e-4534-99c1-cf03793e720a" />
+      </reference>
+      <name value="Cardiovascular disease" />
+      <description value="Cardiovascular disease condition example" />
+      <exampleCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/cardiovascular-diseases" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Condition/83b2b0ef-5862-46f6-be23-73700d81f49d" />
+      </reference>
+      <name value="Chronic liver disease" />
+      <description value="Chronic liver disease condition example" />
+      <exampleCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/chronic-liver-diseases" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Condition/3c5cf052-d894-4cc3-a12c-ba087d8e3083" />
+      </reference>
+      <name value="Rheumatism" />
+      <description value="Rheumatism condition example" />
+      <exampleCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/rheumatological-immunological-diseases" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Condition/1b1a4aa2-7885-497c-bd44-8d9ee377ba2b" />
+      </reference>
+      <name value="History of being a tissue or organ recipient" />
+      <description value="History of being a tissue or organ recipient condition example" />
+      <exampleCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/organ-recipient" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Condition/4d5600e0-adf9-4399-a773-6ac35e7d9632" />
+      </reference>
+      <name value="Diabetes mellitus" />
+      <description value="Diabetes mellitus condition example" />
+      <exampleCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/diabetes-mellitus" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Condition/540c7ce3-752c-4565-821b-fecce54b77d6" />
+      </reference>
+      <name value="Malignant neoplastic disease" />
+      <description value="Malignant neoplastic disease condition example" />
+      <exampleCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/malignant-neoplastic-disease" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/f72e0fbe-08c2-495b-b43a-be2477221b3a" />
+      </reference>
+      <name value="Smoking status" />
+      <description value="Smoking status observation example" />
+      <exampleCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/smoking-status" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Condition/d575547a-577e-42f5-bdb7-5e16d3627552" />
+      </reference>
+      <name value="Mental disorder" />
+      <description value="Mental disorder condition example" />
+      <exampleCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/chronic-neurological-mental-diseases" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Procedure/9fec44ce-5f2b-4814-8a71-6354e69a26b2" />
+      </reference>
+      <name value="Respiratory therapy" />
+      <description value="Respiratory therapy procedure example" />
+      <exampleCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/respiratory-therapies" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Condition/c8aa5893-1f5e-4d1b-b37d-146a48a39581" />
+      </reference>
+      <name value="Chronic kidney disease" />
+      <description value="Chronic kidney disease condition example" />
+      <exampleCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/chronic-kidney-diseases" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/607eb4e3-65ac-4ff9-b67c-20ffa7699555" />
+      </reference>
+      <name value="History of travel" />
+      <description value="History of travel observation example" />
+      <exampleCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/history-of-travel" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Condition/1bf6fe86-7bc6-4508-8e60-3e25c538b93e" />
+      </reference>
+      <name value="Gastrointestinal ulcer" />
+      <description value="Gastrointestinal ulcer condition example" />
+      <exampleCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/gastrointestinal-ulcers" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Immunization/c17f192c-f765-4729-818a-4ee55be5c87b" />
+      </reference>
+      <name value="Immunization" />
+      <description value="Immunization example" />
+      <exampleCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/immunization" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Consent/e1c90e84-aa7b-4999-8036-27f88dd7b60e" />
+      </reference>
+      <name value="Do-not-resuscitate-order" />
+      <description value="Do-not-resuscitate-order consent example" />
+      <exampleCanonical value="https://www.netzwerk-universitaetsmedizin.de//fhir/StructureDefinition/do-not-resuscitate-order" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Procedure/afba3005-186f-4330-9d3e-c188cabd949e" />
+      </reference>
+      <name value="Imaging procedure" />
+      <description value="Imaging procedure example" />
+      <exampleCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/radiology-procedures" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="DiagnosticReport/574d492f-16c6-4482-b2c4-38dc645043f1" />
+      </reference>
+      <name value="Radiological findings" />
+      <description value="Radiological findings diagnostic report example" />
+      <exampleCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/diagnostic-report-radiology" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/14616b17-7235-4024-a9a1-562a39bf7b0d" />
+      </reference>
+      <name value="Pregnancy status" />
+      <description value="Pregnancy Status observation example" />
+      <exampleCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/pregnancy-status" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Patient/c786ac3c-0579-4aa2-adda-db784b214ad6" />
+      </reference>
+      <name value="Patient" />
+      <description value="Patient example" />
+      <exampleCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/Patient" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/d3f16c6f-e67d-4a77-8873-d4ab024e9257" />
+      </reference>
+      <name value="Sex assigned at birth" />
+      <description value="Sex assigned at birth observation example" />
+      <exampleCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/sex-assigned-at-birth" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/4b5cfc04-0d92-47f6-8bd0-be820286db01" />
+      </reference>
+      <name value="Clinical Frailty Scale Score" />
+      <description value="Clinical Frailty Scale Score observation example" />
+      <exampleCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/frailty-score" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/80ac4908-3637-476d-a416-9ab7ed7474e6" />
+      </reference>
+      <name value="Body weight" />
+      <description value="Body weight observation example" />
+      <exampleCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/body-weight" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/23499ea6-d046-4e91-b7ab-d9cf040add72" />
+      </reference>
+      <name value="Body height" />
+      <description value="Body height observation example" />
+      <exampleCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/body-height" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/3d42736a-9e47-491e-8d06-d884e90060c7" />
+      </reference>
+      <name value="Known exposure" />
+      <description value="Known exposure to Covid-19 observation example" />
+      <exampleCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/known-exposure" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Condition/77a8826d-4397-4937-8cca-de90008d3368" />
+      </reference>
+      <name value="Complication" />
+      <description value="Complication condition example" />
+      <exampleCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/complications-covid-19" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Condition/77a8826d-4397-4937-8cca-de90008d3368" />
+      </reference>
+      <name value="Stage at diagnosis" />
+      <description value="Stage at Covid-19 diagnosis condition example" />
+      <exampleCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/diagnosis-covid-19" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/eee655bf-87c3-4567-9fb0-2609b535cd14" />
+      </reference>
+      <name value="Laboratory value" />
+      <description value="Laboratory value observation example" />
+      <exampleCanonical value="https://www.medizininformatik-initiative.de/fhir/core/modul-labor/StructureDefinition/ObservationLab" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/3925fe1b-1b94-4132-bb32-7b4bc34b2a1e" />
+      </reference>
+      <name value="SARS-CoV-2-RT-PCR" />
+      <description value="SARS-CoV-2-RT-PCR observation example" />
+      <exampleCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/sars-cov-2-rt-pcr" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/220767b9-5760-40b8-8741-8772dae04c3f" />
+      </reference>
+      <name value="SARS-CoV-2 Ab panel" />
+      <description value="SARS-CoV-2 Ab panel observation example" />
+      <exampleCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/sars-cov-2-ab-pnl-ser-pl-ia" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/22732de8-3eb6-477e-81d6-28fb906b3e4e" />
+      </reference>
+      <name value="SARS-CoV-2 Ab Qn" />
+      <description value="SARS-CoV-2 Ab Qn observation example" />
+      <exampleCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/sars-cov-2-ab-ser-pl-ia-acnc" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/70ca7d00-0d8b-42bb-9508-a8fc76e5c7ad" />
+      </reference>
+      <name value="SARS-CoV-2 Ab Ql" />
+      <description value="SARS-CoV-2 Ab Ql observation example" />
+      <exampleCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/sars-cov-2-ab-ser-pl-ql-ia" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/7e746710-fad4-474b-8a28-422863f3a2b8" />
+      </reference>
+      <name value="SARS-CoV-2 IgA Ab Qn" />
+      <description value="SARS-CoV-2 IgA Ab Qn observation example" />
+      <exampleCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/sars-cov-2-iga-ser-pl-ia-acnc" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/f35f17da-f642-402d-8cf4-ff70607713a7" />
+      </reference>
+      <name value="SARS-CoV-2 IgA Ab Ql" />
+      <description value="SARS-CoV-2 IgA Ab Ql observation example" />
+      <exampleCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/sars-cov-2-iga-ser-pl-ql-ia" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/7297b0fd-3be7-4b88-a63a-6ba651152c41" />
+      </reference>
+      <name value="SARS-CoV-2 IgG Ab Qn" />
+      <description value="SARS-CoV-2 IgG Ab Qn observation example" />
+      <exampleCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/sars-cov-2-igg-ser-pl-ia-acnc" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/da1fa3fe-a8a3-44b6-94c6-3497269436ec" />
+      </reference>
+      <name value="SARS-CoV-2 IgG Ab Ql" />
+      <description value="SARS-CoV-2 IgG Ab Ql observation example" />
+      <exampleCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/sars-cov-2-igg-ser-pl-ql-ia" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/b5adbc53-a1ee-4a57-9ede-fae4b4462bfb" />
+      </reference>
+      <name value="SARS-CoV-2 IgM Ab Qn" />
+      <description value="SARS-CoV-2 IgM Ab Qn observation example" />
+      <exampleCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/sars-cov-2-igm-ser-pl-ia-acnc" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/b08b1687-2ea1-4b14-9473-dd04389169ec" />
+      </reference>
+      <name value="SARS-CoV-2 IgM Ab Ql" />
+      <description value="SARS-CoV-2 IgM Ab Ql observation example" />
+      <exampleCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/sars-cov-2-igm-ser-pl-ql-ia" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="MedicationStatement/a85311b0-0489-484f-8ee2-1d6257299ded" />
+      </reference>
+      <name value="Pharmacological Therapy" />
+      <description value="Pharmacological Therapy MedicationStatement example" />
+      <exampleCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/pharmacological-therapy" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="MedicationStatement/25369138-60ff-4761-bd6e-b5c9c84758e2" />
+      </reference>
+      <name value="ACE inhibitors" />
+      <description value="ACE inhibitors MedicationStatement example" />
+      <exampleCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/pharmacological-therapy-ace-inhibitors" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="MedicationStatement/a5cfc927-ba0e-4215-a4a2-536528962fe9" />
+      </reference>
+      <name value="Immunoglobulins" />
+      <description value="Immunoglobulins MedicationStatement example" />
+      <exampleCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/pharmacological-therapy-immunoglobulins" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="MedicationStatement/f6ba1b3a-5416-49e5-81b5-6d95e1eac1b9" />
+      </reference>
+      <name value="Anticoagulants" />
+      <description value="Anticoagulants MedicationStatement example" />
+      <exampleCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/pharmacological-therapy-anticoagulants" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Condition/84f75240-befd-4501-89a3-231ccbbae44c" />
+      </reference>
+      <name value="Respiratory outcome" />
+      <description value="Respiratory outcome condition example" />
+      <exampleCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/dependence-on-ventilator" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/611b9cc3-d006-4ee3-8ca6-de1888bba24b" />
+      </reference>
+      <name value="Discharge Disposition" />
+      <description value="Discharge Disposition observation example" />
+      <exampleCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/discharge-disposition" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/63e70e3f-99ea-4a47-beac-997f508306a5" />
+      </reference>
+      <name value="Study Inclusion due to Covid-19" />
+      <description value="Study Inclusion due to Covid-19 observation example" />
+      <exampleCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/study-inclusion-covid-19" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/571c047d-3689-4fb7-9292-c1d71faecf72" />
+      </reference>
+      <name value="Interventional Clinical Trial Participation" />
+      <description value="Interventional Clinical Trial Participation observation example" />
+      <exampleCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/interventional-clinical-trial-participation" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Condition/eb010879-b54b-42d1-8e01-ec42ba61e7d8" />
+      </reference>
+      <name value="Covid-19 Symptoms" />
+      <description value="Covid-19 Symptoms condition example" />
+      <exampleCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/symptoms-covid-19" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Procedure/8190e06c-e82e-4927-929e-17d09be9e6c7" />
+      </reference>
+      <name value="Dialysis" />
+      <description value="Dialysis procedure example" />
+      <exampleCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/dialysis" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Procedure/b03c0583-c7fb-4077-b5ca-b4609746f3f6" />
+      </reference>
+      <name value="Apheresis" />
+      <description value="Apheresis procedure example" />
+      <exampleCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/apheresis" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Procedure/1ea252e6-bfca-4520-bbd6-0be15222ced3" />
+      </reference>
+      <name value="Prone Position" />
+      <description value="Prone position procedure example" />
+      <exampleCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/prone-position" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Procedure/1a596d5e-cf8c-4a67-a434-727c51350d5d" />
+      </reference>
+      <name value="ECMO" />
+      <description value="ECMO procedure example" />
+      <exampleCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/extracorporeal-membrane-oxygenation" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/90cf27fe-5dde-4e92-a66b-7235144b1e65" />
+      </reference>
+      <name value="Patient in ICU" />
+      <description value="Patient in ICU observation example" />
+      <exampleCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/patient-in-icu" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/6a78560b-2f7c-4af5-a7bc-3c7d62ca8458" />
+      </reference>
+      <name value="Carbon Dioxide Partial Pressure" />
+      <description value="Carbon Dioxide Partial Pressure observation example" />
+      <exampleCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/carbon-dioxide-partial-pressure" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/6a78560b-2f7c-4af5-a7bc-3c7d62ca8458" />
+      </reference>
+      <name value="Oxygen Partial Pressure" />
+      <description value="Oxygen Partial Pressure observation example" />
+      <exampleCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/oxygen-partial-pressure" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/c9f96dd3-a77a-4aa9-9b12-43cd1972d9a4" />
+      </reference>
+      <name value="Inhaled Oxygen Concentration" />
+      <description value="Inhaled Oxygen Concentration observation example" />
+      <exampleCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/inhaled-oxygen-concentration" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/ac8b697d-7088-4fbe-9ece-51df2d3f1e04" />
+      </reference>
+      <name value="pH" />
+      <description value="pH observation example" />
+      <exampleCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/pH" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/71e371b6-b801-4387-bd36-ea015b2df658" />
+      </reference>
+      <name value="SOFA Score" />
+      <description value="SOFA score observation example" />
+      <exampleCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/sofa-score" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/a0897b04-2e57-43a7-9372-3c1f6a2fef1c" />
+      </reference>
+      <name value="Respiratory rate" />
+      <description value="Respiratory rate observation example" />
+      <exampleCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/respiratory-rate" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/2a1e1c87-64f4-490b-912b-d8726b7b5f13" />
+      </reference>
+      <name value="Blood pressure" />
+      <description value="Blood pressure observation example" />
+      <exampleCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/blood-pressure" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/c8079220-594c-42dc-8cea-7a52a6833c2c" />
+      </reference>
+      <name value="Heart rate" />
+      <description value="Heart rate observation example" />
+      <exampleCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/heart-rate" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/162918dc-dc70-4767-a6d5-34c7d67e280a" />
+      </reference>
+      <name value="Body temperature" />
+      <description value="Body temperature observation example" />
+      <exampleCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/body-temperature" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/6fa9e2be-d15a-4e77-81fc-056dda521875" />
+      </reference>
+      <name value="Oxygen Saturation" />
+      <description value="Oxygen Saturation observation example" />
+      <exampleCanonical value="https://www.netzwerk-universitaetsmedizin.de/fhir/StructureDefinition/oxygen-saturation" />
+    </resource>
+    <page>
+      <nameUrl value="Home.md" />
+      <title value="Home" />
+      <generation value="markdown" />
+      <page>
+        <nameUrl value="Introduction.md" />
+        <title value="Introduction" />
+        <generation value="markdown" />
+        <page>
+          <nameUrl value="TransactionBundle.md" />
+          <title value="Transaction Bundle" />
+          <generation value="markdown" />
+        </page>
+      </page>
+      <page>
+        <nameUrl value="GECCOCore.md" />
+        <title value="GECCO Core" />
+        <generation value="markdown" />
+        <page>
+          <nameUrl value="AnamnesisRiskfactors.md" />
+          <title value="Anamnesis / Risk factors" />
+          <generation value="markdown" />
+          <page>
+            <nameUrl value="Chroniclungdiseases.md" />
+            <title value="Chronic lung diseases" />
+            <generation value="markdown" />
+          </page>
+          <page>
+            <nameUrl value="Disordersofcardiovascularsystem.md" />
+            <title value="Disorders of cardiovascular system" />
+            <generation value="markdown" />
+          </page>
+          <page>
+            <nameUrl value="Chronicliverdiseases.md" />
+            <title value="Chronic liver diseases" />
+            <generation value="markdown" />
+          </page>
+          <page>
+            <nameUrl value="Rheumatologicalimmunologicaldiseases.md" />
+            <title value="Rheumatological/immunological diseases" />
+            <generation value="markdown" />
+          </page>
+          <page>
+            <nameUrl value="Humanimmunodeficiencyvirusinfection.md" />
+            <title value="Human immunodeficiency virus infection" />
+            <generation value="markdown" />
+          </page>
+          <page>
+            <nameUrl value="Historyofbeingatissueororganrecipient.md" />
+            <title value="History of being a tissue or organ recipient" />
+            <generation value="markdown" />
+          </page>
+          <page>
+            <nameUrl value="Diabetesmellitus.md" />
+            <title value="Diabetes mellitus" />
+            <generation value="markdown" />
+          </page>
+          <page>
+            <nameUrl value="Malignantneoplasticdiseases.md" />
+            <title value="Malignant neoplastic diseases" />
+            <generation value="markdown" />
+          </page>
+          <page>
+            <nameUrl value="Tobaccosmokingstatus.md" />
+            <title value="Tobacco smoking status" />
+            <generation value="markdown" />
+          </page>
+          <page>
+            <nameUrl value="Chronicneurologicalormentaldiseases.md" />
+            <title value="Chronic neurological or mental diseases" />
+            <generation value="markdown" />
+          </page>
+          <page>
+            <nameUrl value="Respiratorytherapies.md" />
+            <title value="Respiratory therapies" />
+            <generation value="markdown" />
+          </page>
+          <page>
+            <nameUrl value="Chronickidneydiseases.md" />
+            <title value="Chronic kidney diseases" />
+            <generation value="markdown" />
+          </page>
+          <page>
+            <nameUrl value="Historyoftravel-duplicate-2.md" />
+            <title value="History of travel" />
+            <generation value="markdown" />
+          </page>
+          <page>
+            <nameUrl value="Gastrointestinalulcers.md" />
+            <title value="Gastrointestinal ulcers" />
+            <generation value="markdown" />
+          </page>
+          <page>
+            <nameUrl value="Immunizationstatus.md" />
+            <title value="Immunization status" />
+            <generation value="markdown" />
+          </page>
+          <page>
+            <nameUrl value="Resuscitationstatus.md" />
+            <title value="Resuscitation status" />
+            <generation value="markdown" />
+          </page>
+        </page>
+        <page>
+          <nameUrl value="Imaging.md" />
+          <title value="Imaging" />
+          <generation value="markdown" />
+          <page>
+            <nameUrl value="Imagingprocedures.md" />
+            <title value="Imaging procedures" />
+            <generation value="markdown" />
+          </page>
+          <page>
+            <nameUrl value="Radiologicalfindings.md" />
+            <title value="Radiological findings" />
+            <generation value="markdown" />
+          </page>
+        </page>
+        <page>
+          <nameUrl value="Demographics.md" />
+          <title value="Demographics" />
+          <generation value="markdown" />
+          <page>
+            <nameUrl value="Pregnancy.md" />
+            <title value="Pregnancy" />
+            <generation value="markdown" />
+          </page>
+          <page>
+            <nameUrl value="Ethnicgroup.md" />
+            <title value="Ethnic group" />
+            <generation value="markdown" />
+          </page>
+          <page>
+            <nameUrl value="Biologicalsex.md" />
+            <title value="Biological sex" />
+            <generation value="markdown" />
+          </page>
+          <page>
+            <nameUrl value="Dateofbirth.md" />
+            <title value="Date of birth" />
+            <generation value="markdown" />
+          </page>
+          <page>
+            <nameUrl value="Age.md" />
+            <title value="Age" />
+            <generation value="markdown" />
+          </page>
+          <page>
+            <nameUrl value="Frailtyscore.md" />
+            <title value="Frailty score" />
+            <generation value="markdown" />
+          </page>
+          <page>
+            <nameUrl value="Bodyweight.md" />
+            <title value="Body weight" />
+            <generation value="markdown" />
+          </page>
+          <page>
+            <nameUrl value="Bodyheight.md" />
+            <title value="Body height" />
+            <generation value="markdown" />
+          </page>
+        </page>
+        <page>
+          <nameUrl value="Epidemiologicalfactors.md" />
+          <title value="Epidemiological factors" />
+          <generation value="markdown" />
+          <page>
+            <nameUrl value="ContactwithpersonssufferingfromCovid-19.md" />
+            <title value="Contact with persons suffering from Covid-19?" />
+            <generation value="markdown" />
+          </page>
+        </page>
+        <page>
+          <nameUrl value="Complications.md" />
+          <title value="Complications" />
+          <generation value="markdown" />
+          <page>
+            <nameUrl value="Complication.md" />
+            <title value="Complication" />
+            <generation value="markdown" />
+          </page>
+        </page>
+        <page>
+          <nameUrl value="OnsetofillnessAdmission.md" />
+          <title value="Onset of illness / Admission" />
+          <generation value="markdown" />
+          <page>
+            <nameUrl value="Stageatdiagnosis.md" />
+            <title value="Stage at diagnosis" />
+            <generation value="markdown" />
+          </page>
+        </page>
+        <page>
+          <nameUrl value="Laboratoryvalues.md" />
+          <title value="Laboratory values" />
+          <generation value="markdown" />
+          <page>
+            <nameUrl value="Laboratoryvalue.md" />
+            <title value="Laboratory value" />
+            <generation value="markdown" />
+          </page>
+          <page>
+            <nameUrl value="SARS-CoV-2-RT-PCR.md" />
+            <title value="SARS-CoV-2-RT-PCR" />
+            <generation value="markdown" />
+          </page>
+          <page>
+            <nameUrl value="SARS-CoV-2antibodies.md" />
+            <title value="SARS-CoV-2 antibodies" />
+            <generation value="markdown" />
+          </page>
+        </page>
+        <page>
+          <nameUrl value="Medication.md" />
+          <title value="Medication" />
+          <generation value="markdown" />
+          <page>
+            <nameUrl value="Covid-19therapy.md" />
+            <title value="Covid-19 therapy" />
+            <generation value="markdown" />
+          </page>
+          <page>
+            <nameUrl value="ACEinhibitors.md" />
+            <title value="ACE inhibitors" />
+            <generation value="markdown" />
+          </page>
+          <page>
+            <nameUrl value="Immunoglobulins.md" />
+            <title value="Immunoglobulins" />
+            <generation value="markdown" />
+          </page>
+          <page>
+            <nameUrl value="Anticoagulation.md" />
+            <title value="Anticoagulation" />
+            <generation value="markdown" />
+          </page>
+        </page>
+        <page>
+          <nameUrl value="Outcomeatdischarge.md" />
+          <title value="Outcome at discharge" />
+          <generation value="markdown" />
+          <page>
+            <nameUrl value="Respiratoryoutcome.md" />
+            <title value="Respiratory outcome" />
+            <generation value="markdown" />
+          </page>
+          <page>
+            <nameUrl value="Typeofdischarge.md" />
+            <title value="Type of discharge" />
+            <generation value="markdown" />
+          </page>
+          <page>
+            <nameUrl value="Follow-upswabresult.md" />
+            <title value="Follow-up swab result" />
+            <generation value="markdown" />
+          </page>
+        </page>
+        <page>
+          <nameUrl value="StudyenrollmentInclusioncriteria.md" />
+          <title value="Study enrollment / Inclusion criteria" />
+          <generation value="markdown" />
+          <page>
+            <nameUrl value="StudyenrolmentduetoCovid-19.md" />
+            <title value="Study enrolment due to Covid-19" />
+            <generation value="markdown" />
+          </page>
+          <page>
+            <nameUrl value="Interventionalstudiesparticipation.md" />
+            <title value="Interventional studies participation" />
+            <generation value="markdown" />
+          </page>
+        </page>
+        <page>
+          <nameUrl value="Symptoms.md" />
+          <title value="Symptoms" />
+          <generation value="markdown" />
+          <page>
+            <nameUrl value="Symptom.md" />
+            <title value="Symptom" />
+            <generation value="markdown" />
+          </page>
+        </page>
+        <page>
+          <nameUrl value="Therapy.md" />
+          <title value="Therapy" />
+          <generation value="markdown" />
+          <page>
+            <nameUrl value="DialysisHemofiltration.md" />
+            <title value="Dialysis / Hemofiltration" />
+            <generation value="markdown" />
+          </page>
+          <page>
+            <nameUrl value="Apheresis.md" />
+            <title value="Apheresis" />
+            <generation value="markdown" />
+          </page>
+          <page>
+            <nameUrl value="Proneposition.md" />
+            <title value="Prone position" />
+            <generation value="markdown" />
+          </page>
+          <page>
+            <nameUrl value="ECMOtherapy.md" />
+            <title value="ECMO therapy" />
+            <generation value="markdown" />
+          </page>
+          <page>
+            <nameUrl value="Isthepatientintheintensivecareunit.md" />
+            <title value="Is the patient in the intensive care unit?" />
+            <generation value="markdown" />
+          </page>
+          <page>
+            <nameUrl value="Ventilationtype.md" />
+            <title value="Ventilation type" />
+            <generation value="markdown" />
+          </page>
+        </page>
+        <page>
+          <nameUrl value="Vitalsigns.md" />
+          <title value="Vital signs" />
+          <generation value="markdown" />
+          <page>
+            <nameUrl value="PaCO2.md" />
+            <title value="PaCO2" />
+            <generation value="markdown" />
+          </page>
+          <page>
+            <nameUrl value="PaO2.md" />
+            <title value="PaO2" />
+            <generation value="markdown" />
+          </page>
+          <page>
+            <nameUrl value="FiO2.md" />
+            <title value="FiO2" />
+            <generation value="markdown" />
+          </page>
+          <page>
+            <nameUrl value="pH.md" />
+            <title value="pH" />
+            <generation value="markdown" />
+          </page>
+          <page>
+            <nameUrl value="SOFA-Score-duplicate-2.md" />
+            <title value="SOFA-Score" />
+            <generation value="markdown" />
+          </page>
+          <page>
+            <nameUrl value="Respiratoryrate.md" />
+            <title value="Respiratory rate" />
+            <generation value="markdown" />
+          </page>
+          <page>
+            <nameUrl value="Diastolicbloodpressure.md" />
+            <title value="Diastolic blood pressure" />
+            <generation value="markdown" />
+          </page>
+          <page>
+            <nameUrl value="Systolicbloodpressure.md" />
+            <title value="Systolic blood pressure" />
+            <generation value="markdown" />
+          </page>
+          <page>
+            <nameUrl value="Heartrate.md" />
+            <title value="Heart rate" />
+            <generation value="markdown" />
+          </page>
+          <page>
+            <nameUrl value="Bodytemperature.md" />
+            <title value="Body temperature" />
+            <generation value="markdown" />
+          </page>
+          <page>
+            <nameUrl value="Peripheraloxygensaturation.md" />
+            <title value="Peripheral oxygen saturation" />
+            <generation value="markdown" />
+          </page>
+        </page>
+      </page>
+      <page>
+        <nameUrl value="Terminologies.md" />
+        <title value="Terminologies" />
+        <generation value="markdown" />
+      </page>
+    </page>
+  </definition>
+</ImplementationGuide>

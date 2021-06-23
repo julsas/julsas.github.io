@@ -1,1 +1,765 @@
-var Cookies;!function(e){function t(e,t,i){var n=new Date;n.setTime(n.getTime()+24*i*60*60*1e3);var r="expires="+n.toUTCString();document.cookie=e+"="+t+";"+r+";path=/"}function i(e){for(var t=e+"=",i=decodeURIComponent(document.cookie),n=i.split(";"),r=0;r<n.length;r++){for(var a=n[r];" "==a.charAt(0);)a=a.substring(1);if(0==a.indexOf(t))return a.substring(t.length,a.length)}return null}e.set=t,e.get=i}(Cookies||(Cookies={}));var Stu3TreeTable=function(){function e(e){this.TreeFlavourCookie="tree",this.eventHandlerDictionary=[],this.isRootCollapsible=!1,this.hasDetailsPinned=!1,this.hasDetails=!1,this.parentContainerId="",e&&(this.isRootCollapsible=!0)}return e.prototype.init=function(e){this.parentContainerId=e,this.initPolyfills(),this.initEventHandlerDictionary(),this.indentTree(),this.registerForEvents(),this.hasDetails=this.elementExists(".treetable-right-panel"),this.getContext().querySelector(".treetable").setAttribute("tabindex","0");var t=this.getTreeRenderingMode();if(this.hasFlavourButtons()===!0){var i=this.getContext().querySelectorAll("[data-mode='"+t+"']")[0];this.switchTreeMode(i)}else this.renderTree(t);this.expandTree()},e.prototype.expandNode=function(e,t,i){var n=this;if(t!==i){var r=this.getVisibleElements(e.getAttribute("data-id"));r.forEach(function(e,r){var a=n.hasClass(e,"collapsed");if(a){var s=e.querySelector(".vjoinexpandable");null==s&&(s=e.querySelector(".vjoinendexpandable")),null!=s&&s.click()}console.log("still rolling..."),n.expandNode(e,t+1,i)})}},e.prototype.expandTree=function(){var e=parseInt(this.getContext().getAttribute("data-level"));if(e>1){var t=this.getContext().querySelector("tr");this.expandNode(t,1,e)}},e.prototype.renderTree=function(e){this.cleanPreviousMode();var t=this.getContext().querySelector(".treetable-wrapper");switch(t.className="treetable-wrapper "+e,e){case"snapshot":this.renderSnapshotMode();break;case"diff":this.renderDiffMode();break;case"hybrid":this.renderHybridMode()}Cookies.set(this.TreeFlavourCookie,e,30)},e.prototype.renderSnapshotMode=function(){this.cleanIndentation();var e=this.getContext().querySelector(".treetable tr[data-id]:not([data-ParentId])"),t=this.getVisibleElements(e.dataset.id);this.checkSnapshotRows(t),this.indentTree(),this.registerForEvents()},e.prototype.renderDiffMode=function(){this.cleanIndentation();var e=this.getContext().querySelector(".treetable tr[data-id]:not([data-ParentId])"),t=this.getVisibleElements(e.dataset.id);this.checkDiffRows(t),this.indentTree(),this.registerForEvents()},e.prototype.renderHybridMode=function(){this.cleanIndentation(),this.indentTree(),this.registerForEvents()},e.prototype.cleanIndentation=function(){for(var e=this.getContext().querySelectorAll(".treetable tr[data-parentid]"),t=0;t<e.length;t++){e[t].style.display="table-row";for(var i=e[t].getElementsByTagName("td")[0],n=i.querySelectorAll("span.base"),r=0;r<n.length;r++)i.removeChild(n[r])}},e.prototype.cleanPreviousMode=function(){for(var e=this.getContext().querySelectorAll(".treetable tr"),t=0;t<e.length;t++)e[t].style.display="table-row",this.hasClass(e[t],"mode-hidden")&&this.removeClass(e[t],"mode-hidden")},e.prototype.checkSnapshotRows=function(e){for(var t=0;t<e.length;t++){var i=e[t];this.hasClass(i,"striped")&&(i.style.display="none",this.addClass(i,"mode-hidden"));var n=this.getVisibleElements(i.dataset.id);this.checkSnapshotRows(n)}},e.prototype.checkDiffRows=function(e){for(var t=0;t<e.length;t++){var i=e[t];this.hasClass(i,"constraints")||(i.style.display="none",this.addClass(i,"mode-hidden"));var n=this.getVisibleElements(i.dataset.id);this.checkDiffRows(n)}},e.prototype.getTreeRenderingMode=function(){var e=null;if(this.hasFlavourButtons()===!0&&(e=Cookies.get(this.TreeFlavourCookie)),null==e){var t=this.getContext().querySelector(".treetable-wrapper"),i=this.hasClass(t,"diff"),n=this.hasClass(t,"snapshot");return i?"diff":n?"snapshot":"hybrid"}return e},e.prototype.shouldHideElement=function(e){var t=this.getTreeRenderingMode();return"hybrid"!==t&&this.hasClass(e,"mode-hidden")},e.prototype.addIndentation=function(e,t,i){t+=1;for(var n=0;n<e.length;n++){var r=t,a=e[n].dataset.id,s=e[n].getElementsByTagName("td")[0],o=this.getVisibleElements(a),l=o.length>0,d=n===e.length-1;d?i[t-1]=this.createSpan("base spacer"):i[t-1]=this.createSpan("base vline");var h=null,c=s.parentElement;for(this.hasClass(c,"collapsed")&&(h="collapsed");r-1>=1;)r-=1,r===t-1&&"collapsed"===h&&l&&!d?(s.insertBefore(this.createSpan("base vjoinexpandable"),s.childNodes[0]),this.hideUnderlyingElements(c.dataset.id)):r===t-1&&"collapsed"===h&&l&&d?(s.insertBefore(this.createSpan("base vjoinendexpandable"),s.childNodes[0]),this.hideUnderlyingElements(c.dataset.id)):r===t-1&&l&&d?s.insertBefore(this.createSpan("base vjoinendcollapsible"),s.childNodes[0]):r===t-1&&l&&!d?s.insertBefore(this.createSpan("base vjoincollapsible"),s.childNodes[0]):r!==t-1||l||d?r===t-1&&!l&&d?s.insertBefore(this.createSpan("base vjoinend"),s.childNodes[0]):void 0!==i[r]&&s.insertBefore(i[r].cloneNode(),s.childNodes[0]):s.insertBefore(this.createSpan("base vjoin"),s.childNodes[0]);this.addIndentation(o,t,i)}},e.prototype.toggleActiveButton=function(e){var t=this.getContext().querySelector(".treetable-buttons .tree-button.active");this.removeClass(t,"active"),this.addClass(e,"active")},e.prototype.switchTreeMode=function(e){if(this.hasFlavourButtons()===!0){var t=e.dataset.mode;this.toggleActiveButton(e),this.renderTree(t),this.hasDetailsPinned===!0&&this.pinRootNode(),this.resizeRightPanel()}},e.prototype.pinRootNode=function(){this.hasDetailsPinned=!0;var e=this.getContext().querySelector(".treetable tr[data-id]:not([data-ParentId])");this.showDetails(e);var t=this.getContext().querySelector(".details-popup .pin-control");this.hasClass(t,"pinned")||(t.classList.remove("unpinned"),t.classList.add("pinned")),this.setTreetableWrapperHeight(),this.resizeRightPanel()},e.prototype.getContext=function(){return document.getElementById(this.parentContainerId)},e.prototype.initPolyfills=function(){this.elementMatchesPolyfill()},e.prototype.elementMatchesPolyfill=function(){Element.prototype.matches||(Element.prototype.matches=Element.prototype.msMatchesSelector||Element.prototype.webkitMatchesSelector||function(e){for(var t=(this.document||this.ownerDocument).querySelectorAll(e),i=t.length;--i>=0&&t.item(i)!==this;);return i>-1})},e.prototype.markRow=function(e){var t=this.getContext().querySelector("tr.selected");t&&this.removeClass(t,"selected"),t!=e&&this.addClass(e,"selected")},e.prototype.initEventHandlerDictionary=function(){var e=this;e.eventHandlerDictionary.vjoinexpandable=function(){var t=e.getParentElementId(this);e.showChildren(t,this,"vjoinexpandable","vjoincollapsible")},e.eventHandlerDictionary.vjoincollapsible=function(){var t=e.getParentElementId(this);e.hideChildren(t,this,"vjoincollapsible","vjoinexpandable")},e.eventHandlerDictionary.vjoinendexpandable=function(){var t=e.getParentElementId(this);e.showChildren(t,this,"vjoinendexpandable","vjoinendcollapsible")},e.eventHandlerDictionary.vjoinendcollapsible=function(){var t=e.getParentElementId(this);e.hideChildren(t,this,"vjoinendcollapsible","vjoinendexpandable")},e.eventHandlerDictionary.selectRow=function(t){if(!(e.hasClass(t.target,"vjoinexpandable")||e.hasClass(t.target,"vjoincollapsible")||e.hasClass(t.target,"vjoinendexpandable")||e.hasClass(t.target,"vjoinendcollapsible"))){var i=void 0!=t.currentTarget?t.currentTarget:t.target;e.markRow(i),e.hasDetails&&(e.hasDetailsPinned&&e.hasClass(i,"detailsexpanded")===!1?e.changePopupContent(i):e.pinDetails())}},e.eventHandlerDictionary.pin=function(){e.pinDetails()},e.eventHandlerDictionary.showpopup=function(){e.hasDetailsPinned&&e.changePopupContent(this)},e.eventHandlerDictionary.popuphover=function(){e.hasDetailsPinned||e.showDetails(this)},e.eventHandlerDictionary.switchmode=function(){e.switchTreeMode(this)},e.eventHandlerDictionary.hideDetails=function(){if(e.hasDetailsPinned===!1){var t=e.getContext().querySelector(".details-popup");if(null!=t){var i=t.dataset.id,n=e.getContext().querySelector('tr[data-id="'+i+'"]');e.hideExpandedDetails(n,t)}}},e.eventHandlerDictionary.keydown=function(t){function i(){var t=a();if(void 0==t){e.hasDetails&&e.pinRootNode();var i=e.getContext().querySelector(".treetable tr[data-id]:not([data-ParentId])");return void e.markRow(i)}var n=s(t);void 0!=n&&n.click()}function n(){var e=a();if(null!=e){var t=o(e);void 0!=t&&t.click()}}function r(){var e=a();if(void 0!=e){var t=e.querySelector(".vjoincollapsible");void 0==t&&(t=e.querySelector(".vjoinexpandable")),void 0==t&&(t=e.querySelector(".vjoinendexpandable")),void 0==t&&(t=e.querySelector(".vjoinendcollapsible"));var i=t;void 0!=i&&i.click()}}function a(){return e.getContext().querySelector("tr.selected")}function s(e){if(e)for(var t=e.nextElementSibling;t;){if(l(t))return t;t=t.nextElementSibling}}function o(e){if(e)for(var t=e.previousElementSibling;t;){if(l(t))return t;t=t.previousElementSibling}}function l(e){return e.offsetWidth>0||e.offsetHeight>0}if(!(t.target instanceof HTMLAnchorElement))switch(t.keyCode){case 40:t.preventDefault(),i();break;case 38:t.preventDefault(),n();break;case 32:case 13:t.preventDefault(),r()}}},e.prototype.showChildren=function(e,t,i,n){for(var r=this.getVisibleElements(e),a=0;a<r.length;a++){var s=r[a];if(!this.shouldHideElement(s)){var o=s.dataset.id,l='[data-id="'+o+'"] td',d=s.querySelector(l+" .vjoinendcollapsible, "+l+" .vjoincollapsible");if(null!==d&&this.showChildren(o,null,null,null),s.style.display="table-row",this.hasClass(s,"detailsexpanded")){var h=this.getContext().querySelector(".details-popup");h.style.display="block"}}}void 0!==t&&null!==t&&(t.className="base "+n,this.registerEventSingle(t,"click",this.eventHandlerDictionary[n])),this.setRightPanelHeightSameAsLeftPanelHeight(),this.recalculateDetailsPopupPosition()},e.prototype.registerEventSingle=function(e,t,i){switch(t){case"click":e.onclick=i;break;case"hover":e.onmouseover=i;break;default:e.addEventListener(t,i)}},e.prototype.getVisibleElements=function(e){for(var t='[data-ParentId="'+e+'"]',i=this.getContext().querySelectorAll(t),n=[],r=0,a=0;a<i.length;a++)this.hasClass(i[a],"mode-hidden")||(n[r]=i[a],r++);return n},e.prototype.getParentElementId=function(e){var t=e.parentElement.parentElement,i=t.dataset.id;return i},e.prototype.hideChildren=function(e,t,i,n){void 0!==t&&(this.hideUnderlyingElements(e),t.className="base "+n,this.registerEventSingle(t,"click",this.eventHandlerDictionary[n]),this.setRightPanelHeightSameAsLeftPanelHeight(),this.recalculateDetailsPopupPosition())},e.prototype.hideUnderlyingElements=function(e){for(var t=this.getVisibleElements(e),i=0;i<t.length;i++){var n=t[i];if(this.hasClass(n,"detailsexpanded")){var r=this.getContext().querySelector(".details-popup");r.style.display="none"}var a=n.dataset.id;this.hideUnderlyingElements(a),n.style.display="none"}},e.prototype.indentTree=function(){for(var e="tr:not([data-parentId]):not(.mode-hidden)",t=this.getContext().querySelectorAll(e),i=0;i<t.length;i++){var n=1,r=t[i],a=r.dataset.id,s=this.getVisibleElements(a),o=i===t.length-1,l=[];o?l[n]=this.createSpan("base spacer"):l[n]=this.createSpan("base vline"),this.addIndentation(s,n,l)}},e.prototype.createSpan=function(e){var t=document.createElement("SPAN");return t.className=e,t},e.prototype.hasClass=function(e,t){return(" "+e.className+" ").indexOf(" "+t+" ")>-1},e.prototype.addClass=function(e,t){var i=this.getCurrentClassesAsArray(e);i.push(t);var n=this.convertClassArrayNamesToString(i);e.setAttribute("class",n)},e.prototype.getCurrentClassesAsArray=function(e){var t=e.getAttribute("class");void 0!==t&&null!==t||(t="");var i=t.split(" ");return i},e.prototype.convertClassArrayNamesToString=function(e){var t=e.join(" ");return t},e.prototype.removeClass=function(e,t){var i=this.getCurrentClassesAsArray(e),n=i.indexOf(t);i.splice(n,1);var r=this.convertClassArrayNamesToString(i);e.setAttribute("class",r)},e.prototype.registerForEvents=function(){this.registerEvent(".vjoinexpandable","click",this.eventHandlerDictionary.vjoinexpandable),this.registerEvent(".vjoincollapsible","click",this.eventHandlerDictionary.vjoincollapsible),this.registerEvent(".vjoinendcollapsible","click",this.eventHandlerDictionary.vjoinendcollapsible),this.registerEvent(".vjoinendexpandable","click",this.eventHandlerDictionary.vjoinendexpandable),this.registerEvent(".treetable-buttons .tree-control .tree-button","click",this.eventHandlerDictionary.switchmode),this.registerEvent(".treetable","keydown",this.eventHandlerDictionary.keydown),this.registerEvent(".treetable tr","click",this.eventHandlerDictionary.selectRow),this.hasDetails&&(this.registerEvent(".details-popup .pin-control","click",this.eventHandlerDictionary.pin),this.registerEvent(".treetable tr","hover",this.eventHandlerDictionary.popuphover),this.registerEvent(".treetable-wrapper","mouseleave",this.eventHandlerDictionary.hideDetails))},e.prototype.changePopupContent=function(e){if(this.hasDetailsPinned){var t=e.getAttribute("class").indexOf("detailsexpanded")!==-1;this.hasDetailsPinned&&t||(this.showDetails(e),this.changePinIcon())}},e.prototype.registerEvent=function(e,t,i){for(var n=this.getContext().querySelectorAll(e),r=0;r<n.length;r++){var a=n[r];this.registerEventSingle(a,t,i)}},e.prototype.pinDetails=function(){var e=this.getContext().querySelector(".details-popup"),t=e.dataset.id,i=this.getContext().querySelector('tr[data-id="'+t+'"]');this.hasDetailsPinned=!this.hasDetailsPinned,this.showDetails(i),this.changePinIcon()},e.prototype.changePinIcon=function(){var e=this.getContext().querySelector(".details-popup .pin-control");this.hasClass(e,"pinned")?(e.classList.remove("pinned"),e.classList.add("unpinned")):(e.classList.remove("unpinned"),e.classList.add("pinned"))},e.prototype.getDetailsWrapperDiv=function(){var e="test",t=this.getContext().querySelector(".treetable-right-panel"),i=t.querySelector("#"+e);return void 0!==i&&null!==i||(i=document.createElement("div"),i.setAttribute("id",e),t.appendChild(i)),i},e.prototype.hideExpandedDetails=function(e,t){var i=this.getContext().querySelector(".detailsexpanded");void 0!==i&&null!==i&&(this.removeClass(i,"detailsexpanded"),t.setAttribute("class","hidden"),t.removeAttribute("data-id"),this.setRightPanelHeightSameAsLeftPanelHeight())},e.prototype.showDetails=function(e){var t=e.getAttribute("data-id"),i=this.getDetailsWrapperDiv(),n=i.getAttribute("data-id"),r=t!=n;if(r){this.hideExpandedDetails(e,i);var a=e.querySelector(".details");if(this.addClass(e,"detailsexpanded"),void 0!==a&&null!==a&&""!=a.innerHTML){i.innerHTML=a.innerHTML,i.setAttribute("data-id",t),i.setAttribute("class","details-popup"),i.style.display="block",this.setDetailsPopupPosition(i,e);var s=e.querySelector(".pin-control");s.classList.add("unpinned"),this.registerEvent(".details-popup .pin-control","click",this.eventHandlerDictionary.pin)}}},e.prototype.setDetailsPopupPosition=function(e,t){if(null!=t){for(var i=t.getBoundingClientRect(),n=this.getContext().querySelector(".treetable").getBoundingClientRect(),r=i.top-n.top,a=r+e.getBoundingClientRect().height,s=this.getLastVisibleRowElement(),o=s.getBoundingClientRect(),l=o.top-n.top+o.height;;){var d=a>l;{if(!d){var h=0,c=i.top-n.top>r;c&&(h=l-(r+e.getBoundingClientRect().height)),r=r<0?0:r+h;break}r-=5,a-=5}}e.style.marginTop=r+"px",this.resizeRightPanel()}},e.prototype.resizeRightPanel=function(){var e=this.calculateNewRightPanelHeight();if(void 0!=e){var t=this.getContext().querySelector(".treetable-right-panel");t.style.height=e+"px",this.setTreetableWrapperHeight()}},e.prototype.calculateNewRightPanelHeight=function(){var e=void 0,t=this.getContext().querySelector(".details-popup"),i=this.getContext().querySelector(".treetable").getBoundingClientRect();if(null!=t){var n=t.getBoundingClientRect();n.height>i.height?e=n.height:n.height<i.height&&(e=i.height)}else e=i.height;return e},e.prototype.setRightPanelHeightSameAsLeftPanelHeight=function(){var e=this.elementExists(".treetable-right-panel");if(e){var t=this.getContext().querySelector(".treetable-left-panel"),i=this.getContext().querySelector(".treetable-right-panel");i.style.height=t.clientHeight+"px",this.setTreetableWrapperHeight()}},e.prototype.recalculateDetailsPopupPosition=function(){var e=this.elementExists(".treetable-right-panel");if(e){var t=this.getDetailsWrapperDiv(),i=this.getContext().querySelector(".treetable tr.detailsexpanded");this.setDetailsPopupPosition(t,i)}},e.prototype.setTreetableWrapperHeight=function(){var e=this.getContext().querySelector(".treetable-left-panel"),t=this.getContext().querySelector(".treetable-right-panel"),i=this.getContext().querySelector(".treetable-wrapper"),n=Math.max(e.clientHeight,t.clientHeight);i.style.height=n+"px"},e.prototype.getLastVisibleRowElement=function(){var e,t=this.getContext().querySelectorAll("table tr");if(t)for(var i=0;i<t.length;i++)"none"!=t[i].style.display&&(e=t[i]);return e},e.prototype.hasFlavourButtons=function(){return null!=this.getContext().querySelector(".treetable-buttons")},e.prototype.elementExists=function(e){return void 0!=this.getContext().querySelector(e)},e}();
+var Cookies;
+(function (Cookies) {
+    function set(name, value, days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        var expires = "expires=" + date.toUTCString();
+        document.cookie = name + "=" + value + ";" + expires + ";path=/";
+    }
+    Cookies.set = set;
+    function get(cname) {
+        var name = cname + "=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var ca = decodedCookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return null;
+    }
+    Cookies.get = get;
+})(Cookies || (Cookies = {}));
+var Stu3TreeTable = (function () {
+    function Stu3TreeTable(isRootCollapsible) {
+        this.TreeFlavourCookie = "tree";
+        this.eventHandlerDictionary = [];
+        this.isRootCollapsible = false;
+        this.hasDetailsPinned = false;
+        this.hasDetails = false;
+        this.parentContainerId = "";
+        if (isRootCollapsible) {
+            this.isRootCollapsible = true;
+        }
+    }
+    Stu3TreeTable.prototype.init = function (containerId) {
+        this.parentContainerId = containerId;
+        this.initPolyfills();
+        this.initEventHandlerDictionary();
+        this.indentTree();
+        this.registerForEvents();
+        this.hasDetails = this.elementExists(".treetable-right-panel");
+        this.getContext().querySelector(".treetable").setAttribute("tabindex", "0");
+        var mode = this.getTreeRenderingMode();
+        if (this.hasFlavourButtons() === true) {
+            var buttonElement = this.getContext().querySelectorAll("[data-mode='" + mode + "']")[0];
+            this.switchTreeMode(buttonElement);
+        }
+        else {
+            this.renderTree(mode);
+        }
+        this.expandTree();
+    };
+    Stu3TreeTable.prototype.expandNode = function (currentNode, currentLevel, levelsToExpand) {
+        var _this = this;
+        if (currentLevel === levelsToExpand)
+            return;
+        var visibleElements = this.getVisibleElements(currentNode.getAttribute("data-id"));
+        visibleElements.forEach(function (node, index) {
+            var isCollapsed = _this.hasClass(node, "collapsed");
+            if (isCollapsed) {
+                var button = node.querySelector(".vjoinexpandable");
+                if (button == null) {
+                    button = node.querySelector(".vjoinendexpandable");
+                }
+                if (button != null) {
+                    button.click();
+                }
+            }
+            console.log("still rolling...");
+            _this.expandNode(node, (currentLevel + 1), levelsToExpand);
+        });
+    };
+    Stu3TreeTable.prototype.expandTree = function () {
+        var levelsToExpand = parseInt(this.getContext().getAttribute("data-level"));
+        if (levelsToExpand > 1) {
+            var rootNode = this.getContext().querySelector("tr");
+            this.expandNode(rootNode, 1, levelsToExpand);
+        }
+    };
+    Stu3TreeTable.prototype.renderTree = function (mode) {
+        this.cleanPreviousMode();
+        var tree = this.getContext().querySelector(".treetable-wrapper");
+        tree.className = "treetable-wrapper " + mode;
+        switch (mode) {
+            case "snapshot":
+                this.renderSnapshotMode();
+                break;
+            case "diff":
+                this.renderDiffMode();
+                break;
+            case "hybrid":
+                this.renderHybridMode();
+                break;
+        }
+        ;
+        Cookies.set(this.TreeFlavourCookie, mode, 30);
+    };
+    Stu3TreeTable.prototype.renderSnapshotMode = function () {
+        this.cleanIndentation();
+        var root = this.getContext().querySelector(".treetable tr[data-id]:not([data-ParentId])");
+        var childrenOfRoot = this.getVisibleElements(root.dataset["id"]);
+        this.checkSnapshotRows(childrenOfRoot);
+        this.indentTree();
+        this.registerForEvents();
+    };
+    Stu3TreeTable.prototype.renderDiffMode = function () {
+        this.cleanIndentation();
+        var root = this.getContext().querySelector(".treetable tr[data-id]:not([data-ParentId])");
+        var childrenOfRoot = this.getVisibleElements(root.dataset["id"]);
+        this.checkDiffRows(childrenOfRoot);
+        this.indentTree();
+        this.registerForEvents();
+    };
+    Stu3TreeTable.prototype.renderHybridMode = function () {
+        this.cleanIndentation();
+        this.indentTree();
+        this.registerForEvents();
+    };
+    Stu3TreeTable.prototype.cleanIndentation = function () {
+        var children = this.getContext().querySelectorAll('.treetable tr[data-parentid]');
+        for (var i = 0; i < children.length; i++) {
+            children[i].style.display = "table-row";
+            var tdElement = children[i].getElementsByTagName('td')[0];
+            var spansToClear = tdElement.querySelectorAll("span.base");
+            for (var j = 0; j < spansToClear.length; j++) {
+                tdElement.removeChild(spansToClear[j]);
+            }
+        }
+    };
+    Stu3TreeTable.prototype.cleanPreviousMode = function () {
+        var elements = this.getContext().querySelectorAll(".treetable tr");
+        for (var i = 0; i < elements.length; i++) {
+            elements[i].style.display = "table-row";
+            if (this.hasClass(elements[i], "mode-hidden")) {
+                this.removeClass(elements[i], "mode-hidden");
+            }
+        }
+    };
+    Stu3TreeTable.prototype.checkSnapshotRows = function (rows) {
+        for (var i = 0; i < rows.length; i++) {
+            var currentRow = rows[i];
+            if (this.hasClass(currentRow, "striped")) {
+                currentRow.style.display = "none";
+                this.addClass(currentRow, "mode-hidden");
+            }
+            var childRows = this.getVisibleElements(currentRow.dataset["id"]);
+            this.checkSnapshotRows(childRows);
+        }
+    };
+    Stu3TreeTable.prototype.checkDiffRows = function (rows) {
+        for (var i = 0; i < rows.length; i++) {
+            var currentRow = rows[i];
+            if (!this.hasClass(currentRow, "constraints")) {
+                currentRow.style.display = "none";
+                this.addClass(currentRow, "mode-hidden");
+            }
+            var childRows = this.getVisibleElements(currentRow.dataset["id"]);
+            this.checkDiffRows(childRows);
+        }
+    };
+    Stu3TreeTable.prototype.getTreeRenderingMode = function () {
+        var mode = null;
+        if (this.hasFlavourButtons() === true) {
+            mode = Cookies.get(this.TreeFlavourCookie);
+        }
+        if (mode == null) {
+            var treetableWrapper = this.getContext().querySelector(".treetable-wrapper");
+            var isDiff = this.hasClass(treetableWrapper, "diff");
+            var isSnapshot = this.hasClass(treetableWrapper, "snapshot");
+            if (isDiff)
+                return "diff";
+            if (isSnapshot)
+                return "snapshot";
+            return "hybrid";
+        }
+        return mode;
+    };
+    Stu3TreeTable.prototype.shouldHideElement = function (element) {
+        var mode = this.getTreeRenderingMode();
+        if (mode === "hybrid") {
+            return false;
+        }
+        return this.hasClass(element, "mode-hidden");
+    };
+    Stu3TreeTable.prototype.addIndentation = function (children, depth, identationDictionary) {
+        depth += 1;
+        for (var i = 0; i < children.length; i++) {
+            var localDepth = depth;
+            var currentElementId = children[i].dataset.id;
+            var tdElement = children[i].getElementsByTagName('td')[0];
+            var currentElementChildren = this.getVisibleElements(currentElementId);
+            var hasChildren = currentElementChildren.length > 0;
+            var isLast = i === children.length - 1;
+            if (isLast) {
+                identationDictionary[depth - 1] = this.createSpan('base spacer');
+            }
+            else {
+                identationDictionary[depth - 1] = this.createSpan('base vline');
+                ;
+            }
+            var defaultState = null;
+            var trElement = tdElement.parentElement;
+            if (this.hasClass(trElement, 'collapsed')) {
+                defaultState = 'collapsed';
+            }
+            while (localDepth - 1 >= 1) {
+                localDepth = localDepth - 1;
+                if (localDepth === depth - 1 && defaultState === 'collapsed' && hasChildren && !isLast) {
+                    tdElement.insertBefore(this.createSpan('base vjoinexpandable'), tdElement.childNodes[0]);
+                    this.hideUnderlyingElements(trElement.dataset.id);
+                }
+                else if (localDepth === depth - 1 && defaultState === 'collapsed' && hasChildren && isLast) {
+                    tdElement.insertBefore(this.createSpan('base vjoinendexpandable'), tdElement.childNodes[0]);
+                    this.hideUnderlyingElements(trElement.dataset.id);
+                }
+                else if (localDepth === depth - 1 && hasChildren && isLast) {
+                    tdElement.insertBefore(this.createSpan('base vjoinendcollapsible'), tdElement.childNodes[0]);
+                }
+                else if (localDepth === depth - 1 && hasChildren && !isLast) {
+                    tdElement.insertBefore(this.createSpan('base vjoincollapsible'), tdElement.childNodes[0]);
+                }
+                else if (localDepth === depth - 1 && !hasChildren && !isLast) {
+                    tdElement.insertBefore(this.createSpan('base vjoin'), tdElement.childNodes[0]);
+                }
+                else if (localDepth === depth - 1 && !hasChildren && isLast) {
+                    tdElement.insertBefore(this.createSpan('base vjoinend'), tdElement.childNodes[0]);
+                }
+                else if (identationDictionary[localDepth] !== undefined) {
+                    tdElement.insertBefore(identationDictionary[localDepth].cloneNode(), tdElement.childNodes[0]);
+                }
+            }
+            this.addIndentation(currentElementChildren, depth, identationDictionary);
+        }
+    };
+    Stu3TreeTable.prototype.toggleActiveButton = function (element) {
+        var currentlyActiveButton = this.getContext().querySelector(".treetable-buttons .tree-button.active");
+        this.removeClass(currentlyActiveButton, "active");
+        this.addClass(element, "active");
+    };
+    Stu3TreeTable.prototype.switchTreeMode = function (element) {
+        if (this.hasFlavourButtons() === true) {
+            var mode = element.dataset["mode"];
+            this.toggleActiveButton(element);
+            this.renderTree(mode);
+            if (this.hasDetailsPinned === true) {
+                this.pinRootNode();
+            }
+            this.resizeRightPanel();
+        }
+    };
+    Stu3TreeTable.prototype.pinRootNode = function () {
+        this.hasDetailsPinned = true;
+        var root = this.getContext().querySelector(".treetable tr[data-id]:not([data-ParentId])");
+        this.showDetails(root);
+        var span = this.getContext().querySelector(".details-popup .pin-control");
+        if (!this.hasClass(span, "pinned")) {
+            span.classList.remove("unpinned");
+            span.classList.add("pinned");
+        }
+        this.setTreetableWrapperHeight();
+        this.resizeRightPanel();
+    };
+    Stu3TreeTable.prototype.getContext = function () {
+        return document.getElementById(this.parentContainerId);
+    };
+    Stu3TreeTable.prototype.initPolyfills = function () {
+        this.elementMatchesPolyfill();
+    };
+    Stu3TreeTable.prototype.elementMatchesPolyfill = function () {
+        if (!Element.prototype.matches) {
+            Element.prototype.matches =
+                Element.prototype.msMatchesSelector ||
+                    Element.prototype.webkitMatchesSelector ||
+                    function (s) {
+                        var matches = (this.document || this.ownerDocument).querySelectorAll(s), i = matches.length;
+                        while (--i >= 0 && matches.item(i) !== this) {
+                        }
+                        return i > -1;
+                    };
+        }
+    };
+    Stu3TreeTable.prototype.markRow = function (row) {
+        var selected = this.getContext().querySelector("tr.selected");
+        if (selected)
+            this.removeClass(selected, "selected");
+        if (selected != row)
+            this.addClass(row, "selected");
+    };
+    Stu3TreeTable.prototype.initEventHandlerDictionary = function () {
+        var me = this;
+        me.eventHandlerDictionary['vjoinexpandable'] = function () {
+            var parentId = me.getParentElementId(this);
+            me.showChildren(parentId, this, 'vjoinexpandable', 'vjoincollapsible');
+        };
+        me.eventHandlerDictionary['vjoincollapsible'] = function () {
+            var parentId = me.getParentElementId(this);
+            me.hideChildren(parentId, this, 'vjoincollapsible', 'vjoinexpandable');
+        };
+        me.eventHandlerDictionary['vjoinendexpandable'] = function () {
+            var parentId = me.getParentElementId(this);
+            me.showChildren(parentId, this, 'vjoinendexpandable', 'vjoinendcollapsible');
+        };
+        me.eventHandlerDictionary['vjoinendcollapsible'] = function () {
+            var parentId = me.getParentElementId(this);
+            me.hideChildren(parentId, this, 'vjoinendcollapsible', 'vjoinendexpandable');
+        };
+        me.eventHandlerDictionary['selectRow'] = function (event) {
+            if (me.hasClass(event.target, 'vjoinexpandable') ||
+                me.hasClass(event.target, 'vjoincollapsible') ||
+                me.hasClass(event.target, 'vjoinendexpandable') ||
+                me.hasClass(event.target, 'vjoinendcollapsible')) {
+                return;
+            }
+            var target = event.currentTarget != undefined ? event.currentTarget : event.target;
+            me.markRow(target);
+            if (me.hasDetails) {
+                if (me.hasDetailsPinned &&
+                    me.hasClass(target, "detailsexpanded") === false) {
+                    me.changePopupContent(target);
+                }
+                else {
+                    me.pinDetails();
+                }
+            }
+        };
+        me.eventHandlerDictionary['pin'] = function () {
+            me.pinDetails();
+        };
+        me.eventHandlerDictionary['showpopup'] = function () {
+            if (me.hasDetailsPinned) {
+                me.changePopupContent(this);
+            }
+        };
+        me.eventHandlerDictionary['popuphover'] = function () {
+            if (!me.hasDetailsPinned) {
+                me.showDetails(this);
+            }
+        };
+        me.eventHandlerDictionary['switchmode'] = function () {
+            me.switchTreeMode(this);
+        };
+        me.eventHandlerDictionary['hideDetails'] = function () {
+            if (me.hasDetailsPinned === false) {
+                var detailsPopup = me.getContext().querySelector(".details-popup");
+                if (detailsPopup != null) {
+                    var id = detailsPopup.dataset["id"];
+                    var rowElement = me.getContext().querySelector('tr[data-id="' + id + '"]');
+                    me.hideExpandedDetails(rowElement, detailsPopup);
+                }
+            }
+        };
+        me.eventHandlerDictionary['keydown'] = function (event) {
+            if (event.target instanceof HTMLAnchorElement)
+                return;
+            switch (event.keyCode) {
+                case 40:// arrow down
+                    event.preventDefault();
+                    selectNextNode();
+                    break;
+                case 38:// arrow up
+                    event.preventDefault();
+                    selectPreviousNode();
+                    break;
+                case 32: // space
+                case 13:// enter
+                    event.preventDefault();
+                    toggleCurrentNode();
+                    break;
+            }
+            function selectNextNode() {
+                var currentNode = getCurrentNode();
+                if (currentNode == undefined) {
+                    if (me.hasDetails) {
+                        me.pinRootNode();
+                    }
+                    var root = me.getContext().querySelector(".treetable tr[data-id]:not([data-ParentId])");
+                    me.markRow(root);
+                    return;
+                }
+                var nextNode = findNext(currentNode);
+                if (nextNode != undefined) {
+                    nextNode.click();
+                }
+            }
+            function selectPreviousNode() {
+                var currentNode = getCurrentNode();
+                if (currentNode != null) {
+                    var previousNode = findPrevious(currentNode);
+                    if (previousNode != undefined) {
+                        previousNode.click();
+                    }
+                }
+            }
+            function toggleCurrentNode() {
+                var currentNode = getCurrentNode();
+                if (currentNode != undefined) {
+                    var button = currentNode.querySelector(".vjoincollapsible");
+                    if (button == undefined)
+                        button = currentNode.querySelector(".vjoinexpandable");
+                    if (button == undefined)
+                        button = currentNode.querySelector(".vjoinendexpandable");
+                    if (button == undefined)
+                        button = currentNode.querySelector(".vjoinendcollapsible");
+                    var element = button;
+                    if (element != undefined) {
+                        element.click();
+                    }
+                }
+            }
+            function getCurrentNode() {
+                return me.getContext().querySelector("tr.selected");
+            }
+            function findNext(element) {
+                if (!element)
+                    return;
+                var next = element.nextElementSibling;
+                while (next) {
+                    if (isVisible(next))
+                        return next;
+                    next = next.nextElementSibling;
+                }
+            }
+            function findPrevious(element) {
+                if (!element)
+                    return;
+                var previous = element.previousElementSibling;
+                while (previous) {
+                    if (isVisible(previous))
+                        return previous;
+                    previous = previous.previousElementSibling;
+                }
+            }
+            function isVisible(element) {
+                return element.offsetWidth > 0 || element.offsetHeight > 0;
+            }
+        };
+    };
+    Stu3TreeTable.prototype.showChildren = function (parentId, element, className, newClassName) {
+        var collapsibleElements = this.getVisibleElements(parentId);
+        for (var i = 0; i < collapsibleElements.length; i++) {
+            var currentElement = collapsibleElements[i];
+            if (!this.shouldHideElement(currentElement)) {
+                var currentElementId = currentElement.dataset["id"];
+                var selector = '[data-id="' + currentElementId + '"] td';
+                var span = currentElement.querySelector(selector + " .vjoinendcollapsible, " + selector + ' .vjoincollapsible');
+                if (span !== null) {
+                    this.showChildren(currentElementId, null, null, null);
+                }
+                currentElement.style.display = 'table-row';
+                if (this.hasClass(currentElement, "detailsexpanded")) {
+                    var detailsElement = this.getContext().querySelector(".details-popup");
+                    detailsElement.style.display = "block";
+                }
+            }
+        }
+        if (element !== undefined && element !== null) {
+            element.className = 'base ' + newClassName;
+            this.registerEventSingle(element, 'click', this.eventHandlerDictionary[newClassName]);
+        }
+        this.setRightPanelHeightSameAsLeftPanelHeight();
+        this.recalculateDetailsPopupPosition();
+    };
+    Stu3TreeTable.prototype.registerEventSingle = function (element, type, eventHandle) {
+        switch (type) {
+            case 'click': {
+                element.onclick = eventHandle;
+                break;
+            }
+            case 'hover': {
+                element.onmouseover = eventHandle;
+                break;
+            }
+            default: {
+                element.addEventListener(type, eventHandle);
+                break;
+            }
+        }
+    };
+    Stu3TreeTable.prototype.getVisibleElements = function (parentId) {
+        var parentSelector = '[data-ParentId="' + parentId + '"]';
+        var collapsibleElements = this.getContext().querySelectorAll(parentSelector);
+        var visibleElements = [];
+        var increment = 0;
+        for (var i = 0; i < collapsibleElements.length; i++) {
+            if (!this.hasClass(collapsibleElements[i], "mode-hidden")) {
+                visibleElements[increment] = collapsibleElements[i];
+                increment++;
+            }
+        }
+        return visibleElements;
+    };
+    Stu3TreeTable.prototype.getParentElementId = function (element) {
+        var parent = element.parentElement.parentElement;
+        var parentId = parent.dataset.id;
+        return parentId;
+    };
+    Stu3TreeTable.prototype.hideChildren = function (parentId, element, className, newClassName) {
+        if (element !== undefined) {
+            this.hideUnderlyingElements(parentId);
+            element.className = 'base ' + newClassName;
+            this.registerEventSingle(element, 'click', this.eventHandlerDictionary[newClassName]);
+            this.setRightPanelHeightSameAsLeftPanelHeight();
+            this.recalculateDetailsPopupPosition();
+        }
+    };
+    Stu3TreeTable.prototype.hideUnderlyingElements = function (parentId) {
+        var collapsibleElements = this.getVisibleElements(parentId);
+        for (var i = 0; i < collapsibleElements.length; i++) {
+            var currentElement = collapsibleElements[i];
+            if (this.hasClass(currentElement, "detailsexpanded")) {
+                var detailsElement = this.getContext().querySelector(".details-popup");
+                detailsElement.style.display = "none";
+            }
+            var currentElementId = currentElement.dataset["id"];
+            this.hideUnderlyingElements(currentElementId);
+            currentElement.style.display = 'none';
+        }
+    };
+    Stu3TreeTable.prototype.indentTree = function () {
+        var selector = 'tr:not([data-parentId]):not(.mode-hidden)';
+        var roots = this.getContext().querySelectorAll(selector);
+        for (var i = 0; i < roots.length; i++) {
+            var depth = 1;
+            var parent = roots[i];
+            var parentId = parent.dataset["id"];
+            var children = this.getVisibleElements(parentId);
+            var isParentLast = i === roots.length - 1;
+            var identationDictionary = [];
+            if (isParentLast) {
+                identationDictionary[depth] = this.createSpan('base spacer');
+            }
+            else {
+                identationDictionary[depth] = this.createSpan('base vline');
+            }
+            this.addIndentation(children, depth, identationDictionary);
+        }
+    };
+    Stu3TreeTable.prototype.createSpan = function (className) {
+        var span = document.createElement('SPAN');
+        span.className = className;
+        return span;
+    };
+    Stu3TreeTable.prototype.hasClass = function (element, cls) {
+        return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
+    };
+    Stu3TreeTable.prototype.addClass = function (element, className) {
+        var classNames = this.getCurrentClassesAsArray(element);
+        classNames.push(className);
+        var newClass = this.convertClassArrayNamesToString(classNames);
+        element.setAttribute("class", newClass);
+    };
+    Stu3TreeTable.prototype.getCurrentClassesAsArray = function (element) {
+        var currentClass = element.getAttribute("class");
+        if (currentClass === undefined || currentClass === null) {
+            currentClass = "";
+        }
+        var classes = currentClass.split(" ");
+        return classes;
+    };
+    Stu3TreeTable.prototype.convertClassArrayNamesToString = function (classNames) {
+        var resultClass = classNames.join(" ");
+        return resultClass;
+    };
+    Stu3TreeTable.prototype.removeClass = function (element, className) {
+        var classNames = this.getCurrentClassesAsArray(element);
+        var indexOfClass = classNames.indexOf(className);
+        classNames.splice(indexOfClass, 1);
+        var newClassName = this.convertClassArrayNamesToString(classNames);
+        element.setAttribute("class", newClassName);
+    };
+    Stu3TreeTable.prototype.registerForEvents = function () {
+        this.registerEvent('.vjoinexpandable', 'click', this.eventHandlerDictionary['vjoinexpandable']);
+        this.registerEvent('.vjoincollapsible', 'click', this.eventHandlerDictionary['vjoincollapsible']);
+        this.registerEvent('.vjoinendcollapsible', 'click', this.eventHandlerDictionary['vjoinendcollapsible']);
+        this.registerEvent('.vjoinendexpandable', 'click', this.eventHandlerDictionary['vjoinendexpandable']);
+        this.registerEvent('.treetable-buttons .tree-control .tree-button', 'click', this.eventHandlerDictionary['switchmode']);
+        this.registerEvent('.treetable', 'keydown', this.eventHandlerDictionary['keydown']);
+        this.registerEvent('.treetable tr', 'click', this.eventHandlerDictionary['selectRow']);
+        if (this.hasDetails) {
+            this.registerEvent('.details-popup .pin-control', 'click', this.eventHandlerDictionary['pin']);
+            this.registerEvent('.treetable tr', 'hover', this.eventHandlerDictionary['popuphover']);
+            this.registerEvent('.treetable-wrapper', 'mouseleave', this.eventHandlerDictionary['hideDetails']);
+        }
+    };
+    Stu3TreeTable.prototype.changePopupContent = function (element) {
+        if (!this.hasDetailsPinned)
+            return;
+        var hasOpenedDetails = element.getAttribute("class").indexOf("detailsexpanded") !== -1;
+        if (this.hasDetailsPinned && hasOpenedDetails) {
+            return;
+        }
+        else {
+            this.showDetails(element);
+        }
+        this.changePinIcon();
+    };
+    Stu3TreeTable.prototype.registerEvent = function (selector, type, eventHandle) {
+        var elems = this.getContext().querySelectorAll(selector);
+        for (var i = 0; i < elems.length; i++) {
+            var elem = elems[i];
+            this.registerEventSingle(elem, type, eventHandle);
+        }
+    };
+    Stu3TreeTable.prototype.pinDetails = function () {
+        var detailsPopup = this.getContext().querySelector(".details-popup");
+        var id = detailsPopup.dataset["id"];
+        var rowElement = this.getContext().querySelector('tr[data-id="' + id + '"]');
+        this.hasDetailsPinned = !this.hasDetailsPinned;
+        this.showDetails(rowElement);
+        this.changePinIcon();
+    };
+    Stu3TreeTable.prototype.changePinIcon = function () {
+        var span = this.getContext().querySelector(".details-popup .pin-control");
+        if (this.hasClass(span, "pinned")) {
+            span.classList.remove("pinned");
+            span.classList.add("unpinned");
+        }
+        else {
+            span.classList.remove("unpinned");
+            span.classList.add("pinned");
+        }
+    };
+    Stu3TreeTable.prototype.getDetailsWrapperDiv = function () {
+        var divId = "test";
+        var wrapper = this.getContext().querySelector(".treetable-right-panel");
+        var div = wrapper.querySelector("#" + divId);
+        if (div === undefined || div === null) {
+            div = document.createElement("div");
+            div.setAttribute("id", divId);
+            wrapper.appendChild(div);
+        }
+        return div;
+    };
+    Stu3TreeTable.prototype.hideExpandedDetails = function (tableRow, div) {
+        var expandedDetails = this.getContext().querySelector(".detailsexpanded");
+        if (expandedDetails !== undefined && expandedDetails !== null) {
+            this.removeClass(expandedDetails, "detailsexpanded");
+            div.setAttribute("class", "hidden");
+            div.removeAttribute("data-id");
+            this.setRightPanelHeightSameAsLeftPanelHeight();
+        }
+    };
+    Stu3TreeTable.prototype.showDetails = function (rowElement) {
+        var rowId = rowElement.getAttribute("data-id");
+        var detailsElement = this.getDetailsWrapperDiv();
+        var detailsElementId = detailsElement.getAttribute("data-id");
+        var isNotSameRowAsBefore = rowId != detailsElementId;
+        if (isNotSameRowAsBefore) {
+            this.hideExpandedDetails(rowElement, detailsElement);
+            var detailsContentColumn = rowElement.querySelector(".details");
+            this.addClass(rowElement, "detailsexpanded");
+            if (detailsContentColumn !== undefined && detailsContentColumn !== null && detailsContentColumn.innerHTML != "") {
+                detailsElement.innerHTML = detailsContentColumn.innerHTML;
+                detailsElement.setAttribute("data-id", rowId);
+                detailsElement.setAttribute("class", "details-popup");
+                detailsElement.style.display = "block";
+                this.setDetailsPopupPosition(detailsElement, rowElement);
+                var pin = rowElement.querySelector(".pin-control");
+                pin.classList.add("unpinned");
+                this.registerEvent('.details-popup .pin-control', 'click', this.eventHandlerDictionary['pin']);
+            }
+        }
+    };
+    Stu3TreeTable.prototype.setDetailsPopupPosition = function (detailsElement, rowElement) {
+        if (rowElement == null)
+            return;
+        var rowElementBoundingBox = rowElement.getBoundingClientRect();
+        var containerBoundingBox = this.getContext().querySelector(".treetable").getBoundingClientRect();
+        var detailsTopPosition = rowElementBoundingBox.top - containerBoundingBox.top;
+        var detailsBottomPosition = detailsTopPosition + detailsElement.getBoundingClientRect().height;
+        var lastRowElement = this.getLastVisibleRowElement();
+        var lastRowElementBoundingBox = lastRowElement.getBoundingClientRect();
+        var lastRowPositionBottom = (lastRowElementBoundingBox.top - containerBoundingBox.top) + lastRowElementBoundingBox.height;
+        while (true) {
+            var isDetailsBottomPositionOutOfView = detailsBottomPosition > lastRowPositionBottom;
+            if (isDetailsBottomPositionOutOfView) {
+                detailsTopPosition -= 5;
+                detailsBottomPosition -= 5;
+                continue;
+            }
+            var errorMargin = 0;
+            var isRowElementBellowDetailsTopPosition = (rowElementBoundingBox.top - containerBoundingBox.top) > detailsTopPosition;
+            if (isRowElementBellowDetailsTopPosition) {
+                errorMargin = lastRowPositionBottom - (detailsTopPosition + detailsElement.getBoundingClientRect().height);
+            }
+            detailsTopPosition = detailsTopPosition < 0 ? 0 : detailsTopPosition + errorMargin;
+            break;
+        }
+        detailsElement.style.marginTop = detailsTopPosition + "px";
+        this.resizeRightPanel();
+    };
+    Stu3TreeTable.prototype.resizeRightPanel = function () {
+        var rightPanelNewHeight = this.calculateNewRightPanelHeight();
+        if (rightPanelNewHeight != undefined) {
+            var rightPanel = this.getContext().querySelector(".treetable-right-panel");
+            rightPanel.style.height = rightPanelNewHeight + "px";
+            this.setTreetableWrapperHeight();
+        }
+    };
+    Stu3TreeTable.prototype.calculateNewRightPanelHeight = function () {
+        var rightPanelNewHeight = undefined;
+        var detailsElement = this.getContext().querySelector(".details-popup");
+        var treeElementBoundingBox = this.getContext().querySelector(".treetable").getBoundingClientRect();
+        if (detailsElement != null) {
+            var detailsElementBoundingBox = detailsElement.getBoundingClientRect();
+            if (detailsElementBoundingBox.height > treeElementBoundingBox.height) {
+                rightPanelNewHeight = detailsElementBoundingBox.height;
+            }
+            else if (detailsElementBoundingBox.height < treeElementBoundingBox.height) {
+                rightPanelNewHeight = treeElementBoundingBox.height;
+            }
+        }
+        else {
+            rightPanelNewHeight = treeElementBoundingBox.height;
+        }
+        return rightPanelNewHeight;
+    };
+    Stu3TreeTable.prototype.setRightPanelHeightSameAsLeftPanelHeight = function () {
+        var hasRightPanel = this.elementExists(".treetable-right-panel");
+        if (hasRightPanel) {
+            var leftPanel = this.getContext().querySelector(".treetable-left-panel");
+            var rightPanel = this.getContext().querySelector(".treetable-right-panel");
+            rightPanel.style.height = leftPanel.clientHeight + "px";
+            this.setTreetableWrapperHeight();
+        }
+    };
+    Stu3TreeTable.prototype.recalculateDetailsPopupPosition = function () {
+        var hasRightPanel = this.elementExists(".treetable-right-panel");
+        if (hasRightPanel) {
+            var detailsElement = this.getDetailsWrapperDiv();
+            var element = this.getContext().querySelector(".treetable tr.detailsexpanded");
+            this.setDetailsPopupPosition(detailsElement, element);
+        }
+    };
+    Stu3TreeTable.prototype.setTreetableWrapperHeight = function () {
+        var leftPanel = this.getContext().querySelector(".treetable-left-panel");
+        var rightPanel = this.getContext().querySelector(".treetable-right-panel");
+        var treetableWrapper = this.getContext().querySelector(".treetable-wrapper");
+        var height = Math.max(leftPanel.clientHeight, rightPanel.clientHeight);
+        treetableWrapper.style.height = height + "px";
+    };
+    Stu3TreeTable.prototype.getLastVisibleRowElement = function () {
+        var lastVisibleRow;
+        var rows = this.getContext().querySelectorAll("table tr");
+        if (rows) {
+            for (var i = 0; i < rows.length; i++) {
+                if (rows[i].style.display != 'none') {
+                    lastVisibleRow = rows[i];
+                }
+            }
+        }
+        return lastVisibleRow;
+    };
+    Stu3TreeTable.prototype.hasFlavourButtons = function () {
+        return this.getContext().querySelector(".treetable-buttons") != null;
+    };
+    Stu3TreeTable.prototype.elementExists = function (selector) {
+        return this.getContext().querySelector(selector) != undefined;
+    };
+    return Stu3TreeTable;
+}());

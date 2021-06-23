@@ -1,0 +1,945 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8" />
+        <title>German Corona Consensus Data Set - Implementation Guide</title>
+
+        <link rel="icon" href="guide/GermanCoronaConsensusDataSet-ImplementationGuide/files/styles/common/favicon.ico" />
+
+        <script src="guide/GermanCoronaConsensusDataSet-ImplementationGuide/files/styles/common/jquery/jquery.min.js"></script>
+        <script src="guide/GermanCoronaConsensusDataSet-ImplementationGuide/files/styles/common/bootstrap/bootstrap.min.js"></script>
+
+        <link rel="stylesheet" href="guide/GermanCoronaConsensusDataSet-ImplementationGuide/files/styles/common/main.min.css" />
+        <link rel="stylesheet" href="guide/GermanCoronaConsensusDataSet-ImplementationGuide/files/styles/common/bootstrap/bootstrap.min.css" />
+        <link rel="stylesheet" href="guide/GermanCoronaConsensusDataSet-ImplementationGuide/files/styles/common/rendering/rendering.min.css" />
+
+        <script src="guide/GermanCoronaConsensusDataSet-ImplementationGuide/files/styles/common/rendering/stu3TreeTable.min.js"></script>
+        <script src="guide/GermanCoronaConsensusDataSet-ImplementationGuide/files/styles/common/rendering/baseTreetable.min.js"></script>
+
+        <link rel="stylesheet" href="guide/GermanCoronaConsensusDataSet-ImplementationGuide/files/styles/treetable/style.css?v=1d76743ac2fc700" />
+
+    </head>
+
+    <body>
+
+        <div id="ig-viewer">
+
+            <div class="ig-view-content">
+
+                <div id="ig-view-treetable">
+
+                    <div class="segment-default-header" role="banner" aria-label="Header">
+                        <div class="row">
+                            <header class="col-md-12" aria-hidden="true">
+                                <h1 class="title">
+                                    <b>German Corona Consensus Data Set - Implementation Guide</b>
+                                </h1>
+                            </header>
+                        </div>
+                    </div>
+
+                    <div class="container-fluid">
+                        <div id="guide-panel">
+                            <div class="tree-panel" role="navigation" aria-label="Main menu">
+                                
+
+<div class="tree-content">
+    <div>
+
+        <input data-val="true" data-val-required="The Id field is required." id="GuideId" name="Guide.Id" type="hidden" value="1252" />
+
+        <table id="treetable" class="treetable ig-treetable">
+
+                    <tr data-id="90320"
+                        data-serial-nr="0"
+                        class="rootnode treenode">
+                        <td>
+                            <a href="Home.html">
+                                <span class="baseIcon resource"></span>
+                                <span title="Home">Home</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90323"
+                        data-parentId="90320"
+                        data-serial-nr="1"
+                        class="treenode">
+                        <td>
+                            <a href="Introduction.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Introduction">Introduction</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90324"
+                        data-parentId="90323"
+                        data-serial-nr="2"
+                        class="treenode">
+                        <td>
+                            <a href="TransactionBundle.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Transaction Bundle">Transaction Bundle</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90322"
+                        data-parentId="90320"
+                        data-serial-nr="3"
+                        class="treenode">
+                        <td>
+                            <a href="GECCOCore.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="GECCO Core">GECCO Core</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90325"
+                        data-parentId="90322"
+                        data-serial-nr="4"
+                        class="treenode">
+                        <td>
+                            <a href="AnamnesisRiskfactors.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Anamnesis / Risk factors">Anamnesis / Risk factors</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90396"
+                        data-parentId="90325"
+                        data-serial-nr="5"
+                        class="treenode">
+                        <td>
+                            <a href="Chroniclungdiseases-duplicate-2.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Chronic lung diseases">Chronic lung diseases</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90368"
+                        data-parentId="90325"
+                        data-serial-nr="6"
+                        class="treenode">
+                        <td>
+                            <a href="Disordersofcardiovascularsystem.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Disorders of cardiovascular system">Disorders of cardiovascular system</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90369"
+                        data-parentId="90325"
+                        data-serial-nr="7"
+                        class="treenode">
+                        <td>
+                            <a href="Chronicliverdiseases-duplicate-2.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Chronic liver diseases">Chronic liver diseases</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90370"
+                        data-parentId="90325"
+                        data-serial-nr="8"
+                        class="treenode">
+                        <td>
+                            <a href="Rheumatologicalimmunologicaldiseases-duplicate-2.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Rheumatological/immunological diseases">Rheumatological/immunological diseases</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90371"
+                        data-parentId="90325"
+                        data-serial-nr="9"
+                        class="treenode">
+                        <td>
+                            <a href="Humanimmunodeficiencyvirusinfection-duplicate-2.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Human immunodeficiency virus infection">Human immunodeficiency virus infection</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90372"
+                        data-parentId="90325"
+                        data-serial-nr="10"
+                        class="treenode">
+                        <td>
+                            <a href="Historyofbeingatissueororganrecipient.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="History of being a tissue or organ recipient">History of being a tissue or organ recipient</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90373"
+                        data-parentId="90325"
+                        data-serial-nr="11"
+                        class="treenode">
+                        <td>
+                            <a href="Diabetesmellitus-duplicate-2.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Diabetes mellitus">Diabetes mellitus</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90374"
+                        data-parentId="90325"
+                        data-serial-nr="12"
+                        class="treenode">
+                        <td>
+                            <a href="Malignantneoplasticdiseases.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Malignant neoplastic diseases">Malignant neoplastic diseases</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90375"
+                        data-parentId="90325"
+                        data-serial-nr="13"
+                        class="treenode">
+                        <td>
+                            <a href="Tobaccosmokingstatus.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Tobacco smoking status">Tobacco smoking status</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90376"
+                        data-parentId="90325"
+                        data-serial-nr="14"
+                        class="treenode">
+                        <td>
+                            <a href="Chronicneurologicalormentaldiseases.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Chronic neurological or mental diseases">Chronic neurological or mental diseases</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90377"
+                        data-parentId="90325"
+                        data-serial-nr="15"
+                        class="treenode">
+                        <td>
+                            <a href="Respiratorytherapies-duplicate-2.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Respiratory therapies">Respiratory therapies</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90378"
+                        data-parentId="90325"
+                        data-serial-nr="16"
+                        class="treenode">
+                        <td>
+                            <a href="Chronickidneydiseases-duplicate-2.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Chronic kidney diseases">Chronic kidney diseases</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90379"
+                        data-parentId="90325"
+                        data-serial-nr="17"
+                        class="treenode">
+                        <td>
+                            <a href="Historyoftravel-duplicate-3.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="History of travel">History of travel</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90380"
+                        data-parentId="90325"
+                        data-serial-nr="18"
+                        class="treenode">
+                        <td>
+                            <a href="Gastrointestinalulcers-duplicate-2.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Gastrointestinal ulcers">Gastrointestinal ulcers</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90381"
+                        data-parentId="90325"
+                        data-serial-nr="19"
+                        class="treenode">
+                        <td>
+                            <a href="Immunizationstatus.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Immunization status">Immunization status</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90382"
+                        data-parentId="90325"
+                        data-serial-nr="20"
+                        class="treenode">
+                        <td>
+                            <a href="Resuscitationstatus-duplicate-2.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Resuscitation status">Resuscitation status</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90326"
+                        data-parentId="90322"
+                        data-serial-nr="21"
+                        class="treenode">
+                        <td>
+                            <a href="Imaging.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Imaging">Imaging</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90383"
+                        data-parentId="90326"
+                        data-serial-nr="22"
+                        class="treenode">
+                        <td>
+                            <a href="Imagingprocedures.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Imaging procedures">Imaging procedures</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90384"
+                        data-parentId="90326"
+                        data-serial-nr="23"
+                        class="treenode">
+                        <td>
+                            <a href="Radiologicalfindings.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Radiological findings">Radiological findings</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90327"
+                        data-parentId="90322"
+                        data-serial-nr="24"
+                        class="treenode selected">
+                        <td>
+                            <a href="Demographics.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Demographics">Demographics</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90385"
+                        data-parentId="90327"
+                        data-serial-nr="25"
+                        class="treenode">
+                        <td>
+                            <a href="Pregnancy.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Pregnancy">Pregnancy</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90386"
+                        data-parentId="90327"
+                        data-serial-nr="26"
+                        class="treenode">
+                        <td>
+                            <a href="Ethnicgroup-duplicate-2.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Ethnic group">Ethnic group</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90387"
+                        data-parentId="90327"
+                        data-serial-nr="27"
+                        class="treenode">
+                        <td>
+                            <a href="Biologicalsex.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Biological sex">Biological sex</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90388"
+                        data-parentId="90327"
+                        data-serial-nr="28"
+                        class="treenode">
+                        <td>
+                            <a href="Dateofbirth.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Date of birth">Date of birth</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90389"
+                        data-parentId="90327"
+                        data-serial-nr="29"
+                        class="treenode">
+                        <td>
+                            <a href="Age-duplicate-2.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Age">Age</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90390"
+                        data-parentId="90327"
+                        data-serial-nr="30"
+                        class="treenode">
+                        <td>
+                            <a href="Frailtyscore-duplicate-2.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Frailty score">Frailty score</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90391"
+                        data-parentId="90327"
+                        data-serial-nr="31"
+                        class="treenode">
+                        <td>
+                            <a href="Bodyweight-duplicate-2.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Body weight">Body weight</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90392"
+                        data-parentId="90327"
+                        data-serial-nr="32"
+                        class="treenode">
+                        <td>
+                            <a href="Bodyheight-duplicate-2.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Body height">Body height</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90328"
+                        data-parentId="90322"
+                        data-serial-nr="33"
+                        class="treenode">
+                        <td>
+                            <a href="Epidemiologicalfactors.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Epidemiological factors">Epidemiological factors</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90393"
+                        data-parentId="90328"
+                        data-serial-nr="34"
+                        class="treenode">
+                        <td>
+                            <a href="ContactwithpersonssufferingfromCovid-19.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Contact with persons suffering from Covid-19?">Contact with persons suffering from Covid-19?</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90329"
+                        data-parentId="90322"
+                        data-serial-nr="35"
+                        class="treenode">
+                        <td>
+                            <a href="Complications.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Complications">Complications</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90394"
+                        data-parentId="90329"
+                        data-serial-nr="36"
+                        class="treenode">
+                        <td>
+                            <a href="Complication.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Complication">Complication</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90330"
+                        data-parentId="90322"
+                        data-serial-nr="37"
+                        class="treenode">
+                        <td>
+                            <a href="OnsetofillnessAdmission.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Onset of illness / Admission">Onset of illness / Admission</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90367"
+                        data-parentId="90330"
+                        data-serial-nr="38"
+                        class="treenode">
+                        <td>
+                            <a href="Stageatdiagnosis.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Stage at diagnosis">Stage at diagnosis</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90331"
+                        data-parentId="90322"
+                        data-serial-nr="39"
+                        class="treenode">
+                        <td>
+                            <a href="Laboratoryvalues.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Laboratory values">Laboratory values</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90366"
+                        data-parentId="90331"
+                        data-serial-nr="40"
+                        class="treenode">
+                        <td>
+                            <a href="Laboratoryvalue.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Laboratory value">Laboratory value</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90365"
+                        data-parentId="90331"
+                        data-serial-nr="41"
+                        class="treenode">
+                        <td>
+                            <a href="SARS-CoV-2-RT-PCR.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="SARS-CoV-2-RT-PCR">SARS-CoV-2-RT-PCR</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90350"
+                        data-parentId="90331"
+                        data-serial-nr="42"
+                        class="treenode">
+                        <td>
+                            <a href="SARS-CoV-2antibodies.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="SARS-CoV-2 antibodies">SARS-CoV-2 antibodies</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90332"
+                        data-parentId="90322"
+                        data-serial-nr="43"
+                        class="treenode">
+                        <td>
+                            <a href="Medication.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Medication">Medication</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90338"
+                        data-parentId="90332"
+                        data-serial-nr="44"
+                        class="treenode">
+                        <td>
+                            <a href="Covid-19therapy.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Covid-19 therapy">Covid-19 therapy</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90339"
+                        data-parentId="90332"
+                        data-serial-nr="45"
+                        class="treenode">
+                        <td>
+                            <a href="ACEinhibitors.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="ACE inhibitors">ACE inhibitors</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90340"
+                        data-parentId="90332"
+                        data-serial-nr="46"
+                        class="treenode">
+                        <td>
+                            <a href="Immunoglobulins.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Immunoglobulins">Immunoglobulins</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90341"
+                        data-parentId="90332"
+                        data-serial-nr="47"
+                        class="treenode">
+                        <td>
+                            <a href="Anticoagulation.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Anticoagulation">Anticoagulation</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90333"
+                        data-parentId="90322"
+                        data-serial-nr="48"
+                        class="treenode">
+                        <td>
+                            <a href="Outcomeatdischarge.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Outcome at discharge">Outcome at discharge</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90342"
+                        data-parentId="90333"
+                        data-serial-nr="49"
+                        class="treenode">
+                        <td>
+                            <a href="Respiratoryoutcome.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Respiratory outcome">Respiratory outcome</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90343"
+                        data-parentId="90333"
+                        data-serial-nr="50"
+                        class="treenode">
+                        <td>
+                            <a href="Typeofdischarge.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Type of discharge">Type of discharge</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90344"
+                        data-parentId="90333"
+                        data-serial-nr="51"
+                        class="treenode">
+                        <td>
+                            <a href="Follow-upswabresult.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Follow-up swab result">Follow-up swab result</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90334"
+                        data-parentId="90322"
+                        data-serial-nr="52"
+                        class="treenode">
+                        <td>
+                            <a href="StudyenrollmentInclusioncriteria.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Study enrollment / Inclusion criteria">Study enrollment / Inclusion criteria</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90345"
+                        data-parentId="90334"
+                        data-serial-nr="53"
+                        class="treenode">
+                        <td>
+                            <a href="StudyenrolmentduetoCovid-19.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Study enrolment due to Covid-19">Study enrolment due to Covid-19</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90346"
+                        data-parentId="90334"
+                        data-serial-nr="54"
+                        class="treenode">
+                        <td>
+                            <a href="Interventionalstudiesparticipation.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Interventional studies participation">Interventional studies participation</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90335"
+                        data-parentId="90322"
+                        data-serial-nr="55"
+                        class="treenode">
+                        <td>
+                            <a href="Symptoms.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Symptoms">Symptoms</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90347"
+                        data-parentId="90335"
+                        data-serial-nr="56"
+                        class="treenode">
+                        <td>
+                            <a href="Symptom.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Symptom">Symptom</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90336"
+                        data-parentId="90322"
+                        data-serial-nr="57"
+                        class="treenode">
+                        <td>
+                            <a href="Therapy.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Therapy">Therapy</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90348"
+                        data-parentId="90336"
+                        data-serial-nr="58"
+                        class="treenode">
+                        <td>
+                            <a href="DialysisHemofiltration.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Dialysis / Hemofiltration">Dialysis / Hemofiltration</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90349"
+                        data-parentId="90336"
+                        data-serial-nr="59"
+                        class="treenode">
+                        <td>
+                            <a href="Apheresis.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Apheresis">Apheresis</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90351"
+                        data-parentId="90336"
+                        data-serial-nr="60"
+                        class="treenode">
+                        <td>
+                            <a href="Proneposition.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Prone position">Prone position</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90364"
+                        data-parentId="90336"
+                        data-serial-nr="61"
+                        class="treenode">
+                        <td>
+                            <a href="ECMOtherapy.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="ECMO therapy">ECMO therapy</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90352"
+                        data-parentId="90336"
+                        data-serial-nr="62"
+                        class="treenode">
+                        <td>
+                            <a href="Isthepatientintheintensivecareunit.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Is the patient in the intensive care unit?">Is the patient in the intensive care unit?</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90353"
+                        data-parentId="90336"
+                        data-serial-nr="63"
+                        class="treenode">
+                        <td>
+                            <a href="Ventilationtype.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Ventilation type">Ventilation type</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90337"
+                        data-parentId="90322"
+                        data-serial-nr="64"
+                        class="treenode">
+                        <td>
+                            <a href="Vitalsigns.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Vital signs">Vital signs</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90354"
+                        data-parentId="90337"
+                        data-serial-nr="65"
+                        class="treenode">
+                        <td>
+                            <a href="PaCO2.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="PaCO2">PaCO2</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90355"
+                        data-parentId="90337"
+                        data-serial-nr="66"
+                        class="treenode">
+                        <td>
+                            <a href="PaO2.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="PaO2">PaO2</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90356"
+                        data-parentId="90337"
+                        data-serial-nr="67"
+                        class="treenode">
+                        <td>
+                            <a href="FiO2.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="FiO2">FiO2</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90357"
+                        data-parentId="90337"
+                        data-serial-nr="68"
+                        class="treenode">
+                        <td>
+                            <a href="pH.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="pH">pH</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90358"
+                        data-parentId="90337"
+                        data-serial-nr="69"
+                        class="treenode">
+                        <td>
+                            <a href="SOFA-Score-duplicate-2.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="SOFA-Score">SOFA-Score</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90359"
+                        data-parentId="90337"
+                        data-serial-nr="70"
+                        class="treenode">
+                        <td>
+                            <a href="Respiratoryrate-duplicate-2.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Respiratory rate">Respiratory rate</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90360"
+                        data-parentId="90337"
+                        data-serial-nr="71"
+                        class="treenode">
+                        <td>
+                            <a href="Diastolicbloodpressure.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Diastolic blood pressure">Diastolic blood pressure</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90361"
+                        data-parentId="90337"
+                        data-serial-nr="72"
+                        class="treenode">
+                        <td>
+                            <a href="Systolicbloodpressure.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Systolic blood pressure">Systolic blood pressure</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90362"
+                        data-parentId="90337"
+                        data-serial-nr="73"
+                        class="treenode">
+                        <td>
+                            <a href="Heartrate-duplicate-2.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Heart rate">Heart rate</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90363"
+                        data-parentId="90337"
+                        data-serial-nr="74"
+                        class="treenode">
+                        <td>
+                            <a href="Bodytemperature-duplicate-2.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Body temperature">Body temperature</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90395"
+                        data-parentId="90337"
+                        data-serial-nr="75"
+                        class="treenode">
+                        <td>
+                            <a href="Peripheraloxygensaturation.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Peripheral oxygen saturation">Peripheral oxygen saturation</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-id="90321"
+                        data-parentId="90320"
+                        data-serial-nr="76"
+                        class="treenode">
+                        <td>
+                            <a href="Terminologies.html">
+                                <span class="baseIcon dataType"></span>
+                                <span title="Terminologies">Terminologies</span>
+                            </a>
+                        </td>
+                    </tr>
+
+        </table>
+    </div>
+</div>
+
+<script type="text/javascript">
+    window.addEventListener('DOMContentLoaded', (event) => {
+        var resourceTreeTable = new BaseTreeTable();
+        resourceTreeTable.init("treetable");
+    });
+</script>
+
+                            </div>
+                            <div id="preview-content" class="preview-panel full-width" role="main" aria-label="Main content">
+                                
+
+<h3 id="demographics">Demographics</h3>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="ig-view-footer" role="contentinfo" aria-label="Footer">
+                
+<div class="container">
+    <div class="row">
+        <p>Powered by <b>SIMPLIFIER.NET</b></p>
+        <div>
+            HL7<sup>&reg;</sup> and FHIR<sup>&reg;</sup> are the registered trademarks of Health Level Seven International
+        </div>
+    </div>
+</div>
+
+            </div>
+
+        </div>
+
+    </body>
+
+</html>
